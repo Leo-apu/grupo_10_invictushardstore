@@ -8,7 +8,7 @@ En Invictus Hard Store, nuestro público objetivo abarca desde entusiastas de la
 Integrantes:
     1- Tactaca Agustin Claudio: Soy Agustín, estudiante de Analista Programador Universitario, me recibí como Técnico en Electrónica. Apasionado de la tecnología, disfruto programar, leer y entrenar. Mi background incluye conocimientos en computación y telefonía celular. Siempre listo para aprender y crecer en el mundo tecnológico
 
-    2-
+    2- Miranda Andres Ismael : Soy Ismael, soy Maestro Mayor de Obras y actualmente soy estudiante de Analista Programador Universitario. Me gusta mucho instalar y modificar software. Soy de escuchar musica elctronica, rock nacional e internacional, para distraerme salgo correr. 
 
     3-
 

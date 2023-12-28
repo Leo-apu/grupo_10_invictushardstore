@@ -11,7 +11,7 @@ Integrantes:
 
     2- Miranda Andres Ismael : Soy Ismael, soy Maestro Mayor de Obras y actualmente soy estudiante de Analista Programador Universitario. Me gusta mucho instalar y modificar software. Soy de escuchar musica elctronica, rock nacional e internacional, para distraerme salgo correr. 
 
-    3-
+    3- Mascareño Jonathan Rolando: Soy Jonathan, estudiante de la carrera Analista Programador universitario, hice reparación de PC y atención al cliente en un Ciber durante 3 años.Soy musico y aprendiz de compositor. Me gusta todo lo que tiene que ver con la tecnologia y la musica, de vez en cuando dibujar,leer,etc.
 
     4-
 

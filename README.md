@@ -14,7 +14,7 @@ En Invictus Hard Store, nuestro público objetivo abarca desde entusiastas de la
 
 > 2 . _**Miranda Andres Ismael**_ : Soy Ismael, soy Maestro Mayor de Obras y actualmente soy estudiante de Analista Programador Universitario. Me gusta mucho instalar y modificar software. Soy de escuchar musica elctronica, rock nacional e internacional, para distraerme salgo correr.
 
-> 3 . _**Cruz Leandro Victorino**_: Soy Leandro, soy Estudiante de Analista Programador Universitario. Mi background incluye conocimientos en computación y programación. Siempre listo para aprender y crecer en el mundo tecnológico
+> 3 . _**Cruz Leandro Victorino**_: Soy Leandro, soy Estudiante de Analista Programador Universitario. Mi background incluye conocimientos en computación y programación. Me considero una persona proactiva, con capacidad de trabajo en equipo y autodidacta. Ademas mi enfoque principal es el desarrollo web. En mis tiempos libres me gusta realizar ejercicio y salir a caminar.
 
 > 4 . _**Apellido Nombres**_:
 

@@ -16,7 +16,7 @@ En Invictus Hard Store, nuestro público objetivo abarca desde entusiastas de la
 
 > 3 . _**Cruz Leandro Victorino**_: Soy Leandro, soy Estudiante de Analista Programador Universitario. Mi background incluye conocimientos en computación y programación. Me considero una persona proactiva, con capacidad de trabajo en equipo y autodidacta. Ademas mi enfoque principal es el desarrollo web. En mis tiempos libres me gusta realizar ejercicio y salir a caminar.
 
-> 4 . _**Apellido Nombres**_:
+> 4 . _**Mascareño Jonathan Rolando**_: Soy Jonathan, estudiante de la carrera Analista Programador universitario, hice reparación de PC y atención al cliente en un Ciber durante 3 años.Soy musico y aprendiz de compositor. Me gusta todo lo que tiene que ver con la tecnologia y la musica, de vez en cuando dibujar,leer,etc.
 
 > 5 . _**Apellido Nombres**_:
 
@@ -39,6 +39,10 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
 
 1. __CompraGamer__ [Ir al Sitio Web](https://compragamer.com)
     _Elegimos como referencia el sitio de compragamer por sus caracteristicas y funcionalidades que nos ayudan a mejorar la experiencia de la compra de los usuarios._
+2. __FullH4rd__ [Ir al Sitio Web](https://www.fullh4rd.com.ar/)
+    _Fue otra de de las referencias a utilizar como inspiración para el diseño._
+2. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
+    _Tomamos como referencia el sitio de Maximus debido a su diseño y estética, que nos sirven de guía para crear una experiencia visual atractiva para nuestros usuarios._
 
 2. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
     _Tomamos como referencia el sitio de Maximus debido a su diseño y estética, que nos sirven de guía para crear una experiencia visual atractiva para nuestros usuarios._

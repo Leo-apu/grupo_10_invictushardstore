@@ -41,9 +41,10 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
     _Elegimos como referencia el sitio de compragamer por sus caracteristicas y funcionalidades que nos ayudan a mejorar la experiencia de la compra de los usuarios._
 2. __FullH4rd__ [Ir al Sitio Web](https://www.fullh4rd.com.ar/)
     _Fue otra de de las referencias a utilizar como inspiración para el diseño._
-2. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
+3. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
     _Tomamos como referencia el sitio de Maximus debido a su diseño y estética, que nos sirven de guía para crear una experiencia visual atractiva para nuestros usuarios._
-
+4. __venex__ [Ir al Sitio Web](https://www.venex.com.ar/) 
+    _Elgimos este sitio web como referencia porque tiene otras caracteristicas que nos ayuda a la hora de registrarse.
 
 ## Repositorio en GitHub 🌐
 

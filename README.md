@@ -18,7 +18,7 @@ En Invictus Hard Store, nuestro público objetivo abarca desde entusiastas de la
 
 > 4 . _**Mascareño Jonathan Rolando**_: Soy Jonathan, estudiante de la carrera Analista Programador universitario, hice reparación de PC y atención al cliente en un Ciber durante 3 años.Soy musico y aprendiz de compositor. Me gusta todo lo que tiene que ver con la tecnologia y la musica, de vez en cuando dibujar,leer,etc.
 
-> 5 . _**Zamudio Cintia Karen**_: Soy Cintia, estudiante de la carrera Analista Programador Universitario en la Facultad de Ingenieria. Durante mis estudios, he explorado y aportado a proyectos desafiantes y disfruto especialmente diseñar soluciones que sean innovadoras. Me encanta mantenerme activa, ya sea practicando deportes, yendo a caminar al aire libre o corriendo para despejar la mente. ¡Siempre lista para aprender y colaborar en nuevos desafíos tecnológicos!
+> 5 . _**Zamudio Cintia**_: soy Cintia, estudiante de la carrera Analista Programador Universitario en la Facultad de Ingenieria. Durante mis estudios, he explorado y aportado a proyectos desafiantes y disfruto especialmente diseñar soluciones que sean innovadoras. Me encanta mantenerme activa, ya sea practicando deportes, yendo a caminar al aire libre o corriendo para despejar la mente. ¡Siempre lista para aprender y colaborar en nuevos desafíos tecnológicos!
 
 ## Productos y Servicios que Ofrecemos 📦
 
@@ -44,7 +44,9 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
 3. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
     _Tomamos como referencia el sitio de Maximus debido a su diseño y estética, que nos sirven de guía para crear una experiencia visual atractiva para nuestros usuarios._
 4. __venex__ [Ir al Sitio Web](https://www.venex.com.ar/) 
-    _Elgimos este sitio web como referencia porque tiene otras caracteristicas que nos ayuda a la hora de registrarse.
+    _Elgimos este sitio web como referencia porque tiene otras caracteristicas que nos ayuda a la hora de registrarse._
+5. __Newegg__ [Ir al Sitio Web](https://www.newegg.com)
+    _Tomada como referencia ya sea para mejorar la experiencia de compra en línea, la interfaz de usuario o el diseño visual._ 
 
 ## Repositorio en GitHub 🌐
 

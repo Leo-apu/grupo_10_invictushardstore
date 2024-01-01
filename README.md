@@ -50,4 +50,4 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
 
 ## Repositorio en GitHub 🌐
 
-El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente repositorio: [Grupo_10_InvictusHardStore](https://github.com/LeoVCruz/DH-Grupo10.git)
+El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente repositorio: [Grupo_10_InvictusHardStore](https://github.com/LeoVCruz/grupo_10_invictushardstore.git)

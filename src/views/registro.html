@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/images/logo-InvictusHardStore-1.png">
+    <link rel="stylesheet" href="/public/css/registro.css">
+    <title>Registrar</title>
+</head>
+<body>
+    <header class="header_container">
+        <nav class="navbar">
+            <section class="logo">
+                <img src="/public/images/logo-InvictusHardStore-1.png" alt="Logo de Invictus Hard Store">
+            </section>
+            <section class="menu">
+                <ul>
+                    <li><a href="#" class="marca">Invictus Hard Store</a></li>
+                    <li><a href="#" class="nosotros">Nosotros</a></li>
+                    <li><a href="#" class="productos">Productos</a></li>
+                    <li><a href="#" class="contacto">Contáctenos</a></li>
+                </ul>
+            </section>
+            
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <div class="contacto">
+            <p><strong>Regístrese</strong></p>
+            <p>Ingresa tus datos para crear tu cuenta</p>
+        </div>
+        <br>
+        
+        <form action="procesar_registro.php" method="post" class="form-register">
+            <div>
+                <!-- Nombre y Apellido -->
+                <div>
+                    <input type="text" name="nombre" required placeholder="Nombre">
+                    <input type="text" name="apellido" required placeholder="Apellido">
+                </div>
+                
+                <!-- Correo Electrónico -->
+                <div>
+                    <input type="email" name="email" required placeholder="Correo electrónico">
+                </div>
+                
+                <!-- Contraseña y Repetir Contraseña -->
+                <div>
+                    <input type="password" name="contraseña" required placeholder="Contraseña">
+                    <input type="password" name="repetir_contraseña" required placeholder="Repetir Contraseña">
+                </div>
+                
+                <div class="contacto">
+                    <p><strong>Celular de Contacto</strong></p>
+                </div>
+                <br>
+                <!-- Código de Área y Número de Celular -->
+                <div>
+                    <input type="text" name="codigo_area" required placeholder="Código de Área">
+                    <input type="text" name="numero_celular" required placeholder="Número de Celular">
+                </div>
+                
+                <!-- Términos y Condiciones -->
+                <div>
+                    <label for="si">Estoy de acuerdo con <a href="#">términos y condiciones</a></label>
+                    <input type="checkbox" id="si" name="si" required>
+                </div>
+                
+                <!-- Botón de Registro -->
+                <div class="form-register">
+                    <input type="submit" value="REGISTRARME">
+                </div>
+                
+                <!-- Iniciar Sesión -->
+                <div name="agree">¿Ya tienes cuenta? Inicia sesión <a href="#">aquí</a></div>
+            </div>
+        </form>
+    </main>
+    <br>
+    <footer>
+        <p>Copyright © 1991-2024 Invictus Hard Store S.R.L.</p>
+    </footer>
+</body>
+</html>

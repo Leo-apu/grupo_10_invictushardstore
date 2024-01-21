@@ -272,8 +272,12 @@ footer{
         display: block;
         flex-basis: 5%;  
         text-align: left;
-        margin-top: 30px;
-        font-size: 30px;
+        margin-top: 20px;
+        font-size: 2em;
+    }
+
+    .nav-caja2 i{
+        color: black;
     }
    
     .nav-icono{

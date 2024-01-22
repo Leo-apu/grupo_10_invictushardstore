@@ -51,3 +51,8 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
 ## Repositorio en GitHub 🌐
 
 El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente repositorio: [Grupo_10_InvictusHardStore](https://github.com/LeoVCruz/grupo_10_invictushardstore.git)
+
+
+## Tablero de Trabjaos 📊
+
+En el tablero de trabajo encontrara la distribución de las tareas de cada integrante del equipo, el mismo se encuentra en el repositorio de GitHub en el apartado **Projects/Tablero de Trabajo - Invictus Hard Store**

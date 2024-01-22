@@ -58,8 +58,7 @@ nav ul li{
 }
 
 .imgLogo{
-    flex-basis: 10%; /* Reduzco ligeramente el porcentaje para dejar espacio entre los elementos */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho especificado */
+    flex-basis: 10%;
     text-align: left;
     width: 20%;
     margin: 10px;

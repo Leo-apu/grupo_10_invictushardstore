@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #fbf8efc0;
+}
+
+body{
+    background-color: #04D0D9;
+}
+
+div.imgLogo{
+    width: 10%;
+    height: 10%;
+}
+
+/* Barra de navegacion*/
+nav{
+    background-size: 500px;
+    border-radius: 3px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+nav ul li{
+	display:inline-block; /*hace que el comportamiento del elemento sea de bloque en linea*/
+	box-sizing:border-box; /* el relleno y el borde están incluidos en el ancho y la altura*/
+	padding:5px 5px;  /*arriba y abajo 5px de padding, izquierda y derecha 5px de padding */
+   /* background: #9ACB34; */
+    border-radius: 6px;
+   /* border-style: ridge; */
+}
+
+.nav-lista{
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(51, 34, 117);
+  outline: none;
+  line-height: 35px;
+  font-family: 'Lora', serif;
+  font-size: 17px;
+}
+
+.nav-lista:hover {
+  background-color: #35e9628a;
+  padding: 10px;
+  color: #ffffff;
+} 
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.imgLogo{
+    flex-basis: 10%;
+    text-align: left;
+    width: 20%;
+    margin: 10px;
+}
+
+.nav-caja{
+    flex-basis: 40%;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.nav-icono{
+    flex-basis: 30%;
+    text-align: right;
+    font-size: 40px; 
+    margin: 20px;
+}
+
+.nav-icono i{
+    color: #123666;
+}
+
+/**
+    Slider
+*/
+
+.container-slider{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider-frame{
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    animation: slide 30s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    flex: 0 0 100%;
+    list-style: none;
+}
+
+.slider-frame img{
+    width: 100%;
+    height: 500px;
+}
+
+@keyframes slide{
+    0%, 100% { transform: translateX(0%); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+}
+
+
+/**
+    Productos destacados
+*/
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family:  'Montserrat', sans-serif;
+    padding-top: 10px;
+    font-size:30px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(0, 68, 255), 0 0 5px rgb(0, 0, 221);
+}
+
+main section article{
+    margin: 10px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+}
+
+article div.main-article{
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff28;
+}
+
+main section article img{
+    width: 100%;
+}
+
+.destacados{
+    background-color: #fbf8efc0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.producto{
+    background-color: #9ACB34;
+    border-radius: 10px;
+    border: 1px solid #353E4A;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.descripcion{
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    margin-bottom: 3px;
+}
+
+.precio{
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    margin-top: 3px;
+    font-size: 24px;
+   
+}
+
+/**
+    Footer
+*/
+
+footer{
+    background-color: #fbf8efc0;
+    padding: 10px;
+}
+
+.icono{
+    text-align: center;
+    color: #123666;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.containerFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.seccion{
+    flex-basis: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.seccion i{
+    font-size: 20px;
+}
+
+.seccion p{
+    margin: 6px;
+    font-family:'Hind Madurai', sans-serif;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 18px;
+    font-family:'Lora', serif;
+    margin-bottom: 10px;
+}
+
+/**
+    Navegación en mobile
+**/
+@media(max-width: 480px){
+    
+    .seccion{
+        flex-basis: 100%;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .imgLogo{
+        flex-basis: 40%;
+        box-sizing: border-box;
+        width: 35%;
+        text-align: left;
+    }
+    
+    .nav-caja{
+        display: none;
+    }
+   
+    .nav-caja2{
+        display: block;
+        flex-basis: 5%;  
+        text-align: left;
+        margin-top: 20px;
+        font-size: 2em;
+    }
+
+    .nav-caja2 i{
+        color: black;
+    }
+   
+    .nav-icono{
+        flex-basis: 26%;  
+    }
+
+}
+
+
+/**
+   Navegacion en tablets
+*/
+@media(min-width: 768px) and (max-width:991px){
+    
+    .producto article{
+       flex-basis: 48%; /* Ajuste para dejar espacio entre los elementos */
+       margin: 5px; /* Espacio entre los elementos */
+    }
+
+    .seccion{
+        flex-basis: 100%;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-caja2{
+        display: none;
+    }
+
+    .imgLogo{
+        flex-basis: 20%; 
+        box-sizing: border-box; 
+        text-align: left;
+        width: 20%;
+        margin: 10px;
+    }
+
+    .nav-caja{
+        flex-basis: 40%;
+    }
+
+    .nav-icono{
+        flex-basis: 20%;
+        text-align: right;
+        font-size: 40px; 
+        margin: 20px;
+    }
+}
+
+/**
+   Navegación en desktop (1200-min)
+*/
+@media(min-width: 1024px) and (max-width:1919px){
+    .producto article{
+        flex-basis: 23%; 
+        margin: 5px; 
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-caja2{
+        display: none;
+    }
+
+    .imgLogo{
+        flex-basis: 20%; 
+        box-sizing: border-box; 
+        text-align: left;
+        width: 20%;
+        margin: 10px;
+    }
+
+    .nav-caja2{
+        flex-basis: 30%;
+    }
+
+    .nav-icono{
+        flex-basis: 20%;
+        text-align: right;
+        font-size: 40px; 
+        margin: 20px;
+    }
+
+}
+
+
+

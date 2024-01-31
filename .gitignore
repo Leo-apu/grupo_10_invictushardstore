@@ -1,0 +1,22 @@
+# Archivos y directorios generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios de dependencias
+/src/node_modules
+/bower_components
+
+# Archivos generados al compilar o ejecutar el proyecto
+/build
+/dist
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Logs y archivos temporales
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+

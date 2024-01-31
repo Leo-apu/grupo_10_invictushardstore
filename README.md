@@ -10,15 +10,15 @@ En Invictus Hard Store, nuestro público objetivo abarca desde entusiastas de la
 
 ## Desarrolladores - Grupo 10 👨‍💻
 
-> 1 . _**Tactaca Agustin Claudio**_: Soy Agustín, estudiante de Analista Programador Universitario, me recibí como Técnico en Electrónica. Apasionado de la tecnología, disfruto programar, leer y entrenar. Mi background incluye conocimientos en computación y telefonía celular. Siempre listo para aprender y crecer en el mundo tecnológico
+> 1 . _**Tactaca Agustin Claudio**_ - [@AgusTactaca](https://github.com/AgusTactaca) : Soy Agustín, estudiante de Analista Programador Universitario, me recibí como Técnico en Electrónica. Apasionado de la tecnología, disfruto programar, leer y entrenar. Mi background incluye conocimientos en computación y telefonía celular. Siempre listo para aprender y crecer en el mundo tecnológico
 
-> 2 . _**Miranda Andres Ismael**_ : Soy Ismael, soy Maestro Mayor de Obras y actualmente soy estudiante de Analista Programador Universitario. Me gusta mucho instalar y modificar software. Soy de escuchar musica elctronica, rock nacional e internacional, para distraerme salgo correr.
+> 2 . _**Miranda Andres Ismael**_ - [@isma92ok](https://github.com/isma92ok) : Soy Ismael, soy Maestro Mayor de Obras y actualmente soy estudiante de Analista Programador Universitario. Me gusta mucho instalar y modificar software. Soy de escuchar musica elctronica, rock nacional e internacional, para distraerme salgo correr.
 
-> 3 . _**Cruz Leandro Victorino**_: Soy Leandro, soy Estudiante de Analista Programador Universitario. Mi background incluye conocimientos en computación y programación. Me considero una persona proactiva, con capacidad de trabajo en equipo y autodidacta. Ademas mi enfoque principal es el desarrollo web. En mis tiempos libres me gusta realizar ejercicio y salir a caminar.
+> 3 . _**Cruz Leandro Victorino**_ - [@LeoVCruz](https://github.com/LeoVCruz) : Soy Leandro, soy Estudiante de Analista Programador Universitario. Mi background incluye conocimientos en computación y programación. Me considero una persona proactiva, con capacidad de trabajo en equipo y autodidacta. Ademas mi enfoque principal es el desarrollo web. En mis tiempos libres me gusta realizar ejercicio y salir a caminar.
 
-> 4 . _**Mascareño Jonathan Rolando**_: Soy Jonathan, estudiante de la carrera Analista Programador universitario, hice reparación de PC y atención al cliente en un Ciber durante 3 años.Soy musico y aprendiz de compositor. Me gusta todo lo que tiene que ver con la tecnologia y la musica, de vez en cuando dibujar,leer,etc.
+> 4 . _**Mascareño Jonathan Rolando** - [@JohnRM992](https://github.com/JohnRM992) : Soy Jonathan, estudiante de la carrera Analista Programador universitario, hice reparación de PC y atención al cliente en un Ciber durante 3 años.Soy musico y aprendiz de compositor. Me gusta todo lo que tiene que ver con la tecnologia y la musica, de vez en cuando dibujar,leer,etc.
 
-> 5 . _**Zamudio Cintia Karen**_: Soy Cintia, estudiante de la carrera Analista Programador Universitario en la Facultad de Ingenieria. Durante mis estudios, he explorado y aportado a proyectos desafiantes y disfruto especialmente diseñar soluciones que sean innovadoras. Me encanta mantenerme activa, ya sea practicando deportes, yendo a caminar al aire libre o corriendo para despejar la mente. ¡Siempre lista para aprender y colaborar en nuevos desafíos tecnológicos!
+> 5 . _**Zamudio Cintia Karen**_ - [@cintiiak](https://github.com/cintiiak) : Soy Cintia, estudiante de la carrera Analista Programador Universitario en la Facultad de Ingenieria. Durante mis estudios, he explorado y aportado a proyectos desafiantes y disfruto especialmente diseñar soluciones que sean innovadoras. Me encanta mantenerme activa, ya sea practicando deportes, yendo a caminar al aire libre o corriendo para despejar la mente. ¡Siempre lista para aprender y colaborar en nuevos desafíos tecnológicos!
 
 ## Productos y Servicios que Ofrecemos 📦
 
@@ -44,8 +44,15 @@ Usamos como referencias y para usar de inspiracion sitios del mercado que se ded
 3. __Maximus__ [Ir al Sitio Web](https://www.maximus.com.ar/)
     _Tomamos como referencia el sitio de Maximus debido a su diseño y estética, que nos sirven de guía para crear una experiencia visual atractiva para nuestros usuarios._
 4. __venex__ [Ir al Sitio Web](https://www.venex.com.ar/) 
-    _Elgimos este sitio web como referencia porque tiene otras caracteristicas que nos ayuda a la hora de registrarse.
+    _Elgimos este sitio web como referencia porque tiene otras caracteristicas que nos ayuda a la hora de registrarse._
+5. __Newegg__ [Ir al Sitio Web](https://www.newegg.com)
+    _Tomada como referencia ya sea para mejorar la experiencia de compra en línea, la interfaz de usuario o el diseño visual._ 
 
 ## Repositorio en GitHub 🌐
 
-El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente repositorio: [Grupo_10_InvictusHardStore](https://github.com/LeoVCruz/DH-Grupo10.git)
+El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente repositorio: [Grupo_10_InvictusHardStore](https://github.com/LeoVCruz/grupo_10_invictushardstore.git)
+
+
+## Tablero de Trabajo 📊
+
+En el tablero de trabajo encontrara la distribución de las tareas de cada integrante del equipo, el mismo se encuentra en el repositorio de GitHub en el apartado **Projects/Tablero de Trabajo - Invictus Hard Store**

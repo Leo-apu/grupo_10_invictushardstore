@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/login.css">
 
     <!-- FUENTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +41,7 @@
                             <a class="nav-lista" href="/">Home</a>
                         </li>
                         <li>
-                            <a class="nav-lista" href="/">Opcion 2</a>
+                            <a class="nav-lista" href="/">Opcion2</a>
                         </li>
                         <li>
                             <a class="nav-lista" href="/">Opcion 3</a>
@@ -58,74 +59,35 @@
 
     <main>
        
-        <div class="container-slider"> 
-            <div class="slider-frame">
-                <ul>
-                    <li><img src="../images/slider1.jpg"></li>
-                    <li><img src="../images/slider2.jpg"></li>
-                    <li><img src="../images/slider3.jpg"></li>
-                </ul>
-            </div>
+        <div class="form-container">
+            <p class="title">INICIAR SESION</p>
+            <p class="signup">Inicie Sesion con su Cuenta de 
+                <span>Invictus Hard Store</span>
+            </p>
+            <form class="form">
+                <div class="input-group">
+                    <input class="input" type="text" name="username" id="username" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+                    
+                </div>
+                <div class="flex-row">
+                    <div>
+                    <input type="checkbox">
+                    <label class="remember">Recuerdame </label>
+                    </div>
+                </div>
+                <button class="sign">INGRESAR</button>
+                <button class="register"><a href="/registro">CREAR CUENTA</button>
+                <div class="forgot">
+                        <a rel="noopener noreferrer" href="#">¿ Olvidaste la contraseña ?</a>
+                    </div>
+            </form>
+            <p class="signup">
+                Si tienes problemas para iniciar sesion escribemos a feedback_soporte@invictushardstore.com
+            </p>
         </div>
-    
-        <section class="destacados">
-            <h1>Productos destacados</h1>
-            <div class="producto">
-                <article>
-                    <img src="../images/intel-i5.jpg" alt="">
-                    <div class="main-article">
-                        <div class="">
-                            <p class="titulo">PC INTEL I5 10400 SSD 240GB 8GB</p>
-                            <p class="descripcion">Disco Sólido: 240 Gb <br>
-                                Capacidad: 8 Gigas <br>
-                                Formato: DIMM
-                                Expandible: Si</p>
-                        </div>
-                        <p class="precio">$539.990</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="../images/fuente_coolermaster.jpg" alt="">
-                    <div class="main-article">
-                        <div class="">
-                            <p class="titulo">FUENTE COOLER MASTER 750W V2 80+ BRONZE MWE</p>
-                            <p class="descripcion">Versión ATX ATX 12V V2.52
-                                Voltaje de entrada 100-240V
-                                Tamaño del ventilador 120mm</p>
-                        </div>
-                        <p class="precio">$179.990</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="../images/memoria.jpg" alt="">
-                    <div class="main-article">
-                        <div class="">
-                            <p class="titulo">DISCO SOLIDO SSD PNY 256GB M2 NVME CS1031 1700MB/S</p>
-                            <p class="descripcion"> Componentes NAND: NAND 3D
-                                Factor de forma: M.2 2280
-                            </p>
-                        </div>
-                        <p class="precio">$30990</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="../images/ryzen.jpg" alt="">
-                    <div class="main-article">
-                        <div class="">
-                            <p class="titulo">PC AMD RYZEN 5 4600G 8GB SSD 240G</p>
-                            <P class="descripcion">Disco Sólido: 240Gb <br>
-                                Interfaz: Sata 2.5" <br>
-                                Windows 10 - Versión: 64-bits
-                                </p>
-                        </div>
-                        <p class="precio">$419.990</p>
-                    </div>
-                </article>
-            </div>
-        </section>
     </main>
 
     <footer>

@@ -58,8 +58,7 @@ nav ul li{
 }
 
 .imgLogo{
-    flex-basis: 10%; /* Reduzco ligeramente el porcentaje para dejar espacio entre los elementos */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho especificado */
+    flex-basis: 10%;
     text-align: left;
     width: 20%;
     margin: 10px;
@@ -87,27 +86,29 @@ nav ul li{
 */
 
 .container-slider{
-    width: 900px;
+    width: 100%;
     text-align: center;
+    overflow: hidden;
 }
 
 .slider-frame{
-    width: 500px;
+    max-width: 100%;
     height: auto;
-    margin:40px auto 0;
-
-    animation: slide 30s infinite alternate ease-in-out;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .slider-frame ul{
     display: flex;
     padding: 0;
-    width: 800%;
+    width: 100%;
+    animation: slide 30s infinite alternate ease-in-out;
 }
 
 .slider-frame li{
+    flex: 0 0 100%;
     list-style: none;
-    width: 100%;
 }
 
 .slider-frame img{
@@ -116,11 +117,9 @@ nav ul li{
 }
 
 @keyframes slide{
-    0% { margin-left: 0%; }
-    25% { margin-left: -100%; }
-    50% { margin-left: -200%; }
-    75% { margin-left: -300%; }
-    100% { margin-left: 0%; } /* Agregado para reiniciar la animación */
+    0%, 100% { transform: translateX(0%); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
 }
 
 

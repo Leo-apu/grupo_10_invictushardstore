@@ -91,7 +91,7 @@ nav ul li{
 }
 
 .slider-frame{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 40px auto 0;
     overflow: hidden;

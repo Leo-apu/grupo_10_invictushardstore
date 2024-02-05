@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs') %>
     <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
     <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="../css/home.css">
     <title>Registrar</title>
 </head>
 <body>
-    <header class="header_container">
-        <nav class="navbar">
-            <section class="logo">
-                <img src="/images/logo-InvictusHardStore-1.png" alt="Logo de Invictus Hard Store">
-            </section>
-            <section class="menu">
-                <ul>
-                    <li><a href="#" class="marca">Invictus Hard Store</a></li>
-                    <li><a href="#" class="nosotros">Nosotros</a></li>
-                    <li><a href="#" class="productos">Productos</a></li>
-                    <li><a href="#" class="contacto">Contáctenos</a></li>
-                </ul>
-            </section>
-            
-        </nav>
+    <header>
+        <%- include('../partials/header.ejs') %>
     </header>
 
     <main>
@@ -80,7 +67,7 @@
     </main>
     <br>
     <footer>
-        <p>Copyright © 1991-2024 Invictus Hard Store S.R.L.</p>
+        <%- include('../partials/footer.ejs') %>
     </footer>
 </body>
 </html>

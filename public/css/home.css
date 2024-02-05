@@ -88,11 +88,10 @@ nav ul li{
 .container-slider{
     width: 100%;
     text-align: center;
-    overflow: hidden;
 }
 
 .slider-frame{
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 40px auto 0;
     overflow: hidden;

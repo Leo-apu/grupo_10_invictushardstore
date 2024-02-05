@@ -11,9 +11,9 @@ app.set('views', path.join(__dirname,'./views'));
 
 app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/views/index.html'));
-// })
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/index.html'));
+})
 
 // app.get('/registro', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/views/registro.html'));

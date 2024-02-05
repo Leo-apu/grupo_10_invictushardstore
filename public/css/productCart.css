@@ -241,15 +241,16 @@ footer {
     height: 35px;
     margin-top: 10px;
     border-radius: 5px;
-    border: 2px solid #04D0D9;
+    border: none;
     background-color: #E3E3E3;
 
     transition: background-color, 0.5s;
+    transition: border,0.5;
 }
 
 .boton-compra:hover {
-    background-color: #04D0D9;
-    color: #FFF;
+    background-color: #35e9628a;
+    border:1px solid #353E4A;
     cursor: pointer;
 }
 

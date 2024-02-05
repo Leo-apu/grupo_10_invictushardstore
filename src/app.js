@@ -42,3 +42,9 @@ app.listen(port, () => console.log(`Listening on port http://localhost:${port}`)
 
 const productCartRoute = require('./routes/productCartRoutes.js')
 app.use('/', productCartRoute);
+
+const crearProductoRoute = require('./routes/crearProductoRoutes.js')
+app.use('/', crearProductoRoute);
+
+const modificarProductoRoute = require('./routes/modificarProductoRoutes.js')
+app.use('/', modificarProductoRoute);

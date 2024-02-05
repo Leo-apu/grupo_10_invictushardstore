@@ -48,3 +48,6 @@ app.use('/', crearProductoRoute);
 
 const modificarProductoRoute = require('./routes/modificarProductoRoutes.js')
 app.use('/', modificarProductoRoute);
+
+const registroRoutes = require('./routes/registroRoutes.js')
+app.use('/', registroRoutes);

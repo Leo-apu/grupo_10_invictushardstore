@@ -1,85 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-header{
-    background-color: #fbf8efc0;
-}
-
-body{
-    background-color: #04D0D9;
-}
-
-div.imgLogo{
-    width: 10%;
-    height: 10%;
-}
-
-/* Barra de navegacion*/
-nav{
-    background-size: 500px;
-    border-radius: 3px;
-    padding: 20px;
-    margin-top: 10px;
-}
-
-nav ul li{
-	display:inline-block; /*hace que el comportamiento del elemento sea de bloque en linea*/
-	box-sizing:border-box; /* el relleno y el borde están incluidos en el ancho y la altura*/
-	padding:5px 5px;  /*arriba y abajo 5px de padding, izquierda y derecha 5px de padding */
-   /* background: #9ACB34; */
-    border-radius: 6px;
-   /* border-style: ridge; */
-}
-
-.nav-lista{
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-  color: rgb(51, 34, 117);
-  outline: none;
-  line-height: 35px;
-  font-family: 'Lora', serif;
-  font-size: 17px;
-}
-
-.nav-lista:hover {
-  background-color: #35e9628a;
-  padding: 10px;
-  color: #ffffff;
-} 
-
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-}
-
-.imgLogo{
-    flex-basis: 10%; /* Reduzco ligeramente el porcentaje para dejar espacio entre los elementos */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho especificado */
-    text-align: left;
-    width: 20%;
-    margin: 10px;
-}
-
-.nav-caja{
-    flex-basis: 40%;
-    box-sizing: border-box;
-    margin: 20px;
-}
-
-.nav-icono{
-    flex-basis: 30%;
-    text-align: right;
-    font-size: 40px; 
-    margin: 20px;
-}
-
-.nav-icono i{
-    color: #123666;
 }
 
 /* MAIN */
@@ -153,23 +75,23 @@ img {
 
 /* Estilos para formas de pago */
 
- /* Estilos para la información adicional */
- .precio-info-botones p {
-     margin: 0 0 10px;
- }
+/* Estilos para la información adicional */
+.precio-info-botones p {
+    margin: 0 0 10px;
+}
 
- .precio-info-botones ul {
-     list-style-type: none;
-     padding: 0;
- }
+.precio-info-botones ul {
+    list-style-type: none;
+    padding: 0;
+}
 
- .precio-info-botones li {
-     margin-bottom: 5px;
- }
+.precio-info-botones li {
+    margin-bottom: 5px;
+}
 
- .precio-info-botones a:hover {
-     text-decoration: underline;
- }
+.precio-info-botones a:hover {
+    text-decoration: underline;
+}
 
 /* Estilos para las especificaciones en tres columnas */
 .especificaciones {
@@ -217,25 +139,25 @@ img {
 
 /* FOOTER */
 
-footer{
+footer {
     background-color: #fbf8efc0;
     padding: 10px;
 }
 
-.icono{
+.icono {
     text-align: center;
     color: #123666;
     font-size: 35px;
     margin: 10px;
 }
 
-.containerFooter{
+.containerFooter {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
 }
 
-.seccion{
+.seccion {
     flex-basis: 33%;
     box-sizing: border-box;
     text-align: center;
@@ -243,19 +165,18 @@ footer{
     margin-bottom: 15px;
 }
 
-.seccion i{
+.seccion i {
     font-size: 20px;
 }
 
-.seccion p{
+.seccion p {
     margin: 6px;
-    font-family:'Hind Madurai', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
-.copyright{
+.copyright {
     text-align: center;
     font-size: 18px;
-    font-family:'Lora', serif;
+    font-family: 'Lora', serif;
     margin-bottom: 10px;
 }
-

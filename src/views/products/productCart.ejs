@@ -1,66 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/normalize.css">
-
+    <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="../css/productCart.css">
 
-    <!-- FUENTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Lora&family=Montserrat:wght@500&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet">
-    <!-- ICONO -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Invictus Hard Store</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <div class="nav-caja2">
-                    <a href="/"><i class="fa fa-bars"></i></a>
-                </div>
-
-                <img class="imgLogo" src="../images/logo-InvictusHardStore-1.png" alt="Logo">
-
-                <div class="nav-caja">
-                    <ul>
-                        <li>
-                            <a class="nav-lista" href="/">Home</a>
-                        </li>
-                        <li>
-                            <a class="nav-lista" href="/">Opcion2</a>
-                        </li>
-                        <li>
-                            <a class="nav-lista" href="/">Opcion 3</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav-icono">
-                    <a href="/login"><i class="fas fa-user-circle"></i></a>
-                    <a href="/"><i class="fas fa-cart-arrow-down"></i></a>
-                </div>
-            </div>
-        </nav>
+        <%- include('../partials/header.ejs') %>
     </header>
 
     <main>
@@ -203,34 +152,7 @@
 
     <footer>
 
-        <div class="icono">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-google-plus-square"></i>
-            <i class="fab fa-whatsapp-square"></i>
-        </div>
-
-        <div class="containerFooter">
-            <div class="seccion">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Direccion: Gral. Alvear N°244</p>
-                <p>San Salvador de Jujuy</p>
-            </div>
-
-            <div class="seccion">
-                <i class="fas fa-clock"></i>
-                <p>Horarios de Atención</p>
-                <p>Lunes a Viernes 8 a 12:30 Hs. y 18 a 21:30 Hs.</p>
-            </div>
-
-            <div class="seccion">
-                <i class="fas fa-headset"></i>
-                <p>Atención al Cliente: 0810-667-8392</p>
-                <p>consultas@invictusHardStore.com.ar</p>
-                <p>Lunes a viernes de 8 a 18hs.</p>
-            </div>
-        </div>
-
-        <p class="copyright">Copyright © 1991-2024 Invictus Hard Store S.R.L.</p>
+        <%- include('../partials/footer.ejs') %>
 
     </footer>
 

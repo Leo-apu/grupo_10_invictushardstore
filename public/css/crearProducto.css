@@ -1,0 +1,118 @@
+.article-crearProducto{
+    margin:0;
+    padding:0;
+    border-top:none;
+    border-bottom:none;
+    display:flex;
+    width:30%; 
+    color: #353E4A;
+    position:relative;
+    left: 35%;
+   
+}
+
+.crearProducto-titulo{
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    padding:10px;
+  
+    
+}
+
+.crearProducto-subtitulo{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+select{
+    border-radius: 5px;
+    height:40px;
+    border:none;
+}
+select:focus{
+    outline:none;
+    border:3px solid #9ACB34;
+}
+input{
+    border-radius: 5px;
+    height:40px;
+    border:none;
+}
+#nombre:focus{
+    outline:none;
+    border:3px solid #9ACB34;
+}
+precio-container:focus{
+    outline:none;
+    border:3px solid #9ACB34;
+}
+textarea:focus{
+    outline:none;
+    border:3px solid #9ACB34;
+}
+textarea{
+    border-radius: 5px;
+    height:100px;
+    border:none;
+}
+
+#imagen{
+    border-radius:5px;
+}
+
+label{
+    position:relative;
+    left: 20px;
+    display: flex;
+}
+.crearProducto-check{
+    position:relative;
+    bottom: 12px;
+    right:5px;
+}
+
+.botones{
+    display:flex;
+    justify-content: space-around;
+}
+.boton{
+    width: 150px;   
+    height: 30px;
+    border-radius:5px;
+    border:none;
+    transition: background-color, 0.5s;
+    transition: border,0.5;
+}
+.crear:hover{
+    background-color: #35e9628a;
+    border:1px solid #353E4A;
+}
+.volver:hover{
+    background-color: #bfc1c3;
+    border:1px solid #353E4A;
+}
+
+  .precio-container {
+    position: relative;
+  }
+  
+  .simbolo-moneda {
+    position: absolute;
+    left: 10px; /* Ajusta la posición según tus necesidades */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px; /* Ajusta el tamaño según tus necesidades */
+    color: #555; /* Ajusta el color según tus necesidades */
+  }
+  
+  #precio {
+    padding-left: 30px; /* Espacio para el símbolo de dólar */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%;
+  }
+  #precio:focus{
+    outline:none;
+    outline:none;
+    border:3px solid #9ACB34;
+  }

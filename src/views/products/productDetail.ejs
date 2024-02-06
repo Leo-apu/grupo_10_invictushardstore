@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/detalleProducto.css">
+
+        <title>Invictus Hard Store</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+    <main>
+        <div class="detalle-producto">
+            <!-- Parte 1: Imagen y Título -->
+            <div class="imagen-titulo">
+                <img id="imagen-principal" src="/images/memoriaRam1.png" alt="Producto principal">
+                <!-- Miniaturas de imágenes -->
+                <div id="miniaturas">
+                    <img class="miniatura-imagen" src="/images/memoriaRam1.png" alt="Miniatura 1"
+                        onclick="cambiarImagen('imagen_principal', 'miniatura1.jpg')">
+                    <img class="miniatura-imagen" src="/images/memoriaRam2.png" alt="Miniatura 2"
+                        onclick="cambiarImagen('imagen_principal', 'miniatura2.jpg')">
+                    <img class="miniatura-imagen" src="/images/memoriaRam3.png" alt="Miniatura 3"
+                        onclick="cambiarImagen('imagen_principal', 'miniatura3.jpg')">
+                </div>
+
+            </div>
+
+
+            <!-- Parte 2: Precio, Información y Botones -->
+            <div class="precio-info-botones">
+                <p>$41.757</p>
+                <a href="#" class="boton-pequeno">Comprar</a>
+                <a href="#" class="boton-pequeno">Agregar al Carrito</a>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+                <ul>
+                    <li>12 cuotas fijas de $6.855,12 con Ahora 12.</li>
+                    <li><a href="#">Ver cuotas</a></li>
+                </ul>
+                <p>Stock:</p>
+                <ul>
+                    <li>STOCK ALTO EN LA WEB</li>
+                    <li>Solo para venta web</li>
+                </ul>
+                <ul>
+                    <li>STOCK ALTO EN EL LOCAL</li>
+                    <li>Solo para venta presencial</li>
+                </ul>
+                <p>Retiro:</p>
+                <ul>
+                    <li>RETIRO ¡GRATIS!</li>
+                    <li>Floresta y Local Galería Jardín (CABA)</li>
+                </ul>
+                <ul>
+                    <li>Envío a todo el país.</li>
+                    <li>Envío Moto CABA llega el Lunes</li>
+                    <li><a href="#">Ver costo de envío</a></li>
+                </ul>
+                <p>Garantía:</p>
+                <ul>
+                    <li>GARANTÍA</li>
+                    <li>1080 días</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Parte 3: Especificaciones del Producto -->
+        <div class="especificaciones">
+            <div class="titulo-especificaciones">
+                <h2>Especificaciones del Producto</h2>
+            </div>
+            <div class="grupo-especificaciones">
+                <p class="categoria">General</p>
+                <ul>
+                    <li>Familia: Corsair</li>
+                    <li>Tipo De Memoria: DDR4</li>
+                    <li>Tamaño De Memoria: 8 GB</li>
+                    <li>Formato De Memoria: Udimm</li>
+                </ul>
+            </div>
+            <div class="grupo-especificaciones">
+                <p class="categoria">Funcionamiento</p>
+                <ul>
+                    <li>Latencia CAS: CL15</li>
+                    <li>Voltaje: 1.2 V</li>
+                    <li>Velocidad: 3200 MHz</li>
+                </ul>
+            </div>
+            <div class="grupo-especificaciones">
+                <p class="categoria">Extras</p>
+                <ul>
+                    <li>Pin De Memoria: 288</li>
+                    <li>Disipador De Calor: Sí</li>
+                    <li>Perfil De Perfomance: XMP 2.0</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

@@ -53,3 +53,6 @@ app.use('/', modificarProductoRoute);
 
 const registroRoutes = require('./routes/registroRoutes.js')
 app.use('/', registroRoutes);
+
+const productDetailRoutes = require('./routes/productDetailRoutes.js')
+app.use('/', productDetailRoutes);

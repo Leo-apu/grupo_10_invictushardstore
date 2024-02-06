@@ -26,20 +26,20 @@
         <section class="destacados">
             <h1>Productos destacados</h1>
             <div class="producto">
-                <article>
-                    <img src="../images/intel-i5.jpg" alt="">
-                    <div class="main-article">
-                        <div class="">
-                            <p class="titulo">PC INTEL I5 10400 SSD 240GB 8GB</p>
-                            <p class="descripcion">Disco Sólido: 240 Gb <br>
-                                Capacidad: 8 Gigas <br>
-                                Formato: DIMM
-                                Expandible: Si</p>
+                <% products.forEach((product) =>{ %>
+                    <article>
+                        <img src="../images/<%= product.img %>" alt="<%= product.titulo %>">
+                        <div class="main-article">
+                            <div class="">
+                                <p class="titulo"><%= product.titulo %></p>
+                                <p class="descripcion"><%= product.descripcion %></p>
+                            </div>
+                            <p class="precio"><%= product.precio %></p>
                         </div>
-                        <p class="precio">$539.990</p>
-                    </div>
-                </article>
+                    </article>
+                <% }) %>
 
+                <!--
                 <article>
                     <img src="../images/fuente_coolermaster.jpg" alt="">
                     <div class="main-article">
@@ -79,6 +79,7 @@
                         <p class="precio">$419.990</p>
                     </div>
                 </article>
+                -->
             </div>
         </section>
     </main>

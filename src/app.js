@@ -11,10 +11,9 @@ app.set('views', path.join(__dirname,'./views'));
 
 app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.html'));
-})
-
+//app.get('/', (req, res) => {
+//    res.sendFile(path.join(__dirname, '/views/index.html'));
+//})
 // app.get('/registro', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/views/registro.html'));
 // })
@@ -39,6 +38,9 @@ app.get('/', (req, res) => {
 // app.get('/detalleProducto', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/views/productDetail.html'));
 // })
+
+const indexRoute = require('./routes/indexRoutes.js')
+app.use('/', indexRoute);
 
 const productCartRoute = require('./routes/productCartRoutes.js')
 app.use('/', productCartRoute);

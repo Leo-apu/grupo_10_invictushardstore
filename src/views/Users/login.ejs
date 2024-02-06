@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <title>Invictus Hard Store</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <p class="title">INICIAR SESION</p>
+            <p class="signup">Inicie Sesion con su Cuenta de
+                <span>Invictus Hard Store</span>
+            </p>
+            <form class="form">
+                <div class="input-group">
+                    <input class="input" type="text" name="username" id="username" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+
+                </div>
+                <div class="flex-row">
+                    <div>
+                        <input type="checkbox">
+                        <label class="remember">Recuerdame </label>
+                    </div>
+                </div>
+                <button class="sign">INGRESAR</button>
+                <button class="register"><a href="/Users/registro">CREAR CUENTA</button>
+                <div class="forgot">
+                    <a rel="noopener noreferrer" href="#">¿ Olvidaste la contraseña ?</a>
+                </div>
+            </form>
+            <p class="signup">
+                Si tienes problemas para iniciar sesion escribemos a feedback_soporte@invictushardstore.com
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+
+</html>

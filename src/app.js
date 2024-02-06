@@ -56,3 +56,6 @@ app.use('/', registroRoutes);
 
 const productDetailRoutes = require('./routes/productDetailRoutes.js')
 app.use('/', productDetailRoutes);
+
+const loginRoute = require('./routes/loginRoutes.js')
+app.use('/', loginRoute);

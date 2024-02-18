@@ -1,61 +1,52 @@
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride =  require('method-override');
 const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3300;
 
+app.use(express.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method'));
+
 app.use(express.static(path.resolve(__dirname, "../public")));
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'./views'));
+const viewPath = ['views', 'views/products', 'views/users'];
+const createPathViews = (paths) => {
+  return paths.map((p) => path.join(__dirname, p));
+}
 
+app.set('view engine', 'ejs');
+app.set('views', createPathViews(viewPath));
 
 app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
 
-//app.get('/', (req, res) => {
-//    res.sendFile(path.join(__dirname, '/views/index.html'));
-//})
-// app.get('/registro', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/views/registro.html'));
-// })
-// app.get('/login', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/views/login.html'));
-// })
+const mainRouter = require('./routes/main');
+const productsRouter = require('./routes/products');
+const userRouter = require('./routes/users'); 
+
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', userRouter);
 
 
-// app.get('/registro', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/views/registro.html'));
-// })
+app.use((req, res, next) => next(createError(404)));
 
-//app.get('/login', (req, res) => {
-//    res.sendFile(path.join(__dirname, '/views/login.html'));
-//})
+// ************ error handler ************
+app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.path = req.path;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-//app.get('/registro', (req, res) => {
-//    res.sendFile(path.join(__dirname, '/views/registro.html'));
-//})
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
-
-// app.get('/detalleProducto', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/views/productDetail.html'));
-// })
-
-const indexRoute = require('./routes/indexRoutes.js')
-app.use('/', indexRoute);
-
-const productCartRoute = require('./routes/productCartRoutes.js')
-app.use('/', productCartRoute);
-
-const crearProductoRoute = require('./routes/crearProductoRoutes.js')
-app.use('/', crearProductoRoute);
-
-const modificarProductoRoute = require('./routes/modificarProductoRoutes.js')
-app.use('/', modificarProductoRoute);
-
-const registroRoutes = require('./routes/registroRoutes.js')
-app.use('/', registroRoutes);
-
-const productDetailRoutes = require('./routes/productDetailRoutes.js')
-app.use('/', productDetailRoutes);
-
-const loginRoute = require('./routes/loginRoutes.js')
-app.use('/', loginRoute);
+// ************ exports app - dont'touch ************
+module.exports = app;

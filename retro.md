@@ -79,3 +79,40 @@ A continuación, presentamos con el equipo un análisis del segundo **Sprint**.
 * No dividir adecuadamente las tareas entre los miembros del equipo.
 
 * No solicitar ayuda cuando se requiere.
+
+==================================================================================
+
+# :pushpin: Storytelling: Sprint-3:
+
+A continuación, presentamos con el equipo un análisis del tercer **Sprint**. 
+El equipo ha identificado varios aspectos positivos y áreas de mejora que son importantes para la continuación del proyecto.
+
+## *Retrospectiva* :memo:
+
+> :heavy_exclamation_mark: Comenzar a hacer:  
+
+* Reconocer la necesidad de gestionar horarios específicos para reuniones, lo que puede ayudar a garantizar una comunicación más efectiva.
+
+* Mejorar la gestión del tiempo y evitar posibles retrasos en futuros sprints.
+
+> :bangbang: Hacer más:
+
+* Mejorar la comunicación entre los miembros del equipo es crucial para garantizar una colaboración efectiva y minimizar malentendidos. 
+
+> :heavy_check_mark: Continuar haciendo:
+
+* Priorizar las tareas de acuerdo con su importancia y complejidad, lo que garantizó que los aspectos mas relevantes del proyecto se abordaran primero.
+
+* Seguir manteniendo una distribución clara de tareas y responsabilidades, lo que contribuye a la eficiencia y a una coordinación general.
+
+* El hecho de plantear dudas y colaborar en la búsqueda de soluciones demuestra un compromiso continuo con la mejora y la resolución de problemas de manera conjunta.
+
+> :point_right: Hacer menos:
+
+* Evitar desviaciones del enfoque principal del proyecto para mantenerse en la dirección correcta y lograr los objetivos establecidos.
+
+> :x: Dejar de hacer:
+
+* Se identificaron algunos problemas relacionados con la gestión del tiempo, es necesario mejorar la planificación para evitar retrasos futuros.
+ 
+Este análisis del tercer sprint ha proporcionado al equipo una visión clara de sus fortalezas y áreas de mejora. Al abordar estos aspectos durante el próximo sprint, el equipo puede seguir avanzando hacia el éxito del proyecto.

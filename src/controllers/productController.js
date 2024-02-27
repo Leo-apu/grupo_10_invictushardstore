@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const cripto = require('crypto');
 
-const productPathFile = path.join(__dirname,'../models/products.json');
+const productPathFile = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productPathFile,'utf-8'));
 
 const controller = {
@@ -12,7 +12,12 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-        res.render('productDetail');
+		const productId = req.params.id;
+        const product = products.find(product => product.id === productId);
+        if (!product) {
+            return res.status(404).send('Product not found');
+        }
+        res.render('productDetail', { product, pageTitle: product.name });
 	},
 
 	// list 
@@ -54,12 +59,26 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		res.render('modificarProducto');
+		const productId = req.params.id;
+		const productToEdit = products.find(product => product.id === productId);
+		res.render('modificarProducto', { productToEdit });
 	},
 
 	// Update - Method to update
 	update: (req, res) => {
-		return res.redirect('/products');
+		const productId = req.params.id;
+		const productToUpdateIndex = products.findIndex(product => product.id === productId);
+		console.log(productToUpdateIndex);
+		if (productToUpdateIndex === -1) {
+			return res.status(404).send('Product not found');
+		}
+	
+		const updatedProductData = req.body;
+		
+		products[productToUpdateIndex] = { ...products[productToUpdateIndex], ...updatedProductData };
+	
+		fs.writeFileSync(productPathFile, JSON.stringify(products, null, 2));
+		return res.redirect('/products/list');
 	},
 
 	// Delete - Delete one product from DB

@@ -4,8 +4,8 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/crearProducto.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/crearProducto.css">
 
         <title>Crear producto</title>
 </head>
@@ -17,61 +17,50 @@
 
     <main>
         <section class="section-crearProducto">
-            <form action="/crear-producto" method="post" enctype="multipart/form-data">
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" >
 
-                <!-- Información General -->
-                <article class="article-crearProducto">
-                    <h2 class="crearProducto-titulo">Información General</h2>
-                    <label class="crearProducto-subtitulo" for="nombre">Nombre del Producto:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+               <!-- Información General -->
+               <article class="article-crearProducto">
+                <h2 class="crearProducto-titulo">Información General</h2>
+                <label class="crearProducto-subtitulo" for="name">Nombre del Producto:</label>
+                <input type="text" id="name" name="name" value="<%= productToEdit.name %>" required>
 
-                    <label class="crearProducto-subtitulo" for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                    <!-- Precio del Producto -->
+                <label class="crearProducto-subtitulo" for="description">Descripción:</label>
+                <textarea id="description" name="description" rows="4" required> <%= productToEdit.description %></textarea>
+                <!-- Precio del Producto -->
 
-                    <label class="precio-container crearProducto-subtitulo" for="precio">Precio:</label>
-                    <label for="precio">Precio:</label>
-                    <div class="precio-container">
-                        <span class="simbolo-moneda">$</span>
-                        <input type="text" id="precio" name="precio" required>
-                    </div>
+                <label class="precio-container crearProducto-subtitulo" for="price">Precio:</label>
+                <label for="precio">Precio:</label>
+                <div class="precio-container">                    
+                    <input type="text" id="price" name="price" value="<%= productToEdit.price %>" required>
+                </div>
 
-                    <!-- Imagen del Producto -->
-                    <h2 class="crearProducto-titulo">Imagen del Producto</h2>
+                <!-- Imagen del Producto -->
+                <h2 class="crearProducto-titulo">Imagen del Producto</h2>
 
-                    <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                <input type="file" id="imagen" name="imagen" accept="image/*" >
 
-                    <!-- Categoría del Producto -->
-                    <h2 class="crearProducto-titulo">Categorías</h2>
-                    <select id="categoria" name="categoria" required>
-                        <option value="almacenamiento">Almacenamiento</option>
-                        <option value="fuentes">Fuentes</option>
-                        <option value="gpus">Placas de video</option>
-                        <option value="ram">Memorias RAM</option>
-                        <option value="procesadores">Procesadores</option>
-                        <option value="motherboards">Motherboards</option>
-                        <option value="gabinetes">Gabinetes</option>
+                <!-- Categoría del Producto -->
+                <div class="col-12 col-md-6">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <select id="categoria" name="category" class="form-input" required>
+                        <option value="almacenamiento" <% if (productToEdit.category === 'almacenamiento') { %> selected <% } %>>Almacenamiento</option>
+                        <option value="fuentes" <% if (productToEdit.category === 'fuentes') { %> selected <% } %>>Fuentes</option>
+                        <option value="gpus" <% if (productToEdit.category === 'gpus') { %> selected <% } %>>Placas de video</option>
+                        <option value="ram" <% if (productToEdit.category === 'ram') { %> selected <% } %>>Memorias RAM</option>
+                        <option value="procesadores" <% if (productToEdit.category === 'procesadores') { %> selected <% } %>>Procesadores</option>
+                        <option value="motherboards" <% if (productToEdit.category === 'motherboards') { %> selected <% } %>>Motherboards</option>
+                        <option value="gabinetes" <% if (productToEdit.category === 'gabinetes') { %> selected <% } %>>Gabinetes</option>
                     </select>
+                </div>
 
-                    <!-- Colores del Producto -->
-                    <h2 class="crearProducto-titulo">Colores</h2>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="rojo">Rojo
-                    </label>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="azul">Azul
-                    </label>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="verde">Verde
-                    </label>
-
-
-                    <div class="botones">
-                        <!-- Botón de Enviar -->
-                        <button class="boton crear" type="submit">Modificar</button>
-                        <button class="boton volver" type="submit">Volver</button>
-                    </div>
-                </article>
+                
+                <div class="botones">
+                    <!-- Botón de Enviar -->
+                    <button class="boton crear" type="submit">MODIFICAR</button>
+                  <!--  <button class="boton volver" type="submit">Volver</button> -->
+                </div>
+            </article>
 
 
 
@@ -83,7 +72,7 @@
 
 
 
-            </form>
+        </form>
         </section>
     </main>
     <br>

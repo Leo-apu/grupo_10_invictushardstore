@@ -8,7 +8,7 @@ router.get('/', productsController.index);
 
 
 router.get('/create/', productsController.create); 
-router.post('/', productsController.store); 
+router.post('/create/', productsController.store); 
 
 router.get('/cart/', productsController.cart);
 
@@ -20,6 +20,6 @@ router.put('/:id', productsController.update);
 
 
 router.delete('/:id', productsController.destroy); 
-
+router.get('/list',productsController.list);
 
 module.exports = router;

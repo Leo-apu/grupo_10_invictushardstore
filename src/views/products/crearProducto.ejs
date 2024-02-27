@@ -17,23 +17,23 @@
 
     <main>
         <section class="section-crearProducto">
-            <form action="/crear-producto" method="post" enctype="multipart/form-data">
+            <form action="/products/create" method="POST">
 
                 <!-- Información General -->
                 <article class="article-crearProducto">
                     <h2 class="crearProducto-titulo">Información General</h2>
-                    <label class="crearProducto-subtitulo" for="nombre">Nombre del Producto:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <label class="crearProducto-subtitulo" for="name">Nombre del Producto:</label>
+                    <input type="text" id="name" name="name" required>
 
-                    <label class="crearProducto-subtitulo" for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                    <label class="crearProducto-subtitulo" for="description">Descripción:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
                     <!-- Precio del Producto -->
 
-                    <label class="precio-container crearProducto-subtitulo" for="precio">Precio:</label>
+                    <label class="precio-container crearProducto-subtitulo" for="price">Precio:</label>
                     <label for="precio">Precio:</label>
                     <div class="precio-container">
                         <span class="simbolo-moneda">$</span>
-                        <input type="text" id="precio" name="precio" required>
+                        <input type="text" id="price" name="price" required>
                     </div>
 
                     <!-- Imagen del Producto -->
@@ -43,7 +43,7 @@
 
                     <!-- Categoría del Producto -->
                     <h2 class="crearProducto-titulo">Categorías</h2>
-                    <select id="categoria" name="categoria" required>
+                    <select id="categoria" name="category" required>
                         <option value="almacenamiento">Almacenamiento</option>
                         <option value="fuentes">Fuentes</option>
                         <option value="gpus">Placas de video</option>
@@ -53,23 +53,11 @@
                         <option value="gabinetes">Gabinetes</option>
                     </select>
 
-                    <!-- Colores del Producto -->
-                    <h2 class="crearProducto-titulo">Colores</h2>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="rojo">Rojo
-                    </label>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="azul">Azul
-                    </label>
-                    <label>
-                        <input class="crearProducto-check" type="checkbox" name="color" value="verde">Verde
-                    </label>
-
-
+                    
                     <div class="botones">
                         <!-- Botón de Enviar -->
                         <button class="boton crear" type="submit">Crear</button>
-                        <button class="boton volver" type="submit">Volver</button>
+                      <!--  <button class="boton volver" type="submit">Volver</button> -->
                     </div>
                 </article>
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Invictus Hard Store</title>
+</head>
+
+<body>
+
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+
+    <main>
+        <div class="container-slider"> 
+            <div class="slider-frame">
+                <ul>
+                    <li><img src="../images/slider1.jpg"></li>
+                    <li><img src="../images/slider2.jpg"></li>
+                    <li><img src="../images/slider3.jpg"></li>
+                </ul>
+            </div>
+        </div>
+    
+        <section class="destacados">
+            <h1>Productos destacados</h1>
+            <div class="producto">
+                <% products.forEach((product) =>{ %>
+                    <article>
+                        <img src="../images/products/<%= product.image %>" alt="<%= product.name %>">
+                        <div class="main-article">
+                            <div class="">
+                                <p class="titulo"><%= product.name %></p>
+                                <p class="descripcion"><%= product.description %></p>
+                            </div>
+                            <p class="precio"><%= product.price %></p>
+                        </div>
+                    </article>
+                <% }) %>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+
+</body>
+</html>

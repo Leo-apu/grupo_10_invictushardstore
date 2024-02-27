@@ -27,8 +27,10 @@
             <h1>Productos destacados</h1>
             <div class="producto">
                 <% products.forEach((product) =>{ %>
-                    <article>
+                <article>
+                    <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
                         <img src="../images/products/<%= product.image %>" alt="<%= product.name %>">
+                        
                         <div class="main-article">
                             <div class="">
                                 <p class="titulo"><%= product.name %></p>
@@ -36,9 +38,9 @@
                             </div>
                             <p class="precio"><%= product.price %></p>
                         </div>
+                    </a>
                     </article>
-                <% }) %>
-
+                    <% }) %>
             </div>
         </section>
     </main>

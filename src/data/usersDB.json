@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "username": "CruzLeo",
+        "firstname": "Leandro",
+        "lastname": "Cruz",
+        "email": "leovcruz@gmail.com",
+        "password": "1234a",
+        "role": "Administrador",
+        "image": "user-default.png"
+    },
+    {
+        "id": "2",
+        "username": "ZamudioK",
+        "firstname": "Cintia",
+        "lastname": "Zamudio",
+        "email": "cintiaZamudio@gmail.com",
+        "password": "1234b",
+        "role": "usuario",
+        "image": "user-default.png"
+    },
+    {
+        "id": "3",
+        "username": "MascareñoJ",
+        "firstname": "Jonathan",
+        "lastname": "Mascareño",
+        "email": "JonaMascareño@gmail.com",
+        "password": "1234c",
+        "role": "usuario",
+        "image": "user-default.png"
+    },
+    {
+        "id": "4",
+        "username": "TastacaA",
+        "firstname": "Agustin",
+        "lastname": "Tactaca",
+        "email": "AgustinTactaca@gmail.com",
+        "password": "1234d",
+        "role": "usuario",
+        "image": "user-default.png"
+    },
+    {
+        "id": "5",
+        "username": "MirandaI",
+        "firstname": "Ismael",
+        "lastname": "Miranda",
+        "email": "IsmaelMiranda@gmail.com",
+        "password": "1234e",
+        "role": "usuario",
+        "image": "user-default.png"
+    },
+    {
+        "id": "6",
+        "username": "Admin",
+        "firstname": "Admin",
+        "lastname": "Admin",
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "role": "Administrador",
+        "image": "user-default.png"
+    },
+    {
+        "id": "7",
+        "username": "Usuario",
+        "firstname": "Usuario",
+        "lastname": "Usuario",
+        "email": "usuario@gmail.com",
+        "password": "usuario",
+        "role": "usuario",
+        "image": "user-default.png"
+    }
+]

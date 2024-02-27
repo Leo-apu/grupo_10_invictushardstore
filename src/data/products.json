@@ -1,0 +1,75 @@
+[
+  {
+    "id": "1",
+    "name": "MSI PRO H410M-B s1200 DDR4",
+    "description": "   La placa base MSI PRO H410M-B es una placa madre diseñada para adaptarse a diversas necesidades informáticas. Equipada con el chipset Intel H410, esta placa base es compatible con procesadores Intel de decima generación (LGA 1200). Ofrece soporte para tarjetas gráficas PCIe 3.0 x16 y memoria DDR4 de doble canal de hasta 64 GB, ideal para aplicaciones y/o gaming. Con 4 ranuras SATA de 64 Gb/s, garantiza un almacenamiento eficiente. En cuanto a la conectividad, ofrece una red LAN de 1G y una variedad de puertos, incluyendo HDMI 1.4 y VGA para soportar monitores antiguos, así como puertos USB 3.2 Gen1 para una rápida transferencia de datos y audio HD 7.1 con Audio Boost.",
+    "category": "motherboards",
+    "price": 25685,
+    "image": "Mother_MSI_PRO_H410M-B_s1200_DDR4.jpg",
+    "imagen": "phmorris-removebg-preview.png"
+  },
+  {
+    "id": "2",
+    "name": " Intel Core i5 10400F 4.3GHz Turbo 1200 Comet Lake",
+    "description": "Tarda Menos y hacé mas, con los nuevos procesadores Intel Core de 10ma gen. con un rendimiento sin igual, la nueva generacion de Intel Core, desafia los límites, obteniendo velocidades mayores y menores consumos de energia.",
+    "category": "procesadores",
+    "price": 136.9,
+    "image": "Procesador_IntelCore_I5_10100F.png"
+  },
+  {
+    "id": "3",
+    "name": "MSI GeForce RTX 4060 8GB GDDR6 Ventus 2X Black OC",
+    "description": "La GeForce RTX™ 4060 te permite enfrentarte a los últimos juegos y aplicaciones con la arquitectura ultraeficiente NVIDIA Ada Lovelace. Experimenta juegos inmersivos acelerados por IA con trazado de rayos y DLSS 3, y potencia tu proceso creativo y productividad con NVIDIA Studio.",
+    "category": "placa de video",
+    "price": 471.79,
+    "image": "Placa_de_Video_MSI_GeForce_RTX_4060_8GB_GDDR6_Ventus_2X_Black.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Teclado Mecanico Redragon Dragonborn K630 RGB 60% Outemu RED",
+    "description": "El Dragonborn es un teclado mecánico 60%, compacto, robusto y súper transportable, con prestaciones óptimas para el juego competitivo de alto nivel: switches Redragon Brown, tecla Fn, bloqueo de tecla de Windows, cable desmontable y la mejor calidad de construcción",
+    "category": "periféricos",
+    "price": 38.45,
+    "image": "Teclado_Mecanico_Redragon_Dragonborn_K630_RGB_60__Outemu_RED.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Disco Sólido SSD Kingston 960GB A400 500MB/s",
+    "description": "La unidad A400 de estado sólido de Kingston ofrece enormes mejoras en la velocidad de respuesta, sin actualizaciones adicionales del hardware. Brinda lapsos de arranque, carga y de transferencia de archivos increíblemente más breves en comparación con las unidades de disco duro mecánico. Apoyada en su controlador de la más reciente generación, que ofrece velocidades de lectura y escritura de hasta 500 MB/s y 450 MB/s1, respectivamente, esta unidad SSD es 10 veces más rápida que los discos duros tradicionales y provee un mejor rendimiento, velocidad de respuesta ultrarrápida en el procesamiento multitareas y una aceleración general del sistema.",
+    "category": "almacenamiento",
+    "price": 71.7,
+    "image": "Disco_SSD_Kingston_960GB_A400.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Memoria Kingston DDR4 16GB 3200Mhz Fury CL16",
+    "description": "La memoria RAM Kingston FURY BEAST DDR4, modelo KF432C16BB1/16, es un componente de alta velocidad diseñado para su uso en PC y servidores. Con una capacidad de 16GB y una velocidad del reloj de 3200MHz, esta memoria ofrece un rendimiento excepcional para aplicaciones exigentes.",
+    "category": "Memoria RAM",
+    "price": 54.2,
+    "image": "Memoria_Kingston_DDR4_16GB_3200Mhz_Fury_CL16.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Mouse Redragon Cobra M711 FPS RGB 24.000 dpi",
+    "description": "Mouse diseñado ergonómicamente para largas sesiones de juego, con sensor de alta precisión.",
+    "category": "periféricos",
+    "price": 27,
+    "image": "Mouse_Redragon_Cobra_M711_FPS_RGB_24.000_dpi.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Disco Rigido WD 2TB BLUE 256MB SATA 6.0GB/s 7200RPM",
+    "description": "Potencie el almacenamiento de su PC con los discos WD Blue, la marca diseñada para las PC de escritorio y todo en uno con diversas capacidades de almacenamiento.",
+    "category": "almacenamiento",
+    "price": 89.1,
+    "image": "Disco_Rigido_WD_2TB_BLUE_256MB_SATA_6.0GB_s_7200RPM.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Auriculares Redragon H320 Lamia RGB 7.1",
+    "description": "Auriculares Redragon H320 Lamia RGB 7.1.",
+    "category": "periféricos",
+    "price": 48.9,
+    "image": "Auriculares_Redragon_H320_Lamia_RGB_7.1.jpg"
+  }
+]

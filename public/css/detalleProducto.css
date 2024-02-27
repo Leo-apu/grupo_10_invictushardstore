@@ -88,6 +88,23 @@ img {
     background-color: #0056b3;
 }
 
+.boton-eliminar {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 10px;
+    width: 40%;
+    font-size: 14px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333;
+}
+
 /* Estilos para formas de pago */
 
  /* Estilos para la información adicional */

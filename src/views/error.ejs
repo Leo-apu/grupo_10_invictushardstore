@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Informática - ¡Ups, ha ocurrido un error!</title>
+    <style>
+        html, body {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            background-color: #04D0D9;
+            margin: 0;
+            padding: 0;
+            color: #353E4A;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #353E4A;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            color: #9ACB34;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 4rem;
+            color: #fff;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        pre {
+            font-size: 1.4rem;
+            color: #b52626;
+            border: solid 2px #9ACB34;
+            display: block;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            background-color: #b9b9b9;
+        }
+        @media screen and (max-width: 834px) {
+            .container {
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            pre {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            pre {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Ups, ha ocurrido un error!</h1>
+        <h2 style="color: crimson;"><%= error.status %></h2>
+        <p>Ocurrió un error al intentar acceder a: <b><%= path %></b></p>
+        <pre><%= error.stack %></pre>
+    </div>
+</body>
+</html>

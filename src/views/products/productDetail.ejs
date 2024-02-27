@@ -3,8 +3,8 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/detalleProducto.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/detalleProducto.css">
 
         <title>Invictus Hard Store</title>
 </head>
@@ -18,14 +18,14 @@
         <div class="detalle-producto">
             <!-- Parte 1: Imagen y Título -->
             <div class="imagen-titulo">
-                <img id="imagen-principal" src="/images/memoriaRam1.png" alt="Producto principal">
+                <img id="imagen-principal" src="/images/products/<%= product.image %>" alt="Producto principal">
                 <!-- Miniaturas de imágenes -->
                 <div id="miniaturas">
-                    <img class="miniatura-imagen" src="/images/memoriaRam1.png" alt="Miniatura 1"
+                    <img class="miniatura-imagen" src="/images/products/<%= product.image %>" alt="Miniatura 1"
                         onclick="cambiarImagen('imagen_principal', 'miniatura1.jpg')">
-                    <img class="miniatura-imagen" src="/images/memoriaRam2.png" alt="Miniatura 2"
+                    <img class="miniatura-imagen" src="/images/products/default-image.png" alt="Miniatura 2"
                         onclick="cambiarImagen('imagen_principal', 'miniatura2.jpg')">
-                    <img class="miniatura-imagen" src="/images/memoriaRam3.png" alt="Miniatura 3"
+                    <img class="miniatura-imagen" src="/images/products/default-image.png" alt="Miniatura 3"
                         onclick="cambiarImagen('imagen_principal', 'miniatura3.jpg')">
                 </div>
 
@@ -34,9 +34,14 @@
 
             <!-- Parte 2: Precio, Información y Botones -->
             <div class="precio-info-botones">
-                <p>$41.757</p>
+                <p>$ <%= product.price %></p>
                 <a href="#" class="boton-pequeno">Comprar</a>
                 <a href="#" class="boton-pequeno">Agregar al Carrito</a>
+                <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: green;">EDITAR PRODUCTO</a>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: block; margin-bottom: 8px;">
+                    <button type="submit"  class="boton-eliminar">ELIMINAR</button>
+                </form>
+                
                 <label for="cantidad">Cantidad:</label>
                 <input type="number" id="cantidad" name="cantidad" value="1" min="1">
                 <ul>
@@ -78,18 +83,14 @@
             <div class="grupo-especificaciones">
                 <p class="categoria">General</p>
                 <ul>
-                    <li>Familia: Corsair</li>
-                    <li>Tipo De Memoria: DDR4</li>
-                    <li>Tamaño De Memoria: 8 GB</li>
-                    <li>Formato De Memoria: Udimm</li>
+                    <li><%= product.name %></li>
+                    <li><%= product.category %></li>
                 </ul>
             </div>
             <div class="grupo-especificaciones">
-                <p class="categoria">Funcionamiento</p>
+                <p class="categoria">Descripcion</p>
                 <ul>
-                    <li>Latencia CAS: CL15</li>
-                    <li>Voltaje: 1.2 V</li>
-                    <li>Velocidad: 3200 MHz</li>
+                    <p><%= product.description %></p>
                 </ul>
             </div>
             <div class="grupo-especificaciones">

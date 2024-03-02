@@ -22,9 +22,6 @@ const controller = {
 
 	// list 
 	list: (req, res) => {
-		console.log(products);
-
-
 		res.render('listarProductos',{products});
 	},
 
@@ -37,14 +34,14 @@ const controller = {
 	store: (req, res) => {
 		const { name, description, category , price  } = req.body;
 
-		console.log('este es ',req.body);
+		let priceNumber = parseFloat(price);
 
 		const newProduct = {
-			id : crypto.randomUUID(),
+			id : cripto.randomUUID(),
 			name,
 			description,
 			category,
-			price
+			price : priceNumber
 
 		};
 
@@ -83,7 +80,14 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		return res.redirect('/products');
+		const productId = req.params.id;
+		const productToDeleteIndex = products.findIndex(product => product.id === productId);
+
+		products.splice(productToDeleteIndex, 1);
+
+		fs.writeFileSync(productPathFile, JSON.stringify(products, null, 2));
+
+		return res.redirect('/products/list');
 	},
 
 	cart: (req, res) => {

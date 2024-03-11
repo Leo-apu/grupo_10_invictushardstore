@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <title>Invictus Hard Store</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div>
+                <div>
+                    <h1 class="profile-title">Información personal</h1>
+                    <h3 class="profile-userName">Hola!, <%= user.username %></h2>
+                    <p class="profile-userText">Nombre: <%= user.firstName %></p>
+                    <p class="profile-userText">Apellido: <%= user.lastName %></p>
+                    <p class="profile-userText">Tu correo registrado es: <%= user.email %></p>
+                    <img class="profile-userImage" src="/images/users/<%= user.image %>">
+                </br>
+                
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+
+</html>

@@ -78,5 +78,15 @@
   "password": "$2a$10$sVDaw1lfB6MmUVhTqKQVouBvA1KwuydWhdj51pbtLIwu4g6Y/4ROi",
   "role": "Usuario",
   "image": "user-1710122649438.png"
+ },
+ {
+  "id": 9,
+  "username": "usuarioprueba",
+  "firstName": "Eugenio",
+  "lastName": "Mendez",
+  "email": "eugemend@gmail.com",
+  "password": "$2a$10$LOq8DkIKemCSa6Nx.D90aenVnVGL.5pD6aNZNJWQrtbeqQu5hg4/2",
+  "role": "Usuario",
+  "image": "user-1710127901963.jpg"
  }
 ]

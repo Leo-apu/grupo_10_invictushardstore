@@ -46,20 +46,18 @@ body {
     max-width: 200px;
 }
 
-.form-register {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #9ACB34;
-    padding: 20px;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
-.form-register input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+.form-register {
+    max-width: max-content;
+    margin: 0 auto;
+    background-color: #9ACB34;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-register input[type="submit"] {
@@ -68,9 +66,71 @@ body {
     cursor: pointer;
 }
 
+/* Ajustes específico*/
 .form-register input {
-    width: 48%;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+}
+
+.form-register input[type="file"] {
+    width: 100%;
+    border: solid 1px #ffffff;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.form-register select {
+    width: 100%;
+    border: solid 1px #ffffff;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.class-checkbox{
+    text-align: center;
+    width: 100%;
+}
+
+.class-checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.class-checkbox input[type="checkbox"] {
+    margin: 10px;
+    vertical-align: middle;
+    width: 20px; 
+    height: 20px; 
+}
+
+.div-container {
+    display: flex; /* Flexbox --> alinear los elementos horizontalmente */
+}
+
+.class-input{
+    flex: 1; /* Cada input ocupara un espacio igual dentro del contenedor */
+    height: 40px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
     box-sizing: border-box;
+}
+
+.class-input + .class-input {
+    margin-left: 15px; 
 }
 
 .footer {
@@ -80,13 +140,6 @@ body {
     padding: 10px;
 }
 
-/* Ajustes específico*/
-.form-register input[name="email"] {
-    width: 100%; 
-}
-.form-register input[type="submit"] {
-    width: 100%;
-}
 
 /* Ajustes para tamaños de pantalla más pequeños (tablets y celulares) */
 @media screen and (max-width: 768px) {
@@ -112,6 +165,7 @@ body {
     .logo {
         order: 1; /* Cambio el oreden*/
     }
+
     .logo img {
         max-width: 400px;
     }
@@ -122,5 +176,18 @@ body {
 
     .form-register input {
         width: 100%;
+    } 
+
+    .div-container {
+        flex-direction: column; /* cambia dirección del flex a columna */
+    }
+
+    .class-input {
+       flex: none; 
+       width: 100%; 
+    }
+
+    .class-input + .class-input {
+       margin-left: 0px; 
     }
 }

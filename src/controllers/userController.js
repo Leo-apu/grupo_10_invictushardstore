@@ -9,6 +9,12 @@ const User = require('../models/User')
 const bcryptjs = require('bcryptjs');
 
 const controller = {
+	index: (req, res) => {
+		const user = req.session.userLogged;
+		res.render('index', {user: user, products: products.results});
+	},
+	search: (req, res) => {
+	},	
 
 	register : (req, res) => {
         res.render('registro');

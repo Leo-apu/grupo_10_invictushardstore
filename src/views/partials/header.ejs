@@ -21,6 +21,17 @@
         </div>
 
         <div class="nav-icono">
+      
+
+            <% if (typeof user !== 'undefined' && user) { %>
+            <div class="dropdown">
+                <button><%= user.username %></button>
+                <div class="dropdown-options">
+                  <a href="/users/profile">Perfil</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>      
+              <% } %>
             <a href="/Users/login"><i class="fas fa-user-circle"></i></a>
             <a href="/products/cart"><i class="fas fa-cart-arrow-down"></i></a>
         </div>

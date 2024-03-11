@@ -6,7 +6,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	index: (req, res) => {
-		res.render('index', {products: products.results});
+		const user = req.session.userLogged;
+		res.render('index', {user: user, products: products.results});
 	},
 	search: (req, res) => {
 	},	

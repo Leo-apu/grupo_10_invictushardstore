@@ -6,13 +6,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3300;
+const session = require('express-session');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-
+app.use(session({
+  secret: "Frase secreta",
+  resave: false,
+  saveUninitialized: false,
+}))
 app.use(express.static(path.resolve(__dirname, "../public")));
 
 const viewPath = ['views', 'views/products', 'views/users'];

@@ -26,5 +26,6 @@ router.get('/profile', userController.profile);
 router.post('/login', userController.loginProcess);
 router.get('/register', userController.register); 
 router.post('/register', upload.single('image'), userController.proccesRegister);
+router.get('/logout', userController.logout); 
 
 module.exports = router;

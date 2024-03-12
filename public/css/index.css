@@ -343,6 +343,7 @@ footer{
     display: inline-block;
     position: relative;
     bottom: 7px;
+    z-index: 3;
   }
   
   button{

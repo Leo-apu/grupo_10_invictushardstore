@@ -19,7 +19,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }))
+
 app.use(cookieParser());
+
 app.use(userMenu);
 
 app.use(express.static(path.resolve(__dirname, "../public")));

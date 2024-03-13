@@ -9,13 +9,14 @@ function userMenu(req, res, next) {
     let userFromCookie = user.findByField('email', emailCookie);
 
     if (userFromCookie) {
-        req.session.userLog = userFromCookie;
+        req.session.userLogged = userFromCookie;
     }
 
     if (req.session && req.session.userLogged) {
         res.locals.isLoged = true;
         res.locals.userLogged = req.session.userLogged;
     }
+
 
     next();
 }

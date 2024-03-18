@@ -116,3 +116,34 @@ El equipo ha identificado varios aspectos positivos y áreas de mejora que son i
 * Se identificaron algunos problemas relacionados con la gestión del tiempo, es necesario mejorar la planificación para evitar retrasos futuros.
  
 Este análisis del tercer sprint ha proporcionado al equipo una visión clara de sus fortalezas y áreas de mejora. Al abordar estos aspectos durante el próximo sprint, el equipo puede seguir avanzando hacia el éxito del proyecto.
+
+==================================================================================
+
+# :pushpin: Storytelling: Sprint-4:
+
+A continuación, presentamos con el equipo un análisis del cuarto **Sprint**. 
+
+## *Retrospectiva* :memo:
+
+> :heavy_exclamation_mark: Comenzar a hacer:  
+
+* Coordinar horarios para realizar una revisión de los puntos asignados en el sprint.
+
+> :bangbang: Hacer más:
+
+* Organizar reuniones grupales coordinando horarios adecuados.
+
+> :heavy_check_mark: Continuar haciendo:
+
+* Distribuir las tareas asignadas de manera eficiente.
+
+* Resolver dudas en equipo sobre alguna tarea.
+
+> :point_right: Hacer menos:
+
+* Evitar distracciones que nos alejen del enfoque principal del proyecto.
+
+> :x: Dejar de hacer:
+
+* Evitar que las consultas se realicen casi a la fecha de entrega.
+ 

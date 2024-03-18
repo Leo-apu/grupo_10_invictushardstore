@@ -1,72 +1,102 @@
 [
-    {
-        "id": "1",
-        "username": "CruzLeo",
-        "firstname": "Leandro",
-        "lastname": "Cruz",
-        "email": "leovcruz@gmail.com",
-        "password": "1234a",
-        "role": "Administrador",
-        "image": "user-default.png"
-    },
-    {
-        "id": "2",
-        "username": "ZamudioK",
-        "firstname": "Cintia",
-        "lastname": "Zamudio",
-        "email": "cintiaZamudio@gmail.com",
-        "password": "1234b",
-        "role": "usuario",
-        "image": "user-default.png"
-    },
-    {
-        "id": "3",
-        "username": "MascareñoJ",
-        "firstname": "Jonathan",
-        "lastname": "Mascareño",
-        "email": "JonaMascareño@gmail.com",
-        "password": "1234c",
-        "role": "usuario",
-        "image": "user-default.png"
-    },
-    {
-        "id": "4",
-        "username": "TastacaA",
-        "firstname": "Agustin",
-        "lastname": "Tactaca",
-        "email": "AgustinTactaca@gmail.com",
-        "password": "1234d",
-        "role": "usuario",
-        "image": "user-default.png"
-    },
-    {
-        "id": "5",
-        "username": "MirandaI",
-        "firstname": "Ismael",
-        "lastname": "Miranda",
-        "email": "IsmaelMiranda@gmail.com",
-        "password": "1234e",
-        "role": "usuario",
-        "image": "user-default.png"
-    },
-    {
-        "id": "6",
-        "username": "Admin",
-        "firstname": "Admin",
-        "lastname": "Admin",
-        "email": "admin@gmail.com",
-        "password": "admin",
-        "role": "Administrador",
-        "image": "user-default.png"
-    },
-    {
-        "id": "7",
-        "username": "Usuario",
-        "firstname": "Usuario",
-        "lastname": "Usuario",
-        "email": "usuario@gmail.com",
-        "password": "usuario",
-        "role": "usuario",
-        "image": "user-default.png"
-    }
+ {
+  "id": "1",
+  "username": "CruzLeo",
+  "firstname": "Leandro",
+  "lastname": "Cruz",
+  "email": "leovcruz@gmail.com",
+  "password": "1234a",
+  "role": "Administrador",
+  "image": "user-default.png"
+ },
+ {
+  "id": "2",
+  "username": "ZamudioK",
+  "firstname": "Cintia",
+  "lastname": "Zamudio",
+  "email": "cintiaZamudio@gmail.com",
+  "password": "1234b",
+  "role": "usuario",
+  "image": "user-default.png"
+ },
+ {
+  "id": "3",
+  "username": "MascareñoJ",
+  "firstname": "Jonathan",
+  "lastname": "Mascareño",
+  "email": "JonaMascareño@gmail.com",
+  "password": "1234c",
+  "role": "usuario",
+  "image": "user-default.png"
+ },
+ {
+  "id": "4",
+  "username": "TactacaA",
+  "firstname": "Agustin",
+  "lastname": "Tactaca",
+  "email": "AgustinTactaca@gmail.com",
+  "password": "1234d",
+  "role": "usuario",
+  "image": "user-default.png"
+ },
+ {
+  "id": "5",
+  "username": "MirandaI",
+  "firstname": "Ismael",
+  "lastname": "Miranda",
+  "email": "IsmaelMiranda@gmail.com",
+  "password": "1234e",
+  "role": "usuario",
+  "image": "user-default.png"
+ },
+ {
+  "id": "6",
+  "username": "Admin",
+  "firstname": "Admin",
+  "lastname": "Admin",
+  "email": "admin@gmail.com",
+  "password": "admin",
+  "role": "Administrador",
+  "image": "user-default.png"
+ },
+ {
+  "id": "7",
+  "username": "Usuario",
+  "firstname": "Usuario",
+  "lastname": "Usuario",
+  "email": "usuario@gmail.com",
+  "password": "usuario",
+  "role": "usuario",
+  "image": "user-default.png"
+ },
+ {
+  "id": 8,
+  "username": "cintiakz",
+  "firstName": "Cintia Karen",
+  "lastName": "Zamudio",
+  "email": "cin@gmail.com",
+  "password": "$2a$10$sVDaw1lfB6MmUVhTqKQVouBvA1KwuydWhdj51pbtLIwu4g6Y/4ROi",
+  "role": "Usuario",
+  "image": "user-1710122649438.png"
+ },
+ {
+  "id": 9,
+  "username": "usuarioprueba",
+  "firstName": "Eugenio",
+  "lastName": "Mendez",
+  "email": "eugemend@gmail.com",
+  "password": "$2a$10$LOq8DkIKemCSa6Nx.D90aenVnVGL.5pD6aNZNJWQrtbeqQu5hg4/2",
+  "role": "Usuario",
+  "image": "user-1710127901963.jpg"
+ },
+ {
+  "id": 10,
+  "username": "aguu734",
+  "firstName": "Agustin",
+  "lastName": "Tactaca",
+  "email": "aguu73470@gmail.com",
+  "password": "$2a$10$CRCDvI0sRIht6bb5UG2xBenrA/h6dG6S.QzMUaN5QxxUyf3FdGW9a",
+  "role": "Administrador",
+  "image": "user-1710365636109.jpg"
+ }
 ]

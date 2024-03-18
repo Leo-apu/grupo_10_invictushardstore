@@ -15,55 +15,64 @@
     <main>
         <br>
         <div class="contacto">
-            <p><strong>Regístrese</strong></p>
+            <p><strong>Registrar Usuario</strong></p>
             <p>Ingresa tus datos para crear tu cuenta</p>
         </div>
         <br>
         
-        <form action="procesar_registro.php" method="post" class="form-register">
+       <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
             <div>
-                <!-- Nombre y Apellido -->
                 <div>
-                    <input type="text" name="nombre" required placeholder="Nombre">
-                    <input type="text" name="apellido" required placeholder="Apellido">
+                    <input type="text" name="username" required placeholder="Nombre de usuario">
                 </div>
-                
-                <!-- Correo Electrónico -->
+
+                <div class="div-container">
+                    <input type="text" class="class-input" name="firstName" required placeholder="Nombres">
+                    <input type="text" class="class-input" name="lastName" required placeholder="Apellido">
+                </div>
+
                 <div>
                     <input type="email" name="email" required placeholder="Correo electrónico">
                 </div>
                 
-                <!-- Contraseña y Repetir Contraseña -->
                 <div>
-                    <input type="password" name="contraseña" required placeholder="Contraseña">
-                    <input type="password" name="repetir_contraseña" required placeholder="Repetir Contraseña">
+                    <input type="password" name="password" required placeholder="Contraseña">
+                </div>
+
+                <div>
+                    <select name="role" id="role" class="form-input" required>
+
+                        <option value="">Elige un rol</option>
+                        <%  let roles = ['Administrador', 'Usuario'] %>
+                        <% for(const oneRole of roles) { %>
+                            <option value="<%= oneRole %>"
+                            <%= locals.oldData && (oneRole === oldData.role) ? 'selected' : null  %>
+                            > <%= oneRole %> </option>
+                        <% } %>
+                        
+                    </select>
+                </div>
+
+                <div>
+                    <input type="file" id="image" name="image" class="form-input" style="padding-top: 10px;">
                 </div>
                 
-                <div class="contacto">
-                    <p><strong>Celular de Contacto</strong></p>
-                </div>
-                <br>
-                <!-- Código de Área y Número de Celular -->
-                <div>
-                    <input type="text" name="codigo_area" required placeholder="Código de Área">
-                    <input type="text" name="numero_celular" required placeholder="Número de Celular">
-                </div>
-                
-                <!-- Términos y Condiciones -->
-                <div>
-                    <label for="si">Estoy de acuerdo con <a href="#">términos y condiciones</a></label>
-                    <input type="checkbox" id="si" name="si" required>
-                </div>
+                <!-- Términos y Condiciones 
+                <div class="class-checkbox">
+                    <label for="si"> <a href="#">Acepto términos y condiciones</a>
+                        <input type="checkbox" id="si" name="si" required>
+                    </label>
+                </div> -->
                 
                 <!-- Botón de Registro -->
                 <div class="form-register">
-                    <input type="submit" value="REGISTRARME">
+                    <input type="submit" value="Registrar">
                 </div>
                 
                 <!-- Iniciar Sesión -->
                 <div name="agree">¿Ya tienes cuenta? Inicia sesión <a href="/Users/login">aquí</a></div>
             </div>
-        </form>
+        </form> 
     </main>
     <br>
     <footer>

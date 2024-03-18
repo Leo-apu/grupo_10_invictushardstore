@@ -35,3 +35,23 @@ A continuación, presentamos un analisis semanal del cuarto **Sprint**.
 > :heavy_check_mark: Que se hizo al final de la semana:
 
 * Cuando la semana llegó a su fin, finalizamos nuestras tareas y fijamos un dia límite para completar el trabajo restante.
+
+---
+
+# :pushpin: Storytelling: Weekly Sprint-5:
+
+A continuación, presentamos un analisis semanal del quinto **Sprint**.
+
+## *Weekly* :memo:
+
+> :heavy_exclamation_mark: Que se Hizo:  
+
+* Realizamos algunas modificaciones antes de comenzar el Sprint-5. Luego, empezamos a leer las consignas del Sprint. Se asignaron tareas a cada integrante para progresar.
+
+> :heavy_exclamation_mark: Que problemas o inconvenientes surgieron:
+
+* Los problemas fueron resueltos de manera grupal, exponiendo lo que cada uno había realizado y resolviendo dudas. El inconveniente que tenemos es coordinar horarios debido a compromisos laborales o académicos, lo que dificulta nuestras reuniones. Sin embargo, mantenemos contacto a través de aplicaciones de mensajería para consultas sobre problemas puntuales.
+
+> :heavy_check_mark: Que se hizo al final de la semana:
+
+* Al finalizar la semana, verificamos que todas las tareas estén completadas para proceder con la entrega del Sprint.

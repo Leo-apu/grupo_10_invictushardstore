@@ -56,3 +56,8 @@ El codigo fuente de nuestro proyecto lo podes encontrar en el siguiente reposito
 ## Tablero de Trabajo 📊
 
 En el tablero de trabajo encontrara la distribución de las tareas de cada integrante del equipo, el mismo se encuentra en el repositorio de GitHub en el apartado **Projects/Tablero de Trabajo - Invictus Hard Store**
+
+
+## Diagrama Entidad Realcion 📋
+
+![DER](/public/images/DER.png)

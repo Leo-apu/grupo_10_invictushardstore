@@ -98,5 +98,15 @@
   "password": "$2a$10$CRCDvI0sRIht6bb5UG2xBenrA/h6dG6S.QzMUaN5QxxUyf3FdGW9a",
   "role": "Administrador",
   "image": "user-1710365636109.jpg"
+ },
+ {
+  "id": 11,
+  "username": "ismael",
+  "firstName": "isma",
+  "lastName": "miranda",
+  "email": "isma@hotmail.com",
+  "password": "$2a$10$5rauYEgnHCp.RsMICRHbjOPG39xkdPjJTSA7P6uXAQpt1SDG9JJrm",
+  "role": "Administrador",
+  "image": "user-1713984024749.jpg"
  }
 ]

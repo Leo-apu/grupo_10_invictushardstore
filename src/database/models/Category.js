@@ -1,30 +1,41 @@
-module.exports = (sequelize, DataTypes) => {
-    const Category = sequelize.define('Category', {
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      description: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      subcategories_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      }
-    });
-    Category.associate = models => {
-        // Relación muchos a muchos con Product
-        Category.belongsToMany(models.SubCategory, {foreignKey: 'subcategories_id'});
-    };
-    Category.associate = (models) => {
-      Category.belongsTo(models.Product, { foreignKey: 'categories_id' });
-
-    };
-    return Category;
+/**
+ * @param {import('sequelize').Sequelize} sequelize 
+ * @param {import('sequelize/type').DataTypes} dataTypes 
+ * @returns 
+ */
+module.exports = (sequelize, dataTypes) => {
+  let alias = 'Category';
+  let cols = {
+    id: {
+      type: dataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    name: {
+      type: dataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: dataTypes.STRING,
+      allowNull: false
+    }
   };
+  let config = {
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    deletedAt: false
+  }
+  
+  const Category = sequelize.define(alias, cols, config);
+
+  Category.associate = function(models) {
+    
+    Category.belongsTo(models.Product,
+      {as: 'product',
+      foreignKey: 'categories_id' 
+    })
+  }
+  
+  return Category;
+};

@@ -7,8 +7,8 @@ const productsController = require('../controllers/productController');
 router.get('/', productsController.index); 
 
 
-router.get('/create/', productsController.create); 
-router.post('/create/', productsController.store); 
+//router.get('/create/', productsController.create); 
+//router.post('/create/', productsController.store); 
 
 router.get('/cart/', productsController.cart);
 
@@ -20,10 +20,20 @@ router.put('/edit/:id', productsController.update);
 
 
 router.delete('/:id', productsController.destroy); 
-router.get('/list',productsController.list);
+router.get('/list',productsController.list); 
+
+
 
 //rutas exigidas para la creacion del crud
-//router.get('/products/add', productsController.add); 
-//router.delete('/products/create', productsController.create); 
+router.get('/add', productsController.add); 
+router.post('/create', productsController.create); 
+
+/**
+router.get('/edit/:id', productsController.edit);
+router.post('/update/:id', productsController.update);
+
+router.get('/delete/:id', productsController.delete);
+router.post('/delete/:id', productsController.destroy);
+*/
 
 module.exports = router;

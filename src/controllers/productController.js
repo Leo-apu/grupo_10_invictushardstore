@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const cripto = require('crypto');
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const productPathFile = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productPathFile,'utf-8'));
@@ -9,7 +11,8 @@ const controller = {
 	index: (req, res) => {
 		res.render('products');
 	},
-
+	
+	
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		const productId = req.params.id;
@@ -52,7 +55,7 @@ const controller = {
 		fs.writeFileSync(productPathFile, JSON.stringify(products, null, 2));
 
 		res.redirect('/');
-	},
+	}, 
 
 	// Update - Form to edit
 	edit: (req, res) => {
@@ -92,7 +95,70 @@ const controller = {
 
 	cart: (req, res) => {
 		return res.render('productCart');
-	}
+	},
+	
+
+	// ------CRUD Sequelize---------
+
+	add: async function (req, res) {
+        const allCategories = await db.Category.findAll()
+		console.log("---> "+allCategories)
+        return res.render('crearProducto',{categories: allCategories})
+	
+    },
+
+	store:  async function (req, res) {
+		await  db.Product.create({
+			...req.body
+		})
+		return res.redirect('/listarProductos');
+	},
+
+	/**
+	edit: async function(req,res) {
+        const Product = await db.Product.findByPk(req.params.id,{
+             include: ['categories']
+        });
+        const allCategories = await db.Product.findAll()
+
+		return res.render('modificarProducto',{ Product,allCategories })
+    },
+
+    update: async function (req,res) {
+           await db.Product.update({
+               ...req.body
+           },
+           {
+            where:{
+                id: req.params.id
+            }
+           })
+           
+           return res.redirect('/listarProductos')  
+    },
+
+    delete: async function (req,res) {
+        try{ 
+            const Movie = await db.Product.findByPk(req.params.id);            
+            return res.render('modificarProducto', {Movie})
+        }catch{ 
+            return res.send('<h1> Ha ocurrido un error </h1>')
+        }     
+    },
+
+    destroy: async function (req,res) {
+        try{ 
+            await db.Movie.destroy({
+                where:{ id: req.params.id }
+            })
+            return res.redirect('/listarProductos')
+         }catch{ 
+             return res.send('<h1> Ha ocurrido un error </h1>')
+         }
+
+    }
+	*/
+
 };
 
 module.exports = controller;

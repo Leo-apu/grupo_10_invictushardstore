@@ -71,12 +71,5 @@
     "category": "periféricos",
     "price": 48.9,
     "image": "Auriculares_Redragon_H320_Lamia_RGB_7.1.jpg"
-  },
-  {
-    "id": "76cfff17-25c4-49cc-9196-d5a316f2eea6",
-    "name": "hola",
-    "description": "yo",
-    "category": "fuentes",
-    "price": 123213
   }
 ]

@@ -5,13 +5,13 @@ const categoriesController = {
     'list': (req, res) => {
         db.Category.findAll()
             .then(categories => {
-                res.render('crearProducto.ejs', {categories})
+                res.render({categories})
             })
     },
     'detail': (req, res) => {
         db.Category.findByPk(req.params.id)
-            .then(categories => {
-                res.render('modificarProducto.ejs', {categories});
+            .then(category=> {
+                res.render('modificarProducto.ejs', {category});
             });
     }
    

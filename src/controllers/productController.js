@@ -12,7 +12,7 @@ const controller = {
 		res.render('products');
 	},
 	
-	
+	/**
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		const productId = req.params.id;
@@ -96,16 +96,21 @@ const controller = {
 	cart: (req, res) => {
 		return res.render('productCart');
 	},
+	*/
 	
 
 	// ------CRUD Sequelize---------
-
-	add: async function (req, res) {
-        const allCategories = await db.Category.findAll()
-		console.log("---> "+allCategories)
-        return res.render('crearProducto',{categories: allCategories})
 	
-    },
+	// Create - Form to create
+	create: async function (req, res) {
+		try {
+			const allCategories = await db.Category.findAll();
+			console.log("---> " + allCategories);
+			return res.render('crearProducto', { allCategories });
+		} catch (error) {
+			console.log("Error:", error);
+		}
+	},
 
 	store:  async function (req, res) {
 		await  db.Product.create({

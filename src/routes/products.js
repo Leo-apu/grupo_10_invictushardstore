@@ -10,23 +10,24 @@ router.get('/', productsController.index);
 //router.get('/create/', productsController.create); 
 //router.post('/create/', productsController.store); 
 
-router.get('/cart/', productsController.cart);
+//router.get('/cart/', productsController.cart);
 
-router.get('/detail/:id', productsController.detail); 
-
-
-router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', productsController.update); 
+//router.get('/detail/:id', productsController.detail); 
 
 
-router.delete('/:id', productsController.destroy); 
-router.get('/list',productsController.list); 
+//router.get('/edit/:id', productsController.edit); 
+//router.put('/edit/:id', productsController.update); 
+
+
+//router.delete('/:id', productsController.destroy); 
+//router.get('/list',productsController.list); 
 
 
 
 //rutas exigidas para la creacion del crud
-router.get('/add', productsController.add); 
-router.post('/create', productsController.create); 
+
+router.get('/create/', productsController.create);
+router.post('/create/', productsController.store); 
 
 /**
 router.get('/edit/:id', productsController.edit);

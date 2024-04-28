@@ -23,15 +23,11 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.FLOAT,
       allowNull: false
     },
-    discount: {
-      type: dataTypes.FLOAT,
-      allowNull: true
-    },
     img: {
       type: dataTypes.STRING,
       allowNull: true
     },
-    categories_id: {
+    category_id: {
       type: dataTypes.INTEGER,
       allowNull: false
     }
@@ -45,12 +41,12 @@ module.exports = (sequelize, dataTypes) => {
 
   const Product = sequelize.define(alias, cols, config);
     
-  // Relación muchos a uno
+ 
   Product.associate = function(models){
     
     Product.belongsTo(models.Category,{
       as: 'category',
-      foreignKey: 'categories_id' 
+      foreignKey: 'category_id' 
     })
   }
   

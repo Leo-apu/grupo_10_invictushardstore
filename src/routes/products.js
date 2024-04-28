@@ -26,15 +26,17 @@ router.get('/', productsController.index);
 
 //rutas exigidas para la creacion del crud
 
+router.get('/prodList', productsController.list);
+router.get('/detail/:id', productsController.detail);
+
 router.get('/create/', productsController.create);
 router.post('/create/', productsController.store); 
 
-/**
 router.get('/edit/:id', productsController.edit);
 router.post('/update/:id', productsController.update);
 
-router.get('/delete/:id', productsController.delete);
+//router.get('/delete/:id', productsController.delete);
 router.post('/delete/:id', productsController.destroy);
-*/
+
 
 module.exports = router;

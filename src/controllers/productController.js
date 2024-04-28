@@ -100,7 +100,28 @@ const controller = {
 	
 
 	// ------CRUD Sequelize---------
-	
+
+	'list': (req, res) => {
+        db.Product.findAll({
+            include: ['category']
+        })
+        .then(products => {
+            res.render('listarProductos',{products})
+        })
+		.catch(error => {
+			console.error('Error al buscar productos:', error);
+		});
+    },
+
+	'detail': (req, res) => {
+        db.Product.findByPk(req.params.id, {
+			include: ['category'] // incluye la categoría asociada al producto
+		})
+            .then(product => {
+                res.render('productDetail2', {product});
+            });
+    },
+
 	// Create - Form to create
 	create: async function (req, res) {
 		try {
@@ -113,56 +134,64 @@ const controller = {
 	},
 
 	store:  async function (req, res) {
-		await  db.Product.create({
-			...req.body
-		})
-		return res.redirect('/listarProductos');
+		try {
+			await  db.Product.create({
+				...req.body
+			})
+			return res.redirect('/products/prodList');
+		} catch (error) {
+			console.log("Error:", error);
+		}
 	},
 
-	/**
 	edit: async function(req,res) {
-        const Product = await db.Product.findByPk(req.params.id,{
-             include: ['categories']
-        });
-        const allCategories = await db.Product.findAll()
+		try {
+			const Product = await db.Product.findByPk(req.params.id,{
+				include: ['category']
+			});
+			const allCategories = await db.Category.findAll()
 
-		return res.render('modificarProducto',{ Product,allCategories })
-    },
+			return res.render('productEdit',{ Product,allCategories })
+		}catch (error){
+			console.log("Error:", error);
+		}
+	},
 
     update: async function (req,res) {
+		try {
            await db.Product.update({
                ...req.body
            },
            {
-            where:{
-                id: req.params.id
-            }
+            where:{ id: req.params.id }
            })
-           
-           return res.redirect('/listarProductos')  
+           return res.redirect('/products/prodList')  
+		}catch (error){
+			console.log("Error:", error);
+		}
     },
-
+	/**
     delete: async function (req,res) {
         try{ 
-            const Movie = await db.Product.findByPk(req.params.id);            
-            return res.render('modificarProducto', {Movie})
-        }catch{ 
-            return res.send('<h1> Ha ocurrido un error </h1>')
-        }     
-    },
+            const Product = await db.Product.findByPk(req.params.id);            
+            return res.render('productDelete', {Product})
+        }catch (error){
+			console.log("Error:", error);
+		}   
+    },*/
 
     destroy: async function (req,res) {
         try{ 
-            await db.Movie.destroy({
+            await db.Product.destroy({
                 where:{ id: req.params.id }
             })
-            return res.redirect('/listarProductos')
-         }catch{ 
-             return res.send('<h1> Ha ocurrido un error </h1>')
-         }
+            return res.redirect('/products/prodList')
+        }catch (error){
+			console.log("Error:", error);
+		}
 
     }
-	*/
+	
 
 };
 

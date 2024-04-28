@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/detalleProducto.css">
+
+        <title>Invictus Hard Store</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+    <main>
+        <div class="detalle-producto">
+            <div class="imagen-titulo">
+                <img id="imagen-principal" src="/images/products/<%= product.image %>" alt="Producto principal">
+                <!-- Miniaturas de imágenes -->
+                <div id="miniaturas">
+                    <img class="miniatura-imagen" src="/images/products/<%= product.image %>" alt="Miniatura 1"
+                        onclick="cambiarImagen('imagen_principal', 'miniatura1.jpg')">
+                </div>
+            </div>
+
+            <div class="precio-info-botones">
+                <p>$ <%= product.price %></p>
+                <a href="#" class="boton-pequeno">Comprar</a>
+                <a href="#" class="boton-pequeno">Agregar al Carrito</a>
+                <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: green;">EDITAR PRODUCTO</a>
+                <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
+                    <button type="submit"  class="boton-eliminar">ELIMINAR</button>
+                </form>  
+            </div>
+        </div>
+
+        <div class="especificaciones">
+            <div class="titulo-especificaciones">
+                <h2>Especificaciones del Producto</h2>
+            </div>
+            <div class="grupo-especificaciones">
+                <p class="categoria">General</p>
+                <ul>
+                    <li>Nombre del producto: <%= product.name %></li>
+                    <li>Categoria al que pertenece: <%= product.category.name %></li>
+                </ul>
+            </div>
+            <div class="grupo-especificaciones">
+                <p class="categoria">Descripcion</p>
+                <ul>
+                    <p> <%= product.description %></p>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

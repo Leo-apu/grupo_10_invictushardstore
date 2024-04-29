@@ -17,11 +17,13 @@
     <main>
         <div class="detalle-producto">
             <div class="imagen-titulo">
-                <img id="imagen-principal" src="/images/products/<%= product.image %>" alt="Producto principal">
+                <img id="imagen-principal" src="../../images/productsBD/<%= product.img %>" alt="Producto principal">
                 <!-- Miniaturas de imágenes -->
                 <div id="miniaturas">
-                    <img class="miniatura-imagen" src="/images/products/<%= product.image %>" alt="Miniatura 1"
+                    <img class="miniatura-imagen" src="../../images/productsBD/<%= product.img %>" alt="Miniatura 1"
                         onclick="cambiarImagen('imagen_principal', 'miniatura1.jpg')">
+                    <img class="miniatura-imagen" src="../../images/productsBD/<%= product.img %>" alt="Miniatura 2"
+                        onclick="cambiarImagen('imagen_principal', 'miniatura2.jpg')">
                 </div>
             </div>
 

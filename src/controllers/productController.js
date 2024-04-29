@@ -136,7 +136,8 @@ const controller = {
 	store:  async function (req, res) {
 		try {
 			await  db.Product.create({
-				...req.body
+				...req.body,
+				img: req.file.filename,
 			})
 			return res.redirect('/products/prodList');
 		} catch (error) {

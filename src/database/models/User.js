@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: false
     },
-    roles_id: {
+    rol_id: {
       type: dataTypes.INTEGER,
       allowNull: false
     }
@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
        
     User.belongsTo(models.Rol, {
       as: 'rol',
-      foreignKey: 'roles_id' 
+      foreignKey: 'rol_id' 
     })
   }
   

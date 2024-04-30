@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Rol.hasMany(models.User,{
       as: 'users',
-      foreignKey: 'roles_id' 
+      foreignKey: 'rol_id' 
     })
   }
 

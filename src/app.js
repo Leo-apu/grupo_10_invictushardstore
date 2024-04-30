@@ -39,11 +39,12 @@ app.listen(port, () => console.log(`Listening on port http://localhost:${port}`)
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/users'); 
+const categoriesRouter = require('./routes/categories'); 
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', userRouter);
-
+app.use('/categories', categoriesRouter); 
 
 app.use((req, res, next) => next(createError(404)));
 

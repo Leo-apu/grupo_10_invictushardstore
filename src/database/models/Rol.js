@@ -1,22 +1,44 @@
-module.exports = (sequelize, DataTypes) => {
-    const Rol = sequelize.define('Rol', {
-      id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-      }
+/**
+ * @param {import('sequelize').Sequelize} sequelize 
+ * @param {import('sequelize/type').DataTypes} dataTypes 
+ * @returns 
+ */
 
-    });
+module.exports = (sequelize, dataTypes) => {
+  let alias = 'Rol';
+  let cols = {
+    id: {
+      type: dataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    name: {
+      type: dataTypes.STRING,
+      allowNull: false,
+      unique: true
+    }
+  };
+  let config = {
+      timestamps: true,
+      createdAt: 'created_at',
+      updatedAt: 'updated_at',
+      deletedAt: false
+  }
   
-// Relación uno a muchos
-  Rol.associate = (models) => {
-    Rol.hasMany(models.Usuario, { foreignKey: 'roles_id' });
-};
+  const Rol = sequelize.define(alias, cols, config);
 
-    return Rol;
-};
+  // Relación uno a muchos
+  Rol.associate = function (models){
+
+    Rol.hasMany(models.User,{
+      as: 'users',
+      foreignKey: 'rol_id' 
+    })
+  }
+
+  return Rol;
+}
+
+  
+
+

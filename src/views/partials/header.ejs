@@ -15,25 +15,30 @@
                     <a class="nav-lista" href="/products/create">Crear Producto</a>
                 </li>
                 <li>
-                    <a class="nav-lista" href="/products/list">Todos los Productos</a>
+                   <!-- <a class="nav-lista" href="/products/list">Todos los Productos</a> -->
+                    <a class="nav-lista" href="/products/prodList">Todos los Productos</a>
                 </li>
             </ul>
         </div>
 
         <div class="nav-icono">
-      
 
-            <% if (typeof user !== 'undefined' && user) { %>
-            <div class="dropdown">
-                <button><%= user.username %></button>
-                <div class="dropdown-options">
-                  <a href="/users/profile">Perfil</a>
-                  <a href="#">Logout</a>
+
+            <% if (locals.isLoged) { %>
+                <div class="dropdown">
+                    <button style="display: flex; align-items: center; gap: 5px;">
+                        <img src="/images/users/<%= locals.userLogged.image %>" alt="user-image" class="user-image">
+                        <%= locals.userLogged.username %>
+                    </button>
+                    <div class="dropdown-options">
+                        <a href="/users/profile">Perfil</a>
+                        <a href="/users/logout">Logout</a>
+                    </div>
                 </div>
-              </div>      
-              <% } %>
-            <a href="/Users/login"><i class="fas fa-user-circle"></i></a>
-            <a href="/products/cart"><i class="fas fa-cart-arrow-down"></i></a>
+                <% }else{ %>
+                    <a href="/Users/login"><i class="fas fa-sign-in-alt"></i></a>
+                    <% } %>
+                        <a href="/products/cart"><i class="fas fa-cart-arrow-down"></i></a>
         </div>
     </div>
 </nav>

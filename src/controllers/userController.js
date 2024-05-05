@@ -25,7 +25,7 @@ const controller = {
 		let userToCreate  = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			image: req.file.filename,
+			image: req.file?.filename || 'user-default.jpg',
 		}
 
 		User.create(userToCreate);
@@ -38,14 +38,18 @@ const controller = {
 	},
 
 	loginProcess: (req,res) =>{
-		let userToLogin = User.findByField('email',req.body.email);
 
+		let userToLogin = User.findByField('email',req.body.email);
 		if(userToLogin){
-			//Defini una variable que almacena la comparación de lo que viene por el req, y la clave hasheada
 			let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
 			if(correctPassword){
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+				
+				if (req.body.remember){
+					res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
+				}
+
 				return res.redirect('/users/profile')
 				
 			}
@@ -68,8 +72,13 @@ const controller = {
 		})
 	},
 
+	logout : (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
+
 	profile: (req,res) =>{
-		
 		return res.render('profile' , {
 			user: req.session.userLogged
 		});

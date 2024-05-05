@@ -7,9 +7,8 @@ module.exports = (sequelize, dataTypes) => {
   let alias = 'User';
   let cols = {
     id: {
-      type: dataTypes.BIGINT(10).UNSIGNED,
+      type: dataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false,
       autoIncrement: true
     },
     first_name: {
@@ -30,16 +29,20 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: false
     },
-    rol_id: {
+    roles_id: {
       type: dataTypes.INTEGER,
       allowNull: false
+    },
+    img: {
+      type: dataTypes.STRING // Puedes ajustar el tipo de datos según tus necesidades
     }
   }; 
   let config = {
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
-    deletedAt: false
+    deletedAt: false,
+    tableName: 'users'
   }
    
   const User = sequelize.define(alias, cols, config);
@@ -49,7 +52,7 @@ module.exports = (sequelize, dataTypes) => {
        
     User.belongsTo(models.Rol, {
       as: 'rol',
-      foreignKey: 'rol_id' 
+      foreignKey: 'roles_id' 
     })
   }
   

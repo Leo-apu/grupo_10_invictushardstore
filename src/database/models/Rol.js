@@ -22,7 +22,8 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: true,
       createdAt: 'created_at',
       updatedAt: 'updated_at',
-      deletedAt: false
+      deletedAt: false,
+      tableName: 'roles'
   }
   
   const Rol = sequelize.define(alias, cols, config);
@@ -32,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Rol.hasMany(models.User,{
       as: 'users',
-      foreignKey: 'rol_id' 
+      foreignKey: 'roles_id' 
     })
   }
 
@@ -40,5 +41,3 @@ module.exports = (sequelize, dataTypes) => {
 }
 
   
-
-

@@ -6,17 +6,10 @@ CREATE TABLE IF NOT EXISTS roles (
     name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS subcategories (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    description TEXT,
-    subcategories_id INT,
-    FOREIGN KEY (subcategories_id) REFERENCES subcategories(id)
+    description TEXT
 );
 
 CREATE TABLE IF NOT EXISTS users (

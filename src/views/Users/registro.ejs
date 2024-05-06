@@ -22,13 +22,13 @@
         
        <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
             <div>
-                <div>
+                <!-- <div>
                     <input type="text" name="username" required placeholder="Nombre de usuario">
-                </div>
+                </div> -->
 
                 <div class="div-container">
-                    <input type="text" class="class-input" name="firstName" required placeholder="Nombres">
-                    <input type="text" class="class-input" name="lastName" required placeholder="Apellido">
+                    <input type="text" class="class-input" name="first_name" required placeholder="Nombres">
+                    <input type="text" class="class-input" name="last_name" required placeholder="Apellido">
                 </div>
 
                 <div>
@@ -40,29 +40,25 @@
                 </div>
 
                 <div>
-                    <select name="role" id="role" class="form-input" required>
-
+                    <select name="roles_id" id="role" class="form-input" required>
                         <option value="">Elige un rol</option>
-                        <%  let roles = ['Administrador', 'Usuario'] %>
+                        <%  let roles = [{ id: 1, name: 'Administrador' }, { id: 2, name: 'Usuario' }] %>
                         <% for(const oneRole of roles) { %>
-                            <option value="<%= oneRole %>"
-                            <%= locals.oldData && (oneRole === oldData.role) ? 'selected' : null  %>
-                            > <%= oneRole %> </option>
+                            <option value="<%= oneRole.id %>"
+                            <%= locals.oldData && (oneRole.id === oldData.roles_id) ? 'selected' : null  %>
+                            > <%= oneRole.name %> </option>
                         <% } %>
+                    </select>
+                    
                         
                     </select>
                 </div>
 
                 <div>
-                    <input type="file" id="image" name="image" class="form-input" style="padding-top: 10px;">
+                    <!-- Cambié la línea siguiente para agregar el atributo accept y así permitir solo archivos de imagen -->
+                    <input type="file" id="img" name="img" accept="image/*" class="form-input" style="padding-top: 10px;">
+                    
                 </div>
-                
-                <!-- Términos y Condiciones 
-                <div class="class-checkbox">
-                    <label for="si"> <a href="#">Acepto términos y condiciones</a>
-                        <input type="checkbox" id="si" name="si" required>
-                    </label>
-                </div> -->
                 
                 <!-- Botón de Registro -->
                 <div class="form-register">

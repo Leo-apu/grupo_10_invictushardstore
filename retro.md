@@ -142,8 +142,72 @@ A continuación, presentamos con el equipo un análisis del cuarto **Sprint**.
 > :point_right: Hacer menos:
 
 * Evitar distracciones que nos alejen del enfoque principal del proyecto.
+==================================================================================
+# :pushpin: Storytelling: Sprint-5:
+
+A continuación, presentamos con el equipo un análisis del quinto **Sprint**.
+
+## *Retrospectiva* :memo:
+
+> :heavy_exclamation_mark: Comenzar a hacer:
+
+- Crear e implementar la base de datos de usuarios y productos, definiendo la estructura necesaria para cumplir con los requisitos del negocio.
+- Generar el Diagrama de Entidades y Relaciones (DER) para representar las tablas y sus relaciones de manera clara y legible.
+- Utilizar el tablero de trabajo para priorizar y asignar tareas relacionadas con la creación e implementación de la base de datos.
+
+> :bangbang: Hacer más:
+
+- Realizar pruebas exhaustivas para asegurar la integridad de la base de datos y el correcto funcionamiento de las relaciones entre tablas.
+- Mantener una comunicación abierta dentro del equipo para compartir conocimientos y resolver posibles obstáculos.
+
+> :heavy_check_mark: Continuar haciendo:
+
+- Seguir una planificación cuidadosa de las tareas, estimando su dificultad y asignando responsables.
+- Mantener un registro actualizado de los avances y desafíos en el tablero de trabajo.
+
+> :point_right: Hacer menos:
+
+- Evitar la procrastinación en la creación e implementación de la base de datos, priorizando esta tarea para garantizar su finalización oportuna.
+
+> :x: Dejar de hacer:
+
+- Dejar de postergar la actualización del tablero de trabajo y la retroalimentación sobre el progreso del proyecto.
+- Evitar la falta de seguimiento en la documentación de la estructura de la base de datos y los archivos de configuración de Sequelize.
+
 
 > :x: Dejar de hacer:
 
 * Evitar que las consultas se realicen casi a la fecha de entrega.
+==================================================================================
+# :pushpin: Storytelling: Sprint-6:
+
+A continuación, presentamos con el equipo un análisis del sexto **Sprint**.
+
+## *Retrospectiva* :memo:
+
+> :heavy_exclamation_mark: Comenzar a hacer:
+
+- Establecer la estructura inicial de la base de datos mediante un Diagrama de Entidades y Relaciones (DER).
+- Definir los campos necesarios para las tablas de usuarios y productos, tomando como referencia los archivos JSON anteriores.
+- Crear los archivos de configuración y modelos de Sequelize para representar las tablas en la base de datos.
+
+> :bangbang: Hacer más:
+
+- Realizar pruebas exhaustivas para asegurar la integridad de la base de datos y el correcto funcionamiento de las relaciones entre tablas.
+- Utilizar el tablero de trabajo de manera más efectiva para priorizar y asignar tareas relacionadas con la implementación de la base de datos.
+
+> :heavy_check_mark: Continuar haciendo:
+
+- Mantener una comunicación abierta dentro del equipo para compartir conocimientos y resolver posibles obstáculos.
+- Seguir una planificación cuidadosa de las tareas, estimando su dificultad y asignando responsables.
+
+> :point_right: Hacer menos:
+
+- Evitar la procrastinación en la implementación de la base de datos, priorizando esta tarea para garantizar su finalización oportuna.
+
+> :x: Dejar de hacer:
+
+- Dejar de postergar la actualización del tablero de trabajo y la retroalimentación sobre el progreso del proyecto.
+- Evitar la falta de seguimiento en la documentación de la estructura de la base de datos y los archivos de configuración de Sequelize.
+
  

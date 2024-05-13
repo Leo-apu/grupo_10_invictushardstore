@@ -78,7 +78,6 @@ label{
 }
 .boton{
     width: 150px;   
-    height: 30px;
     border-radius:5px;
     border:none;
     transition: background-color, 0.5s;

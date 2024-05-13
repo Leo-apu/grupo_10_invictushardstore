@@ -6,7 +6,7 @@
         <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
         <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="/css/crearProducto.css">
-
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <title>Crear producto</title>
 </head>
 
@@ -44,7 +44,7 @@
                         <% }); %> 
                     </select>
                 </div>
-
+                <ul id="errorContainer" class="error-container"></ul>
                 <div class="botones">
                     <button class="boton crear" type="submit">MODIFICAR</button>
                 </div>
@@ -56,6 +56,7 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+    <script src="/js/productEditValidation.js"></script>
 </body>
 
 </html>

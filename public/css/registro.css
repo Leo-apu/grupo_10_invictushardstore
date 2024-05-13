@@ -140,6 +140,14 @@ p{
     padding: 10px;
 }
 
+.li-registro{
+    list-style: disc;
+    text-align: left;
+    margin-left: 25px;
+    color: crimson;
+    font-size: 17px;
+}
+
 
 /* Ajustes para tamaños de pantalla más pequeños (tablets y celulares) */
 @media screen and (max-width: 768px) {

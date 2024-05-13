@@ -3,6 +3,7 @@ const path = require('path');
 const cripto = require('crypto');
 const db = require('../database/models');
 const { Op } = require("sequelize");
+const { validationResult } = require('express-validator');
 
 const productPathFile = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productPathFile,'utf-8'));
@@ -133,17 +134,24 @@ const controller = {
 		}
 	},
 
-	store:  async function (req, res) {
+	store: async function (req, res) {
+		const resultValidation = validationResult(req);
 		try {
-			await  db.Product.create({
+			if (resultValidation.errors.length > 0) {
+				const allCategories = await db.Category.findAll();
+				return res.render('crearProducto', { allCategories, errors: resultValidation.mapped(), oldData: req.body });
+			}
+	
+			await db.Product.create({
 				...req.body,
-				img: req.file.filename,
+				img: req.file.filename
 			})
 			return res.redirect('/products/prodList');
 		} catch (error) {
 			console.log("Error:", error);
 		}
 	},
+	
 
 	edit: async function(req,res) {
 		try {

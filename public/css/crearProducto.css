@@ -115,3 +115,12 @@ label{
     outline:none;
     border:3px solid #9ACB34;
   }
+
+  .li-producto{
+    padding-top: 15px;
+    list-style: disc;
+    text-align: left;
+    margin-left: 25px;
+    color: crimson;
+    font-size: 17px;
+}

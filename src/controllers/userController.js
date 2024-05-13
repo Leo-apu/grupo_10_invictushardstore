@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require("sequelize");
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/usersDB.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -40,7 +41,13 @@ const controller = {
 
 	// },
 	processRegister:  async function (req, res) {
+		const resultValidation = validationResult(req); 
 		try {
+
+			  const existingUser = await db.User.findOne({ where: { email: req.body.email } });
+        if (existingUser) {
+            return res.render('registro', { errors: { email: { msg: 'El correo electrónico ya está registrado' } }, oldData: req.body });
+        }
 			
 			await  db.User.create({
 				...req.body,
@@ -48,6 +55,14 @@ const controller = {
 				password: bcryptjs.hashSync(req.body.password, 10),
 				
 			})
+			
+			if(resultValidation.errors.length > 0){
+				
+				return res.render('registro' , {
+					errors: resultValidation.mapped(),oldData: req.body});
+					
+				
+			}
 			return res.redirect('/users/login');
 		} catch (error) {
 			console.log("Error:", error);

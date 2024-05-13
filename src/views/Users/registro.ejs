@@ -25,19 +25,19 @@
             <div>
                 
                     <div>
-                    <input type="text" class="class-input" id="nombre" name="first_name" required placeholder="Nombre/s">
+                    <input type="text" class="class-input" id="nombre" name="first_name"  required placeholder="Nombre/s" value="<%= locals.oldData ? oldData.first_name : null %>">
                     <!-- <div id="nombreError" class="error-message"></div>  -->
                     </div>
                     
            
 
                 <div>
-                    <input type="text" class="class-input" id="apellido" name="last_name" required placeholder="Apellido">
+                    <input type="text" class="class-input" id="apellido" name="last_name" required placeholder="Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
                     <!-- <div id="apellidoError" class="error-message"></div>  -->
                     </div>
 
                 <div>
-                    <input type="email" name="email" id="email" required placeholder="Correo electrónico">
+                    <input type="email" name="email" id="email" required placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
                     <!-- <div id="emailError" class="error-message"></div>  -->
                 </div>
                 
@@ -66,7 +66,20 @@
 
                 <ul id="errorContainer"></ul>
 
-                
+                <ul>
+                    <ul>
+                    <% if(locals.errors){ %>
+                        <% for (let oneError in errors) { %>
+                            <li class="li-registro"> <%= errors[oneError].msg %> </li>
+                            <% } %>
+                            <% } %>
+                        </ul>
+                            <!-- <div>
+                                <% if (locals.errors && errors.img) { %>
+                                    <p> <%= errors.img.msg %> </p>
+                                    <% } %>
+                            </div> -->
+                </ul>
                 
                 <div class="form-register">
                     <input type="submit" value="Registrar">

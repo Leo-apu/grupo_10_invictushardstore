@@ -5,6 +5,7 @@
     <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
     <link rel="stylesheet" href="../css/registro.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <title>Registrar</title>
 </head>
 <body>
@@ -20,23 +21,29 @@
         </div>
         <br>
         
-       <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
+       <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data" id="registroForm">
             <div>
-                <!-- <div>
-                    <input type="text" name="username" required placeholder="Nombre de usuario">
-                </div> -->
-
-                <div class="div-container">
-                    <input type="text" class="class-input" name="first_name" required placeholder="Nombres">
-                    <input type="text" class="class-input" name="last_name" required placeholder="Apellido">
-                </div>
+                
+                    <div>
+                    <input type="text" class="class-input" id="nombre" name="first_name" required placeholder="Nombre/s">
+                    <!-- <div id="nombreError" class="error-message"></div>  -->
+                    </div>
+                    
+           
 
                 <div>
-                    <input type="email" name="email" required placeholder="Correo electrónico">
+                    <input type="text" class="class-input" id="apellido" name="last_name" required placeholder="Apellido">
+                    <!-- <div id="apellidoError" class="error-message"></div>  -->
+                    </div>
+
+                <div>
+                    <input type="email" name="email" id="email" required placeholder="Correo electrónico">
+                    <!-- <div id="emailError" class="error-message"></div>  -->
                 </div>
                 
                 <div>
-                    <input type="password" name="password" required placeholder="Contraseña">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña">
+                    <!-- <div id="passwordError" class="error-message"></div>  -->
                 </div>
 
                 <div>
@@ -49,23 +56,22 @@
                             > <%= oneRole.name %> </option>
                         <% } %>
                     </select>
-                    
-                        
-                    </select>
+                    <!-- <div id="roleError" class="error-message"></div>  -->
                 </div>
 
                 <div>
-                    <!-- Cambié la línea siguiente para agregar el atributo accept y así permitir solo archivos de imagen -->
                     <input type="file" id="img" name="img" accept="image/*" class="form-input" style="padding-top: 10px;">
-                    
+                    <!-- <div id="imgError" class="error-message"></div>  -->
                 </div>
+
+                <ul id="errorContainer"></ul>
+
                 
-                <!-- Botón de Registro -->
+                
                 <div class="form-register">
                     <input type="submit" value="Registrar">
                 </div>
                 
-                <!-- Iniciar Sesión -->
                 <div name="agree">¿Ya tienes cuenta? Inicia sesión <a href="/Users/login">aquí</a></div>
             </div>
         </form> 
@@ -74,5 +80,7 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+
+    <script src="/js/registerValidation.js"></script>
 </body>
 </html>

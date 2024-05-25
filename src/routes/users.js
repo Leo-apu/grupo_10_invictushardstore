@@ -52,7 +52,7 @@ let validationsRegister = [
 
 /*LEER EL FORMULARIO DE LOGIN, Y ENVIAR EL FORMULARIO DE LOGIN */
 router.get('/login', guestMiddleware, userController.login); 
-router.post('/login', userController.loginProcess);
+router.post('/login', validationsRegister, userController.loginProcess);
 
 /*TRAER UN USUARIO Y MOSTRAR SUS DETALLES*/
 router.get('/profile', authMiddleware, userController.profile);

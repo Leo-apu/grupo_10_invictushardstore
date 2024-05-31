@@ -13,12 +13,22 @@
     </header>
 
     <main>
+        <div class="container-slider"> 
+            <div class="slider-frame">
+                <ul>
+                    <li><img src="../images/slider1.jpg"></li>
+                    <li><img src="../images/slider2.jpg"></li>
+                    <li><img src="../images/slider3.jpg"></li>
+                </ul>
+            </div>
+        </div>
+    
         <section class="destacados">
-            <h1>Lista de Productos</h1>
+            <h1>Productos destacados</h1>
             <div class="producto">
-             <!-- <% products.forEach((product) =>{ %>
+                <% products.forEach((product) =>{ %>
                 <article>
-                    <a href="/products/detail/<%= product.id %> style="text-decoration: none">
+                    <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
                         <img src="../images/products/<%= product.image %>" alt="<%= product.name %>">
                         
                         <div class="main-article">
@@ -29,24 +39,8 @@
                             <p class="precio"><%= product.price %></p>
                         </div>
                     </a>
-                </article>
-                <% }) %>  -->
-
-                <% products.forEach((product) =>{ %>
-                    <article>
-                        <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
-                            <img src="../images/productsBD/<%= product.img %>" alt="<%= product.name %>">
-                            
-                            <div class="main-article">
-                                <div class="">
-                                    <p class="titulo"><%= product.name %></p>
-                                    <p class="descripcion"><%= product.description %></p>
-                                </div>
-                                <p class="precio">$ <%= product.price %></p>
-                            </div>
-                        </a>
                     </article>
-                <% }) %> 
+                    <% }) %>
             </div>
         </section>
     </main>

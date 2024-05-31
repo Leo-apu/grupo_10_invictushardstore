@@ -3,11 +3,11 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <title>Editar perfil - Invictus Hard Store</title>
+        <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/crearProducto.css">
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <title>Crear producto</title>
 </head>
 
 <body>
@@ -16,36 +16,47 @@
     </header>
 
     <main>
-        <div class="form-container">
-            <div>
-                <div>
-                    <h1 class="profile-title">Editar información personal</h1>
-                    <form action="/users/profile/update/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                        
-                        <div class="user-info">
-                            <label for="first_name">Nombre:</label>
-                            <input type="text" id="first_name" name="first_name" value="<%= user.first_name %>" required>
-                            <label for="last_name">Apellido:</label>
-                            <input type="text" id="last_name" name="last_name" value="<%= user.last_name %>" required>
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" value="<%= user.email %>" required>
-                        </div>
-                        
-                        <div class="user-image">
-                            <input type="file" id="img" name="img" accept="image/*" class="form-input">
-                        </div>
-                        
-                        <button class="user-button" type="submit">Guardar cambios</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
+        <section class="section-crearProducto">
+            <form action="/products/update/<%= Product.id %>" method="POST" >
 
+               <article class="article-crearProducto">
+                <h2 class="crearProducto-titulo">Información General</h2>
+
+                <label class="crearProducto-subtitulo" for="name">Nombre del Producto:</label>
+                <input type="text" id="name" name="name" value="<%= Product.name %>" required>
+
+                <label class="crearProducto-subtitulo" for="description">Descripción:</label>
+                <textarea id="description" name="description" rows="4" required> <%= Product.description %></textarea>
+
+                <label class="precio-container crearProducto-subtitulo" for="price">Precio:</label>
+                <div class="precio-container">                    
+                    <input type="text" id="price" name="price" value="<%= Product.price %>" required>
+                </div>
+
+                <h2 class="crearProducto-titulo">Imagen del Producto</h2>
+                <input type="file" id="imagen" name="imagen" accept="image/*" >
+
+                <div class="col-12 col-md-6">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <select id="" name="category_id" class="form-input" required>
+                        <% allCategories.forEach(category => { %>
+                            <option value="<%= category.id %>" <% if (Product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
+                        <% }); %> 
+                    </select>
+                </div>
+                <ul id="errorContainer" class="error-container"></ul>
+                <div class="botones">
+                    <button class="boton crear" type="submit">MODIFICAR</button>
+                </div>
+            </article>
+        </form>
+        </section>
+    </main>
+    <br>
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
-
+    <script src="/js/productEditValidation.js"></script>
 </body>
 
 </html>

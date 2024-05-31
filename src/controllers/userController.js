@@ -74,18 +74,7 @@ const controller = {
 	},
 
 	loginProcess: async (req, res) => {
-		const resultValidation = validationResult(req); 
 		try {
-
-				if(resultValidation.errors.length > 0){
-					console.log('error');
-				return res.render('login' , {
-					errors: resultValidation.mapped()});
-					
-			}
-	
-
-
 			let userToLogin = await db.User.findOne({ where: { email: req.body.email } });
 	
 			if (userToLogin) {
@@ -101,23 +90,22 @@ const controller = {
 					return res.redirect('/users/profile');
 				}
 	
-				// return res.render('login', {
-				// 	errors: {
-				// 		password: {
-				// 			msg: 'La contraseña es incorrecta'
-				// 		}
-				// 	}
-				// });
+				return res.render('login', {
+					errors: {
+						password: {
+							msg: 'La contraseña es incorrecta'
+						}
+					}
+				});
 			}
-
-		
-			// return res.render('login', {
-			// 	errors: {
-			// 		email: {
-			// 			msg: 'No se encontró un usuario con este email'
-			// 		}
-			// 	}
-			// });
+	
+			return res.render('login', {
+				errors: {
+					email: {
+						msg: 'No se encontró un usuario con este email'
+					}
+				}
+			});
 		} catch (error) {
 			console.log("Error:", error);
 			return res.render('login', {

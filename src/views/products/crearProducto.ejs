@@ -57,21 +57,6 @@
                     </select>
                     <ul id="errorContainer" class="error-container"></ul>
                     
-                    <ul>
-                        <ul>
-                            <% if(locals.errors){ %>
-                                <% for (let oneError in locals.errors) { %>
-                                    <li class="li-producto"> <%= locals.errors[oneError].msg %> </li>
-                                <% } %>
-                            <% } %>
-                            </ul>
-                                <!-- <div>
-                                    <% if (locals.errors && errors.img) { %>
-                                        <p> <%= errors.img.msg %> </p>
-                                        <% } %>
-                                </div> -->
-                    </ul>
-
                     <div class="botones" >
                         <!-- Botón de Enviar -->
                         <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Crear</button>

@@ -8,11 +8,14 @@ const app = express();
 const port = process.env.PORT || 3300;
 const session = require('express-session');
 const userMenu = require('./middlewares/userMenu');
+const cors = require('cors');
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(cors());
 
 app.use(session({
   secret: "Frase secreta",
@@ -39,7 +42,8 @@ app.listen(port, () => console.log(`Listening on port http://localhost:${port}`)
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/users'); 
-const categoriesRouter = require('./routes/categories'); 
+// const usersApiRouter = require('./routes/api/users');
+// const productsApiRouter = require('./routes/api/products');
 
 //---API---
 const productsApiRouter = require('./routes/api/productsRouter');
@@ -48,7 +52,10 @@ const productsApiRouter = require('./routes/api/productsRouter');
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', userRouter);
-app.use('/categories', categoriesRouter); 
+// Rutas de la API
+// app.use('/api/users', usersApiRouter);
+// app.use('/api/products', productsApiRouter);
+
 
 //---API---
 app.use('/api/products', productsApiRouter);

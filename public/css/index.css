@@ -389,7 +389,9 @@ footer{
 /**
    Navegación en desktop (1200-min)
 */
-@media(min-width: 1024px) and (max-width:1919px){
+
+
+@media(min-width: 1024px) and (max-width:1930px){
     .producto article{
         flex-basis: 23%; 
         margin: 5px; 

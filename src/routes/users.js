@@ -51,7 +51,6 @@ let validationsRegister = [
     })
 ];
 
-
 /*LEER EL FORMULARIO DE LOGIN, Y ENVIAR EL FORMULARIO DE LOGIN */
 router.get('/login', guestMiddleware, userController.login); 
 router.post('/login', userController.loginProcess);
@@ -65,7 +64,7 @@ router.put('/profile/update/:id', upload.single('img'), authMiddleware, userCont
 /*TRAER FORMULARIO DE REGISTRO, ENVIAR DATOS DEL FORMULARIO DE REGISTRO */
 router.get('/register', guestMiddleware, userController.register); 
 // router.post('/register', upload.single('img'), userController.proccesRegister); /*CREAR */
-router.post('/register', upload.single('img'), userController.processRegister);
+router.post('/register', upload.single('img'), validationsRegister, userController.processRegister);
 
 router.get('/logout', userController.logout); 
 

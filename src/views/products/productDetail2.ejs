@@ -28,9 +28,13 @@
             </div>
 
             <div class="precio-info-botones">
+                <div>
+                    <p>Precio:</p>
                 <p>$ <%= product.price %></p>
+                </div>
+                
                 <a href="#" class="boton-pequeno">Comprar</a>
-                <a href="#" class="boton-pequeno">Agregar al Carrito</a>
+                <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
                 <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: green;">EDITAR PRODUCTO</a>
                 <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
                     <button type="submit"  class="boton-eliminar">ELIMINAR</button>

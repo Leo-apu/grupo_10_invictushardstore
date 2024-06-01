@@ -22,7 +22,7 @@ nav{
     background-size: 500px;
     border-radius: 3px;
     padding: 20px;
-    margin-top: 10px;
+    
 }
 
 nav ul li{
@@ -389,7 +389,7 @@ footer{
 /**
    Navegación en desktop (1200-min)
 */
-@media(min-width: 1024px) and (max-width:1919px){
+@media(min-width: 1024px) and (max-width:1930px){
     .producto article{
         flex-basis: 23%; 
         margin: 5px; 

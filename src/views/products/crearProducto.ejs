@@ -42,14 +42,7 @@
                     <!-- Categoría del Producto -->
                     <h2 class="crearProducto-titulo">Categorías</h2>
                     <select id="categoria" name="category_id" required>
-                     <!-- <option value="almacenamiento">Almacenamiento</option>
-                        <option value="fuentes">Fuentes</option>
-                        <option value="gpus">Placas de video</option>
-                        <option value="ram">Memorias RAM</option>
-                        <option value="procesadores">Procesadores</option>
-                        <option value="motherboards">Motherboards</option>
-                        <option value="gabinetes">Gabinetes</option>  
-                     -->
+                     
                         <option value="" disabled selected>- seleccione una categoria - </option>
                         <% allCategories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %></option>

@@ -33,14 +33,14 @@
                 <% }) %>  -->
 
                 <% products.forEach((product) =>{ %>
-                    <article>
+                    <article class="product-item">
                         <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
                             <img src="../images/productsBD/<%= product.img %>" alt="<%= product.name %>">
                             
                             <div class="main-article">
                                 <div class="">
                                     <p class="titulo"><%= product.name %></p>
-                                    <p class="descripcion"><%= product.description %></p>
+                                    
                                 </div>
                                 <p class="precio">$ <%= product.price %></p>
                             </div>

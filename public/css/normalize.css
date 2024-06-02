@@ -25,6 +25,7 @@ pre {
 a {
     background-color: transparent;
 }
+
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -145,3 +146,17 @@ template {
     display: none;
 }
 
+/*estilos de */
+.main-article {
+    color: #000000; /* Cambia este color al que desees */
+    height: 150px; /* Cambia este valor al que desees */
+}
+
+.product-item {
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Añade la propiedad background-color a la transición */
+}
+
+.product-item:hover {
+    transform: scale(1.0); /* Escala un poco más grande al pasar el cursor */
+    background-color: rgba(240, 240, 240, 0.38); /* Cambia el color de fondo al pasar el cursor con una opacidad del 80% */
+}

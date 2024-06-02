@@ -7,7 +7,7 @@
     width:30%; 
     color: #353E4A;
     position:relative;
-    left: 35%;
+ 
    
 }
 
@@ -123,4 +123,36 @@ label{
     margin-left: 25px;
     color: crimson;
     font-size: 17px;
+}
+
+/* Estilos para pantallas de hasta 480px de ancho */
+@media(max-width: 480px) {
+    .article-crearProducto {
+        width: 80%; /* Cambiar el ancho del artículo para adaptarlo al tamaño de la pantalla */
+        left: 1%; /* Ajustar la posición izquierda para centrar */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Agregar más ajustes según sea necesario para esta resolución */
+}
+
+/* Estilos para pantallas de 768px a 991px de ancho */
+@media(min-width: 768px) and (max-width: 991px) {
+    .article-crearProducto {
+        width: 60%; /* Cambiar el ancho del artículo para adaptarlo al tamaño de la pantalla */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Agregar más ajustes según sea necesario para esta resolución */
+}
+
+/* Estilos para pantallas de 1024px a 1930px de ancho */
+@media(min-width: 1024px) and (max-width: 1930px) {
+    .article-crearProducto {
+        width: 40%; /* Cambiar el ancho del artículo para adaptarlo al tamaño de la pantalla */
+
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Agregar más ajustes según sea necesario para esta resolución */
 }

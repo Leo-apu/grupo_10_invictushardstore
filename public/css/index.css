@@ -270,47 +270,70 @@ footer {
 /**
     Navegación en mobile
 **/
-@media(max-width: 480px){
-    
-    .seccion{
-        flex-basis: 100%;
+@media(max-width: 480px) {
+    a{
+        color: #123666;
+        text-decoration: none;
     }
-
-    .container{
+    .container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
     }
 
-    .imgLogo{
-        flex-basis: 40%;
-        box-sizing: border-box;
-        width: 35%;
-        text-align: left;
+    .imgLogo {
+        width: 200px; /* Tamaño deseado para la imagen */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin-bottom: 10px; /* Espacio entre la imagen y el resto del contenido */
+    }
+
+    .nav-icono {
+        margin-top: 10px; /* Espacio entre el resto del contenido y el icono */
+    }
+
+    .nav-caja2 {
+        margin-top: 10px; /* Espacio entre el resto del contenido y el botón de hamburguesa */
+    }
+
+    .nav-caja2 a {
+        font-size: 40px; /* Tamaño de fuente más grande */
+        
+    }
+
+    .nav-caja {
+        display: none;
+        width: 80%;
+    }
+
+    .nav-caja.active {
+        display: block;
+    }
+
+    .nav-caja ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-caja ul li {
+        display: block;
+        width: 100%;
+        text-align: center; 
+        padding: 10px 0;
+    }
+
+    .nav-caja ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: rgb(51, 34, 117);
+        text-decoration: none;
     }
     
-    .nav-caja{
-        display: none;
+    .nav-caja ul li a:hover {
+        background-color: #35e9628a;
+        color: #ffffff;
     }
-   
-    .nav-caja2{
-        display: block;
-        flex-basis: 5%;  
-        text-align: left;
-        margin-top: 20px;
-        font-size: 2em;
-    }
-
-    .nav-caja2 i{
-        color: black;
-    }
-   
-    .nav-icono{
-        flex-basis: 26%;  
-    }
-
 }
-
 
 /**
    Navegacion en tablets

@@ -157,7 +157,7 @@ main{
 
   @media screen and (max-width: 834px) {
     .form-container {
-        width: 95%;
+        width: 80%;
     }
     .sign, .register {
         width: 100%;  

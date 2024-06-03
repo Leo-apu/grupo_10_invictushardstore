@@ -130,12 +130,19 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* Centra las columnas */
     text-align: center;
-    /* Centra el título */
     align-items: flex-start;
-    /* Alinea el contenido en la parte superior */
+    background-color: #fbf8efc0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .titulo-especificaciones {
     width: 100%;
@@ -213,3 +220,46 @@ footer{
     margin-bottom: 10px;
 }
 
+/* Estilos para pantallas de hasta 480px de ancho */
+@media(max-width: 480px) {
+    .detalle-producto {
+        flex-direction: column; /* Cambiar la dirección del flex para apilar los elementos */
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    .especificaciones {
+        order: -1; /* Mover la sección de especificaciones arriba */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .titulo-especificaciones {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .grupo-especificaciones:nth-child(2) {
+        order: 2; /* Mover la caja de "General" debajo de la caja de "Descripcion" */
+    }
+
+    .precio-info-botones {
+        order: 3; /* Cambiar el orden para que aparezca debajo del contenido */
+        width: 100%; /* Ancho completo */
+    }
+}
+
+/* Estilos para pantallas de 768px a 991px de ancho */
+@media(min-width: 768px) and (max-width: 991px) {
+    .detalle-producto {
+        max-width: 600px; /* Ancho máximo ajustado */
+        margin: auto; /* Centrar horizontalmente */
+    }
+}
+
+/* Estilos para pantallas de 1024px a 1930px de ancho */
+@media(min-width: 1024px) and (max-width: 1930px) {
+    .detalle-producto {
+        max-width: 800px; /* Ancho máximo ajustado */
+        margin: auto; /* Centrar horizontalmente */
+    }
+}

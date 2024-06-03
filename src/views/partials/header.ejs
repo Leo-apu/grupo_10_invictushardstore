@@ -1,10 +1,12 @@
 <nav>
     <div class="container">
+        
+
+        <img class="imgLogo" src="/images/logo-InvictusHardStore-1.png" alt="Logo">
+
         <div class="nav-caja2">
             <a href="/"><i class="fa fa-bars"></i></a>
         </div>
-
-        <img class="imgLogo" src="/images/logo-InvictusHardStore-1.png" alt="Logo">
 
         <div class="nav-caja">
             <ul>
@@ -42,3 +44,15 @@
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerIcon = document.querySelector('.nav-caja2 a');
+        const navMenu = document.querySelector('.nav-caja');
+
+        burgerIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+        });
+    });
+</script>

@@ -5,25 +5,21 @@
     position:relative;
 
     margin-top:20px;
-    
 }
-.article-crearProducto{
 
+.article-crearProducto{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     color: #353E4A;
     position:relative;
-   align-content: center;
-   
+    align-content: center;
 }
 
 .crearProducto-titulo{
     font-family: 'Lora', serif;
     font-size: 20px;
-    padding:10px;
-  
-    
+    padding:10px; 
 }
 
 .crearProducto-subtitulo{
@@ -37,35 +33,41 @@ select{
     height:40px;
     border:none;
 }
+
 select:focus{
     outline:none;
     border:3px solid #9ACB34;
 }
+
 input{
     border-radius: 5px;
     height:40px;
     border:none;
 }
 
-
 input{
     outline:none;
 }
+
 input:focus{
     outline: 3px solid #9ACB34
 }
+
 #nombre:focus{
     outline:none;
     border:3px solid #9ACB34;
 }
+
 precio-container:focus{
     outline:none;
     border:3px solid #9ACB34;
 }
+
 textarea:focus{
     outline:none;
     border:3px solid #9ACB34;
 }
+
 textarea{
     border-radius: 5px;
     height:100px;
@@ -81,6 +83,7 @@ label{
     left: 20px;
     display: flex;
 }
+
 .crearProducto-check{
     position:relative;
     bottom: 12px;
@@ -91,6 +94,7 @@ label{
     display:flex;
     justify-content: space-around;
 }
+
 .boton{
     width: 150px;   
     border-radius:5px;
@@ -100,6 +104,7 @@ label{
     background-color: #9ACB34;
     margin-bottom: 15px;
 }
+
 .crear:hover{
     color: rgba(17, 24, 39, 1);
   
@@ -109,36 +114,43 @@ label{
     border:1px solid #353E4A;
 }
 
-  .precio-container {
+.precio-container {
     position: relative;
-  }
+}
   
-  .simbolo-moneda {
+.simbolo-moneda {
     position: absolute;
     left: 10px; /* Ajusta la posición según tus necesidades */
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px; /* Ajusta el tamaño según tus necesidades */
     color: #555; /* Ajusta el color según tus necesidades */
-  }
+}
   
-  #precio {
+#precio {
     padding-left: 30px; /* Espacio para el símbolo de dólar */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     width: 100%;
-  }
-  #precio:focus{
+}
+
+#precio:focus{
     outline:none;
     outline:none;
     border:3px solid #9ACB34;
-  }
+}
 
-  .li-producto{
+.li-producto{
     padding-top: 15px;
     list-style: disc;
     text-align: left;
     margin-left: 25px;
     color: crimson;
+    font-size: 17px;
+}
+
+.busqueda-resultado{
+    padding: 20px;
+    color: rgb(0, 0, 0);
     font-size: 17px;
 }
 

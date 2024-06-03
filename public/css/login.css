@@ -101,6 +101,7 @@ main{
     font-weight: 600;
     margin: 16px auto 0 auto;
     cursor: pointer;
+    transition: background-color, 0.5s;
   }
   .register {
     display: block;
@@ -114,6 +115,7 @@ main{
     font-weight: 600;
     margin: 16px auto 0 auto;
     cursor: pointer;
+    transition: background-color, 0.5s;
   }
 
   .registerButtonl{

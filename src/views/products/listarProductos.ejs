@@ -3,6 +3,7 @@
 <head>
     <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="../css/crearProducto.css">
     <title>Invictus Hard Store</title>
 </head>
 
@@ -14,7 +15,13 @@
 
     <main>
         <section class="destacados">
-            <h1>Lista de Productos</h1>
+            <h1>Lista de Productos </h1>
+            <form action="/products/search" method="get">
+                <div>
+                    <input type="text" id="name" name="name" required>
+                    <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Buscar</button>
+                </div>
+            </form>
             <div class="producto">
 
                 <% products.forEach((product) =>{ %>

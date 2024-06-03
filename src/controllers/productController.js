@@ -105,9 +105,25 @@ const controller = {
 			console.log("Error:", error);
 		}
 
-    }
-	
+    },
+	search: async function (req,res) {
+        try{ 
+			const searchTerm = req.query.name;
 
+			const products = await db.Product.findAll({
+				where: {
+					name: {
+						[db.Sequelize.Op.like]: `%${searchTerm}%`
+					}
+				},
+				include: ['category']
+			});
+
+			res.render('prodListSearch', { products });
+        }catch (error){
+			console.log("Error:", error);
+		}
+    }
 };
 
 module.exports = controller;

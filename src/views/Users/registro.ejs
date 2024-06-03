@@ -15,14 +15,16 @@
 
     <main>
         <br>
-        <div class="contacto">
-            <p><strong>Registrar Usuario</strong></p>
-            <p>Ingresa tus datos para crear tu cuenta</p>
-        </div>
+       
         <br>
         
        <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data" id="registroForm">
+        <div class="contacto" style="margin-bottom:15px">
+            <p><strong>Registrar Usuario</strong></p>
+            <p>Ingresa tus datos para crear tu cuenta</p>
+        </div>
             <div>
+                
                 
                     <div>
                     <input type="text" class="class-input" id="nombre" name="first_name"  required placeholder="Nombre/s" value="<%= locals.oldData ? oldData.first_name : null %>">
@@ -82,7 +84,7 @@
                 </ul>
                 
                 <div class="form-register">
-                    <input type="submit" value="Registrar">
+                    <button class="registerButton" type="submit" >REGISTRAR</button>
                 </div>
                 
                 <div name="agree">¿Ya tienes cuenta? Inicia sesión <a href="/Users/login">aquí</a></div>

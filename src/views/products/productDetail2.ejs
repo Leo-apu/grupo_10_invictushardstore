@@ -28,16 +28,16 @@
             </div>
 
             <div class="precio-info-botones">
-                <div>
+                <div class="productPrice">
                     <p>Precio:</p>
                 <p>$ <%= product.price %></p>
                 </div>
                 
-                <a href="#" class="boton-pequeno">Comprar</a>
+                <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a>
                 <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
-                <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: green;">EDITAR PRODUCTO</a>
+                <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: #97c72e;font-size:16px; color:black ; text-decoration: none;">EDITAR PRODUCTO</a>
                 <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
-                    <button type="submit"  class="boton-eliminar">ELIMINAR</button>
+                    <button type="submit"  class="boton-eliminar" style=" color:black; font-size:16px;">ELIMINAR</button>
                 </form>  
             </div>
         </div>

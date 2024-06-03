@@ -28,10 +28,10 @@
 
             <% if (locals.isLoged) { %>
                 <div class="dropdown">
-                    <button style="display: flex; align-items: center; gap: 5px;">
+                    <span class="userDrop" style="display: flex; align-items: center; gap: 5px;">
                         <img src="/images/users/<%= locals.userLogged.img %>" alt="user-image" class="user-image">
                         <%= locals.userLogged.first_name %>
-                    </button>
+                    </span>
                     <div class="dropdown-options">
                         <a href="/users/profile">Perfil</a>
                         <a href="/users/logout">Logout</a>

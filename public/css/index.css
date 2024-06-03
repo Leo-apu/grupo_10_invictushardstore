@@ -40,11 +40,14 @@ nav ul li{
   border-radius: 10px;
   color: rgb(51, 34, 117);
   outline: none;
-  line-height: 35px;
+  
   font-family: 'Lora', serif;
-  font-size: 17px;
+  font-size:23px;
+  margin-bottom:15px;
 }
-
+li{
+    
+}
 .nav-lista:hover {
   background-color: #35e9628a;
   padding: 10px;
@@ -65,9 +68,10 @@ nav ul li{
 }
 
 .nav-caja{
-    flex-basis: 40%;
+    
     box-sizing: border-box;
-    margin: 20px;
+  position:relative;
+  top:35px;
 }
 
 .nav-icono{
@@ -84,9 +88,14 @@ nav ul li{
     color: #123666;
 }
 
+.userDrop{
+    font-size:26px;
+    position:relative;
+    top:7px;
+}
 .user-image{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 5px;
     margin-top: 5px;
@@ -160,7 +169,7 @@ main section article{
 
 article div.main-article{
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: #ffffff28;
 }
 
@@ -188,20 +197,49 @@ main section article img{
 .titulo{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    position:relative;
+    margin-top:10px;
+    height:40px;
+}
+.titulo2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* margin-bottom: 5px; */
+    position:relative;
+    padding-top:15px;
+    height:62px;
 }
 
 .descripcion{
+    margin-top:5px;
     text-align: center;
     font-family: 'Hind Madurai', sans-serif;
     margin-bottom: 3px;
+    height:55px;
 }
 
 .precio{
     text-align: center;
     font-family: 'Hind Madurai', sans-serif;
-    margin-top: 3px;
     font-size: 24px;
+    font-weight: 600;
+    position:relative;
+    /* top:20px; */
+    align-content: center;
+    height:10px;
+   
+}
+
+.precio2{
+    text-align: center;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    position:relative;
+    top:10px;
+    align-content: center;
+    height:50px;
    
 }
 
@@ -213,6 +251,8 @@ footer {
     background-color: #fbf8efc0;
     padding: 10px;
     text-align: center;
+  
+    
 }
 
 .icono {
@@ -290,6 +330,7 @@ footer {
 
     .nav-icono {
         margin-top: 10px; /* Espacio entre el resto del contenido y el icono */
+        margin-bottom: 25px;
     }
 
     .nav-caja2 {
@@ -333,6 +374,14 @@ footer {
         background-color: #35e9628a;
         color: #ffffff;
     }
+    .precio{
+        /* top:25px; */
+        align-content: center;
+    }
+    /* .dropdown-options{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    } */
 }
 
 /**
@@ -350,8 +399,10 @@ footer {
     }
 
     .container{
+        
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0;
     }
@@ -361,14 +412,23 @@ footer {
     }
 
     .imgLogo{
-        width: 200px; /* Tamaño deseado para la imagen */
+        width: 300px; /* Tamaño deseado para la imagen */
         height: auto; /* Permite que la altura se ajuste automáticamente */
-        margin-bottom: 30px;
-        margin-top: 30px;
+        /* margin-bottom: 30px;
+        margin-top: 30px; */
+        position:relative;
+        left:26%;
+        margin-top:25px;
+    }
+    .descripcion{
+        width:90%;
+        position: relative;
+        left:15px;
     }
 
     .nav-caja{
-        flex-basis: 30%;
+        
+        text-align: center;
     
     }
 
@@ -376,7 +436,8 @@ footer {
         flex-basis: 20%;
         text-align: right;
         font-size: 40px; 
-        margin: 20px;
+        margin-top:60px;
+        margin-bottom:30px;
     }
 }
 .dropdown {
@@ -385,6 +446,8 @@ footer {
     bottom: 7px;
     z-index: 3;
   }
+  
+
   
   button{
     border:none;
@@ -425,6 +488,10 @@ footer {
     background-color: #ddd;
     border-radius:5px;
   }
+  .precio{
+    margin-top:10px;
+    align-content: center;
+  }
 
 /**
    Navegación en desktop (1200-min)
@@ -441,6 +508,10 @@ footer {
         justify-content: space-between;
     }
 
+    .nav-caja{
+        top:44px;
+        
+    }
     .nav-caja2{
         display: none;
     }

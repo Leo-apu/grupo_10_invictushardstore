@@ -82,5 +82,7 @@ router.post('/update/:id', productsController.update);
 //router.get('/delete/:id', productsController.delete);
 router.post('/delete/:id', productsController.destroy);
 
+router.get('/search/', productsController.search);
+
 
 module.exports = router;

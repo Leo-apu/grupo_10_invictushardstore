@@ -4,8 +4,8 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/crearProducto.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/crearProducto.css">
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <title>Crear producto</title>
 </head>
@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <div class="section-crearProducto">
+        <section class="section-crearProducto">
             <form action="/products/create" method="POST" enctype="multipart/form-data">
 
                 <!-- Información General -->
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </section>
     </main>
     <br>
     <footer>

@@ -13,7 +13,6 @@
     flex-wrap: nowrap;
     color: #353E4A;
     position:relative;
-    padding: 20px;
 }
 
 .crearProducto-titulo{
@@ -81,6 +80,7 @@ textarea{
 
 label{
     position:relative;
+    left: 20px;
     display: flex;
 }
 
@@ -93,6 +93,7 @@ label{
 .botones{
     display:flex;
     justify-content: space-around;
+    margin-top: 16px;
 }
 
 .boton{
@@ -164,8 +165,18 @@ label{
     .article-crearProducto {
         width:100%;
         margin: 0 auto;
+        flex-wrap: wrap;
         align-content: center;
     }
+    input{
+        width:85%;
+     
+    }
+
+    textarea{
+        width:85%;
+    }
+    /* Agregar más ajustes según sea necesario para esta resolución */
 }
 
 /* Estilos para pantallas de 768px a 991px de ancho */

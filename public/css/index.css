@@ -60,6 +60,13 @@ li{
     justify-content: left;
 }
 
+  
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .imgLogo{
     flex-basis: 10%;
     text-align: left;
@@ -86,6 +93,49 @@ li{
 
 .nav-icono i{
     color: #123666;
+}
+
+.user-form-edit {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los campos de entrada */
+.user-info-edit label,
+label[for="email"] {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para la imagen de perfil */
+.user-image-edit input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Estilos para el botón */
+.user-button-edit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-button-edit:hover {
+    background-color: #0056b3;
 }
 
 .userDrop{

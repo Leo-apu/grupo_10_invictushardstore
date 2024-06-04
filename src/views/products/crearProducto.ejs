@@ -4,9 +4,9 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/crearProducto.css">
-
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/crearProducto.css">
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <title>Crear producto</title>
 </head>
 
@@ -17,10 +17,10 @@
 
     <main>
         <section class="section-crearProducto">
-            <form action="/products/create" method="POST">
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
 
                 <!-- Información General -->
-                <article class="article-crearProducto">
+                <div class="article-crearProducto">
                     <h2 class="crearProducto-titulo">Información General</h2>
                     <label class="crearProducto-subtitulo" for="name">Nombre del Producto:</label>
                     <input type="text" id="name" name="name" required>
@@ -35,41 +35,27 @@
                         <input type="number" id="price" name="price" style="padding: 1.5rem" required>
                     </div>
 
-                    <!-- Imagen del Producto -->
+                    <!-- Imagen del Producto  name="imagen"-->
                     <h2 class="crearProducto-titulo">Imagen del Producto</h2>
-
-                    <input type="file" id="imagen" name="imagen" accept="image/*" >
+                    <input type="file" id="img" name="img" accept="image/*" >
 
                     <!-- Categoría del Producto -->
                     <h2 class="crearProducto-titulo">Categorías</h2>
-                    <select id="categoria" name="category" required>
-                        <option value="almacenamiento">Almacenamiento</option>
-                        <option value="fuentes">Fuentes</option>
-                        <option value="gpus">Placas de video</option>
-                        <option value="ram">Memorias RAM</option>
-                        <option value="procesadores">Procesadores</option>
-                        <option value="motherboards">Motherboards</option>
-                        <option value="gabinetes">Gabinetes</option>
+                    <select id="categoria" name="category_id" required>
+                     
+                        <option value="" disabled selected>- seleccione una categoria - </option>
+                        <% allCategories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                        <% }); %> 
                     </select>
-
+                    <ul id="errorContainer" class="error-container"></ul>
                     
                     <div class="botones" >
                         <!-- Botón de Enviar -->
-                        <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Crear Producto</button>
+                        <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Crear</button>
                       <!--  <button class="boton volver" type="submit">Volver</button> -->
                     </div>
-                </article>
-
-
-
-
-
-
-
-
-
-
-
+                </div>
             </form>
         </section>
     </main>
@@ -77,6 +63,7 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+    <script src="/js/productValidation.js"></script>
 </body>
 
 </html>

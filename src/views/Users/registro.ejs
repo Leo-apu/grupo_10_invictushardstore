@@ -5,6 +5,7 @@
     <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
     <link rel="stylesheet" href="../css/registro.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <title>Registrar</title>
 </head>
 <body>
@@ -14,62 +15,78 @@
 
     <main>
         <br>
-        <div class="contacto">
+       
+        <br>
+        
+       <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data" id="registroForm">
+        <div class="contacto" style="margin-bottom:15px">
             <p><strong>Registrar Usuario</strong></p>
             <p>Ingresa tus datos para crear tu cuenta</p>
         </div>
-        <br>
-        
-       <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
             <div>
-                <div>
-                    <input type="text" name="username" required placeholder="Nombre de usuario">
-                </div>
+                
+                
+                    <div>
+                    <input type="text" class="class-input" id="nombre" name="first_name"  required placeholder="Nombre/s" value="<%= locals.oldData ? oldData.first_name : null %>">
+                    <!-- <div id="nombreError" class="error-message"></div>  -->
+                    </div>
+                    
+           
 
-                <div class="div-container">
-                    <input type="text" class="class-input" name="firstName" required placeholder="Nombres">
-                    <input type="text" class="class-input" name="lastName" required placeholder="Apellido">
-                </div>
+                <div>
+                    <input type="text" class="class-input" id="apellido" name="last_name" required placeholder="Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
+                    <!-- <div id="apellidoError" class="error-message"></div>  -->
+                    </div>
 
                 <div>
-                    <input type="email" name="email" required placeholder="Correo electrónico">
+                    <input type="email" name="email" id="email" required placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                    <!-- <div id="emailError" class="error-message"></div>  -->
                 </div>
                 
                 <div>
-                    <input type="password" name="password" required placeholder="Contraseña">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña">
+                    <!-- <div id="passwordError" class="error-message"></div>  -->
                 </div>
 
                 <div>
-                    <select name="role" id="role" class="form-input" required>
-
+                    <select name="roles_id" id="role" class="form-input" required>
                         <option value="">Elige un rol</option>
-                        <%  let roles = ['Administrador', 'Usuario'] %>
+                        <%  let roles = [{ id: 1, name: 'Administrador' }, { id: 2, name: 'Usuario' }] %>
                         <% for(const oneRole of roles) { %>
-                            <option value="<%= oneRole %>"
-                            <%= locals.oldData && (oneRole === oldData.role) ? 'selected' : null  %>
-                            > <%= oneRole %> </option>
+                            <option value="<%= oneRole.id %>"
+                            <%= locals.oldData && (oneRole.id === oldData.roles_id) ? 'selected' : null  %>
+                            > <%= oneRole.name %> </option>
                         <% } %>
-                        
                     </select>
+                    <!-- <div id="roleError" class="error-message"></div>  -->
                 </div>
 
                 <div>
-                    <input type="file" id="image" name="image" class="form-input" style="padding-top: 10px;">
+                    <input type="file" id="img" name="img" accept="image/*" class="form-input" style="padding-top: 10px;">
+                    <!-- <div id="imgError" class="error-message"></div>  -->
                 </div>
+
+                <ul id="errorContainer"></ul>
+
+                <ul>
+                    <ul>
+                    <% if(locals.errors){ %>
+                        <% for (let oneError in errors) { %>
+                            <li class="li-registro"> <%= errors[oneError].msg %> </li>
+                            <% } %>
+                            <% } %>
+                        </ul>
+                            <!-- <div>
+                                <% if (locals.errors && errors.img) { %>
+                                    <p> <%= errors.img.msg %> </p>
+                                    <% } %>
+                            </div> -->
+                </ul>
                 
-                <!-- Términos y Condiciones 
-                <div class="class-checkbox">
-                    <label for="si"> <a href="#">Acepto términos y condiciones</a>
-                        <input type="checkbox" id="si" name="si" required>
-                    </label>
-                </div> -->
-                
-                <!-- Botón de Registro -->
                 <div class="form-register">
-                    <input type="submit" value="Registrar">
+                    <button class="registerButton" type="submit" >REGISTRAR</button>
                 </div>
                 
-                <!-- Iniciar Sesión -->
                 <div name="agree">¿Ya tienes cuenta? Inicia sesión <a href="/Users/login">aquí</a></div>
             </div>
         </form> 
@@ -78,5 +95,7 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+
+    <script src="/js/registerValidation.js"></script>
 </body>
 </html>

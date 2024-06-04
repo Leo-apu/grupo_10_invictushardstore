@@ -2,17 +2,16 @@ main{
     display: flex; 
     justify-content: center;
     align-items: center;
-    margin: 32px 0; 
+    margin: 20px auto;
 }
 
 .form-container {
-    width: 50%;
+    width: 40%;
     border-radius: 0.75rem;
     background-color: #FBF8EF;
     padding: 2rem;
     color: #353E4A;
   }
-  
 
   .title {
     text-align: center;
@@ -27,7 +26,7 @@ main{
   
   .input-group {
     margin: 1.25rem 0;
-    font-size: 0.875rem;
+    font-size: 18px;
     line-height: 1.25rem;
     border: none;
 }
@@ -41,7 +40,7 @@ main{
     outline: none;
     background: transparent;
     padding: 0.75rem 1rem;
-    color: #9ACB34;
+    color: #000000;
 }
 
 .input-group .input:focus {
@@ -99,6 +98,7 @@ main{
     font-weight: 600;
     margin: 16px auto 0 auto;
     cursor: pointer;
+    transition: background-color, 0.5s;
   }
   .register {
     display: block;
@@ -112,6 +112,11 @@ main{
     font-weight: 600;
     margin: 16px auto 0 auto;
     cursor: pointer;
+    transition: background-color, 0.5s;
+  }
+
+  .registerButtonl{
+    text-decoration:none;
   }
 
   .line {
@@ -125,7 +130,6 @@ main{
     font-size: 0.75rem;
     line-height: 1rem;
     color: #353E4A;
-    margin-top: 16px;
   }
   
   .signup span {
@@ -146,8 +150,87 @@ main{
     border-radius: 50%;
     box-shadow: 4px 3px 20px #353E4A;
     position:relative;
-    left: 45%;
+    left: 40%;
   }
+
+  .container-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #9acb34;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 4px 3px 20px #353E4A;
+  }
+
+  .profile-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-userImage-perfil{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 100px;
+    border-radius: 20%;
+    box-shadow: 4px 3px 20px #353E4A;
+  }
+
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la imagen de perfil */
+.profile-image-container {
+    text-align: right;
+}
+
+.profile-userImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+    background-color: #353E4A;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right;
+    width: 150px;
+}
+
+.edit-button:hover {
+    background-color: #04D0D9;
+    color: #353e4a;
+}
+
   .profile-userName{
     margin:10px;
   }
@@ -155,23 +238,39 @@ main{
     margin:10px;
   }
 
-  @media screen and (max-width: 834px) {
+  @media (max-width:1920px){
+    .form-container{
+      margin-top:10px;
+    }
+  }
+ @media(min-width: 768px) and (max-width: 991px) {
     .form-container {
-        width: 95%;
+        width: 90%;
     }
     .sign, .register {
         width: 100%;  
         margin: 16px 0 0 0;
+    }
+    .profile-userImage{
+      left:40%;
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 430px) {
     .form-container {
-        width: 98%;
+        width: 90%;
+        padding:1rem;
     }
     .sign, .register {
         width: 100%;  
         margin: 16px 0 0 0;
     }
+   .profile-userImage{
+    left:35%;
+   }
+   .profile-title{
+    margin-bottom: 15px;
+
     
+   }
 }

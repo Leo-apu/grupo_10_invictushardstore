@@ -4,9 +4,9 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="../css/login.css">
-        <link rel="stylesheet" href="../css/index.css">
+        <!-- <link rel="stylesheet" href="/css/home.css"> -->
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/index.css">
         <title>Invictus Hard Store</title>
 </head>
 
@@ -17,19 +17,33 @@
 
     <main>
         <div class="form-container">
-            <div>
-                <div>
-                    <h1 class="profile-title">Información personal</h1>
-                    <h3 class="profile-userName">Hola!, <%= user.username %></h2>
-                    <p class="profile-userText">Nombre: <%= user.firstName %></p>
-                    <p class="profile-userText">Apellido: <%= user.lastName %></p>
-                    <p class="profile-userText">Tu correo registrado es: <%= user.email %></p>
-                    <img class="profile-userImage" src="/images/users/<%= user.image %>">
-                </br>
-                
-
+            <h1 class="profile-title">Información personal</h1>
+            <!-- <h3 class="profile-userName">Hola!, <%= user.username %></h2> -->
+                <div    class="container-profile">
+                    <div class="profile-info">
+                        <p class="profile-userText"><strong>NOMBRE :</strong> <%= user.first_name %>
+                        </p>
+                        <p class="profile-userText"><strong>APELLIDO:</strong> <%= user.last_name %>
+                        </p>
+                        <p class="profile-userText"><strong>CORREO ELECTRONICO :</strong> <%= user.email %>
+                        </p>
+                        <% if (user.roles_id === 1) {%>
+                        <p class="profile-userText"><strong>ROL :</strong>  Administrador</p>
+                        <% }else if (user.roles_id === 2) {%>
+                        <p class="profile-userText"><strong>ROL :</strong>  Usuario</p>
+                        <% } %>
+                    </div>
+                    <div class="image-profile">
+                        <img class="profile-userImage-perfil" src="/images/users/<%= user.img %>">
+                    </div>
+                    <div >
+                        <a href="/users/profile/edit/<%= user.id %>">
+                            <button class="edit-button">Editar</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            <!-- <a href="/users/profile/edit/<%= user.id %>" class="userEdit-button"></a> -->
+            </br>
         </div>
     </main>
 

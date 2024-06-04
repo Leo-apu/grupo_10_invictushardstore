@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="../css/crearProducto.css">
+        <title>Invictus Hard Store</title>
+    </head>
+
+    <body>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
+
+        <main>
+            <section class="destacados">
+                <h1>Lista de productos encontrados </h1>
+                <form action="/products/search" method="get">
+                    <div>
+                        <input type="text" id="name" name="name" required>
+                        <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Buscar</button>
+                    </div>
+                </form>
+                <div class="producto">
+                    <% if (products && products.length) { %>
+                        <% products.forEach((product) => { %>
+                            <article class="product-item">
+                                <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
+                                    <img src="/images/productsBD/<%= product.img %>" alt="<%= product.name %>">
+                                    
+                                    <div class="main-article">
+                                        <div>
+                                            <p class="titulo2"><%= product.name %></p>
+                                        </div>
+                                        <p class="precio2">$ <%= product.price %></p>
+                                    </div>
+                                </a>
+                            </article>
+                        <% }) %>
+                    <% } else { %>
+                        <p class="busqueda-resultado">No se encontraron productos con ese nombre.</p>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <%- include('./partials/footer.ejs') %>
+        </footer>
+        
+    </body>
+</html>

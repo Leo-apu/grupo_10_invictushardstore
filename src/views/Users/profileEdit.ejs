@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Editar perfil - Invictus Hard Store</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+<main>
+    <div class="form-container">
+        <h1 class="profile-title">Editar información personal</h1>
+        <form class="user-form-edit" action="/users/profile/update/<%= user.id %>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
+
+            <div class="user-info-edit">
+                <label for="first_name">
+                    <span for="first_name">Nombre:</span>
+                    <input type="text" id="first_name" name="first_name" value="<%= user.first_name %>" required>
+                </label>
+                <label for="last_name">
+                    <span for="last_name">Apellido:</span>
+                    <input type="text" id="last_name" name="last_name" value="<%= user.last_name %>" required>
+                </label>
+            </div>
+            <label for="email">
+                <span for="email">Correo electrónico:</span>
+                <input type="email" id="email" name="email" value="<%= user.email %>" required>
+            </label>
+            
+
+            <div class="user-image-edit">
+                <input type="file" id="img" name="img" accept="image/*" class="form-input">
+            </div>
+
+            <button class="user-button-edit" type="submit">Guardar cambios</button>
+        </form>
+    </div>
+</main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+
+</html>

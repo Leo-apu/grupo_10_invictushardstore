@@ -54,6 +54,7 @@ const controller = {
                     name: product.name,
                     description: product.description,
                     categories: product.category ? [product.category.name] : [], 
+                    img : product.img,
                     detail: `/api/products/${product.id}`
                 };
             });

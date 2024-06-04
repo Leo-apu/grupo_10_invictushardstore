@@ -35,10 +35,16 @@
                 
                 <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a>
                 <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
-                <a href="/products/edit/<%= product.id %>" class="boton-pequeno" style="background-color: #97c72e;font-size:16px; color:black ; text-decoration: none;">EDITAR PRODUCTO</a>
-                <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
-                    <button type="submit"  class="boton-eliminar" style=" color:black; font-size:16px;">ELIMINAR</button>
-                </form>  
+
+                <% if (locals.isLoged) { %>
+                    <% if (locals.userLogged.roles_id===1) { %>
+                        <a href="/products/edit/<%= product.id %>" class="boton-pequeno"
+                            style="background-color: #97c72e;font-size:16px; color:black ; text-decoration: none;">EDITAR PRODUCTO</a>
+                        <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
+                            <button type="submit" class="boton-eliminar" style=" color:black; font-size:16px;">ELIMINAR</button>
+                        </form>                
+                        <% } %>
+                            <% } %>
             </div>
         </div>
 

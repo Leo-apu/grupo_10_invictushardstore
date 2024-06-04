@@ -48,6 +48,21 @@
             white-space: pre-wrap;
             background-color: #b9b9b9;
         }
+        .boton-volver {
+            background-color: #9ACB34;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-volver:hover {
+            background-color: #04D0D9;  
+        }
+        
         @media screen and (max-width: 834px) {
             .container {
                 max-width: 90%;
@@ -88,6 +103,10 @@
         <h2 style="color: crimson;"><%= error.status %></h2>
         <p>Ocurrió un error al intentar acceder a: <b><%= path %></b></p>
         <pre><%= error.stack %></pre>
+
+        <a href="/" class="boton-volver" >Volver al inicio</a>
+
+        <p>Si el error persiste, por favor, contacte con el administrador del sitio.</p>
     </div>
 </body>
 </html>

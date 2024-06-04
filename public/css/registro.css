@@ -10,6 +10,10 @@ body {
     background-color: #04D0D9;
 }
 
+main{
+    height:659px;
+}
+
 .header_container {
     background-color: #FBF8EF;
     color: white;
@@ -52,12 +56,12 @@ p{
 }
 
 .form-register {
-    max-width: max-content;
+    width:40%;
     margin: 0 auto;
-    background-color: #9ACB34;
+    background-color: #FBF8EF;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .form-register input[type="submit"] {
@@ -75,15 +79,28 @@ p{
     font-size: 18px;
     border-radius: 5px;
     border: none;
-    border: solid 1px var(--gray);
+    
     padding: 0 15px;
+    
 }
 
 .form-register input[type="file"] {
     width: 100%;
     border: solid 1px #ffffff;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    
+    
+}
+input:focus{
+outline: 3px solid #9ACB34;
+}
+
+select{
+    outline: none;
+}
+
+select:focus{
+    outline: 3px solid #9ACB34;
 }
 
 .form-register select {
@@ -113,6 +130,10 @@ p{
     height: 20px; 
 }
 
+.registerButton{
+    background-color: #9ACB34;
+    font-weight: 600;
+}
 .div-container {
     display: flex; /* Flexbox --> alinear los elementos horizontalmente */
 }
@@ -138,6 +159,14 @@ p{
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+.li-registro{
+    list-style: disc;
+    text-align: left;
+    margin-left: 25px;
+    color: crimson;
+    font-size: 17px;
 }
 
 
@@ -171,7 +200,8 @@ p{
     }
 
     .form-register {
-        max-width: 100%;
+        width:90%;
+        margin-bottom:25px;
     }
 
     .form-register input {

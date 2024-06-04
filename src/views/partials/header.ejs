@@ -1,10 +1,12 @@
 <nav>
     <div class="container">
+        
+
+        <img class="imgLogo" src="/images/logo-InvictusHardStore-1.png" alt="Logo">
+
         <div class="nav-caja2">
             <a href="/"><i class="fa fa-bars"></i></a>
         </div>
-
-        <img class="imgLogo" src="/images/logo-InvictusHardStore-1.png" alt="Logo">
 
         <div class="nav-caja">
             <ul>
@@ -15,7 +17,8 @@
                     <a class="nav-lista" href="/products/create">Crear Producto</a>
                 </li>
                 <li>
-                    <a class="nav-lista" href="/products/list">Todos los Productos</a>
+                   <!-- <a class="nav-lista" href="/products/list">Todos los Productos</a> -->
+                    <a class="nav-lista" href="/products/prodList">Todos los Productos</a>
                 </li>
             </ul>
         </div>
@@ -25,19 +28,31 @@
 
             <% if (locals.isLoged) { %>
                 <div class="dropdown">
-                    <button style="display: flex; align-items: center; gap: 5px;">
-                        <img src="/images/users/<%= locals.userLogged.image %>" alt="user-image" class="user-image">
-                        <%= locals.userLogged.username %>
-                    </button>
+                    <span class="userDrop" style="display: flex; align-items: center; gap: 5px;">
+                        <img src="/images/users/<%= locals.userLogged.img %>" alt="user-image" class="user-image">
+                        <%= locals.userLogged.first_name %>
+                    </span>
                     <div class="dropdown-options">
                         <a href="/users/profile">Perfil</a>
                         <a href="/users/logout">Logout</a>
                     </div>
                 </div>
                 <% }else{ %>
-                    <a href="/Users/login"><i class="fas fa-sign-in-alt"></i></a>
+                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
                     <% } %>
-                        <a href="/products/cart"><i class="fas fa-cart-arrow-down"></i></a>
+                        <a href="/cart"><i class="fas fa-cart-arrow-down"></i></a>
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerIcon = document.querySelector('.nav-caja2 a');
+        const navMenu = document.querySelector('.nav-caja');
+
+        burgerIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+        });
+    });
+</script>

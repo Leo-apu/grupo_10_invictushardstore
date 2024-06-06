@@ -3,14 +3,15 @@ main{
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    height: 637px;
 }
 
 .form-container {
     width: 40%;
     border-radius: 0.75rem;
     background-color: #FBF8EF;
-    padding: 2rem;
-    color: #353E4A;
+    padding: 1rem;
+    /* color: #353E4A; */
   }
 
   .title {
@@ -29,6 +30,9 @@ main{
     font-size: 18px;
     line-height: 1.25rem;
     border: none;
+}
+p{
+  font-size: 20px;
 }
 
 
@@ -157,15 +161,18 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #9acb34;
+    /* background-color: #9acb34; */
     border-radius: 20px;
     padding: 16px;
-    box-shadow: 4px 3px 20px #353E4A;
+    /* box-shadow: 4px 3px 20px #353E4A; */
   }
 
   .profile-info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    border: 1px solid lightgrey;
+    /* justify-content: space-around; */
+    border-radius: 3px;
   }
 
   .image-profile{
@@ -180,7 +187,7 @@ main{
     margin-bottom: 15px;
     height: 100px;
     border-radius: 20%;
-    box-shadow: 4px 3px 20px #353E4A;
+    box-shadow: 4px 3px 15px #797979;
   }
 
   .profile-card {
@@ -214,7 +221,7 @@ main{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.edit-button {
+/* .edit-button {
     background-color: #353E4A;
     color: #ffffff;
     border: none;
@@ -224,11 +231,20 @@ main{
     transition: background-color 0.3s;
     float: right;
     width: 150px;
+} */
+.edit-button{
+  background-color: #9ACB34;
+  font-weight: 600;
+  margin-top:25px;
+  margin-bottom:25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+float: right;
 }
 
 .edit-button:hover {
-    background-color: #04D0D9;
-    color: #353e4a;
+  background-color:#ddd;
+    /* color: #353e4a; */
 }
 
   .profile-userName{
@@ -242,6 +258,7 @@ main{
     .form-container{
       margin-top:10px;
     }
+    
   }
  @media(min-width: 768px) and (max-width: 991px) {
     .form-container {
@@ -254,9 +271,24 @@ main{
     .profile-userImage{
       left:40%;
     }
+    .profile-userImage-perfil{
+      box-shadow:none;
+      position: relative;
+      left: 10px;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1930px) {
+
+  .profile-userImage-perfil{
+    position:relative;
+   left:55px
+  }
 }
 
 @media screen and (max-width: 430px) {
+  .profile-info{
+    flex-direction: column;
+  }
     .form-container {
         width: 90%;
         padding:1rem;
@@ -271,6 +303,9 @@ main{
    .profile-title{
     margin-bottom: 15px;
 
-    
    }
+   .profile-userImage-perfil{
+    box-shadow:none;
+    
+  }
 }

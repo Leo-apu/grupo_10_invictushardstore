@@ -23,14 +23,14 @@
             </p>
             <form class="form" method="POST" action="/users/login">
                 <div class="input-group">
-                    <input class="input" type="text" name="email" id="email" placeholder="Email">
+                    <input required class="input" type="text" name="email" id="email" placeholder="Email">
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: red"><%= errors.email.msg %></div>
 
                         <% } %>
                 </div>
                 <div class="input-group">
-                    <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+                    <input required class="input" type="password" name="password" id="password" placeholder="Contraseña">
                     <% if (locals.errors && errors.password) { %>
                         <div style="color: red"><%= errors.password.msg %></div>
 

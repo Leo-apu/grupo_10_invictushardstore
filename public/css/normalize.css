@@ -153,10 +153,12 @@ template {
 }
 
 .product-item {
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Añade la propiedad background-color a la transición */
+ 
+    transition:0.3s ease, background-color 0.3s ease; /* Añade la propiedad background-color a la transición */
 }
 
 .product-item:hover {
-    transform: scale(1.0); /* Escala un poco más grande al pasar el cursor */
-    background-color: rgba(240, 240, 240, 0.38); /* Cambia el color de fondo al pasar el cursor con una opacidad del 80% */
+
+    transform: scale(1.025); /* Escala un poco más grande al pasar el cursor */
+    background-color: #e0e0e0d2;
 }

@@ -61,6 +61,11 @@ El codigo fuente de nuestro proyecto de Dashboard en React lo podes encontrar en
 
 En el tablero de trabajo encontrara la distribución de las tareas de cada integrante del equipo, el mismo se encuentra en el repositorio de GitHub en el apartado **Projects/Tablero de Trabajo - Invictus Hard Store**
 
+## Diagrama Entidad Realcion 📋
+
+![DER](/public/images/DER.png)
+
 ## Diseño en Figma 📐
 
 En el siguiente enlace encontrara el diseño de nuestro proyecto, el mismo se encuentra en el repositorio de GitHub en el apartado **Projects/Diseño en Figma - Invictus Hard Store** [Figma-Invictus-Hard-Store](https://www.figma.com/design/dRcAaQ18K1asklEOKFmNp2/Proyecto?node-id=0-1&t=DBn8lwE0UuOm1jeW-1)
+

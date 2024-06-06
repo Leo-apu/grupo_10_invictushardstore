@@ -28,11 +28,14 @@
             </div>
 
             <div class="precio-info-botones">
+                <div class="prodTitleRight">
+                <h3><%= product.name %></h3>
+                </div>
                 <div class="productPrice">
                     <p>Precio:</p>
                 <p>$ <%= product.price %></p>
                 </div>
-                
+                <div class="botonesContainerDetail">
                 <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a>
                 <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
 
@@ -45,6 +48,20 @@
                         </form>                
                         <% } %>
                             <% } %>
+                        </div>
+                            <div class="iconosProducto">
+                               
+                                <div class="iconoProductoSeparado">
+                            <i class="fas fa-shield-alt"></i><p>Garantía - 12 meses</p>
+                            </div>
+                            <div class="iconoProductoSeparado">
+                            <i class="fas fa-check"></i>
+                            <p>Stock disponible</p>
+                        </div>
+                        <div class="iconoProductoSeparado">
+                            <i class="fas fa-truck"></i><p>Envíos a todo el país.</p>
+                        </div>
+                        </div>
             </div>
         </div>
 
@@ -53,15 +70,15 @@
                 <h2>Especificaciones del Producto</h2>
             </div>
             <div class="grupo-especificaciones">
-                <p class="categoria">General</p>
-                <ul>
+                <h3 class="categoria">General</h3>
+                <ul class="grupoUl">
                     <li>Nombre del producto: <%= product.name %></li>
                     <li>Categoria al que pertenece: <%= product.category.name %></li>
                 </ul>
             </div>
             <div class="grupo-especificaciones">
-                <p class="categoria">Descripcion</p>
-                <ul>
+                <h3 class="categoria">Descripcion</h3>
+                <ul  class="grupoUl">
                     <p> <%= product.description %></p>
                 </ul>
             </div>

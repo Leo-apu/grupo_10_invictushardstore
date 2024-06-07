@@ -12,12 +12,11 @@
         <%- include('../partials/header.ejs') %>
     </header>
     <main>
-        <div class="containerPurchased">
-            <!-- <h1>Carrito de Compras</h1> -->
-             <div class="containerCompraText"
-                <% if (message) { %>
-                    <p class="compraTexto"><%= message %></p>
-                <% } %>
+        <div class="cart-message">
+            <h1>Carrito de Compras</h1>
+            <% if (message) { %>
+                <p class="cart-message-text"><%= message %></p>
+            <% } %>
         </div>
     </main>
     <footer>

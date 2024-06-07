@@ -34,8 +34,11 @@ module.exports = {
     },
 
     viewCart: (req, res) => {
+        const cart = req.session.cart || [];
+        const total = cart.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
         res.render('cliente/cart', {
-            cart: req.session.cart || []
+            cart,
+            total
         });
     },
 

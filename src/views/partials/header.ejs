@@ -51,3 +51,15 @@
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerIcon = document.querySelector('.nav-caja2');
+        const navMenu = document.querySelector('.nav-caja');
+
+        burgerIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+        });
+    });
+</script>

@@ -28,7 +28,7 @@ module.exports = {
 
     purchase: (req, res) => {
         req.session.cart = [];
-        res.render('cliente/cart', {
+        res.render('cliente/purchased', {
             cart: [],
             message: '¡Muchas gracias por su compra!'
         });

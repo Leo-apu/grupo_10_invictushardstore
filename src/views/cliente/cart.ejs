@@ -20,8 +20,8 @@
                         <li>
                             <img src="/images/productsBD/<%= item.product.img %>" alt="<%= item.product.titulo %>">
                             <p><%= item.product.titulo %></p>
-                            <p>Cantidad: </p><input type="number" value="<%= item.quantity %>">
-                            <p>titulo: <%= item.product.name %></p>
+                            <p>Cantidad: </p><input type="number" value="<%= item.quantity %>" min="1">
+                            <p>Titulo: <%= item.product.name %></p> <!-- Cambié "titulo" por "name" -->
                             <p>Precio: $<%= item.product.price %></p>
                         </li>
                     <% }) %>
@@ -30,9 +30,10 @@
                     <button type="submit">Comprar</button>
                 </form>
             <% } else { %>
-                <p>El carrito está vacío.</p>
-                <% if (message) { %>
-                    <p><%= message %></p>
+                <% if (locals.isLoged) { %>
+                    <p>El carrito está vacío.</p>
+                <% } else { %>
+                    <p>Primero debes Iniciar Sesión</p>
                 <% } %>
             <% } %>
         </div>

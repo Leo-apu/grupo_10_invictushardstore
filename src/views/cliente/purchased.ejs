@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Carrito de Compras</h1>
+                <% if (message) { %>
+                    <p><%= message %></p>
+                <% } %>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
+</html>

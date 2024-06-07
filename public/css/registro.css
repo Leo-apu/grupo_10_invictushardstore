@@ -93,7 +93,7 @@ p{
     width: 100%;
 
     background-color: rgb(255, 255, 255);
-  
+      
         padding: 10px;
         margin: 10px 0;
         border: 1px solid #ccc;
@@ -228,6 +228,7 @@ select:focus{
     .form-register {
         width:90%;
         margin-bottom:50px;
+        
         /* position: relative;
         top: 50px; */
     }

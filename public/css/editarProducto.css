@@ -1,6 +1,6 @@
 .section-crearProducto{
     width:40%;
-    background-color: #9ACB34;
+    background-color: #FBF8EF;
     border-radius:10px;
     position:relative;
 
@@ -32,6 +32,7 @@ select{
     height:40px;
     border:none;
     width: 100%;
+    border: 1px solid #ccc;
 }
 
 select:focus{
@@ -43,6 +44,11 @@ input{
     border-radius: 5px;
     height:40px;
     border:none;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+input[type="file"]{
+    padding:10px;
 }
 
 input{
@@ -72,6 +78,7 @@ textarea{
     border-radius: 5px;
     height:100px;
     border:none;
+    border: 1px solid #ccc;
 }
 
 #imagen{
@@ -82,6 +89,7 @@ label{
     position:relative;
     left: 20px;
     display: flex;
+    padding-top:10px;
 }
 
 .crearProducto-check{

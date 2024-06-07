@@ -66,3 +66,20 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `img`, `category_i
 (17, 'Procesador Intel Core i5 14400F 4.7GHz Turbo Socket 1700 Raptor Lake', 'Modelo 14400F\r\nSocket 1700 Raptor Lake \r\nNúcleos 10\r\nFrecuencia 2500.00 mhz\r\nProceso De Fabricación 10 nm\r\nHilos 16\r\nFrecuencia Turbo 4700 mhz\r\nFamilia Intel Core i5', 304600.00, 'prod-bd-1714487276766.jpg', 5, '2024-04-30 14:27:56', '2024-04-30 14:27:56'),
 (18, 'Memoria Team DDR5 32GB (2x16GB) 6400MHz T-Force Delta RGB Black CL40 Intel XMP 3.0', 'Capacidad 32 gb\r\nVelocidad 6400 mhz\r\nTipo DDR5\r\nCantidad De Memorias 2\r\nLatencia 40 cl\r\nVoltaje 1.35 v', 173250.00, 'prod-bd-1714487400168.jpg', 4, '2024-04-30 14:30:00', '2024-04-30 14:30:00'),
 (19, 'Gabinete Kolink Inspire K8 Vidrio Templado 1x120mm ARGB', 'Factor Mother ITX,M-ATX,ATX\r\nFuente En Posición Superior No\r\nCon Ventana Si\r\nTipo De Ventana Vidrio templado\r\nColores Negro\r\nAncho 200 mm\r\nAlto 426 mm\r\nProfundidad 362 mm', 79000.00, 'prod-bd-1714487581535.jpg', 7, '2024-04-30 14:33:01', '2024-04-30 14:33:01');
+
+
+CREATE TABLE carts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE cart_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cart_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (cart_id) REFERENCES carts(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);

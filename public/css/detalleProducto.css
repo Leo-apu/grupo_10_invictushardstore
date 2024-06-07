@@ -307,7 +307,7 @@ footer{
         left:25px;
         height:40px;
         padding-top: 20px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
     }
     .botonesContainerDetail{
         width:90%;
@@ -324,7 +324,10 @@ footer{
         font-size: 18px;
     }
     p{
-        font-size: 15px;
+        font-size: 17px;
+    }
+    li{
+        font-size: 17px;
     }
 }
 
@@ -375,7 +378,7 @@ footer{
         left:25px;
         height:40px;
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
     .botonesContainerDetail{
         width:90%;

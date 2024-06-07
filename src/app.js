@@ -40,12 +40,14 @@ const productsRouter = require('./routes/products');
 const userRouter = require('./routes/users');
 const productsApiRouter = require('./routes/api/productsRouter');
 const usersApiRouter = require('./routes/api/users');
+const cartRouter = require('./routes/cart');
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', userRouter);
 app.use('/api/products', productsApiRouter);
 app.use('/api/users', usersApiRouter);
+app.use('/cart', cartRouter);
 
 // Error handling
 app.use((req, res, next) => next(createError(404)));

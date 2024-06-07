@@ -12,7 +12,7 @@ module.exports = {
         const cartItem = req.session.cart.find(item => item.product.id == productId);
 
         if (cartItem) {
-            cartItem.quantity += parseInt(quantity);
+            cartItem.quantity = 1;
         } else {
             req.session.cart.push({ product, quantity: parseInt(quantity) });
         }

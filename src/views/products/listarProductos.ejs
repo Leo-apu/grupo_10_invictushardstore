@@ -37,8 +37,8 @@
                                 <p class="precio2">$ <%= product.price %></p>
                                 <form action="/cart/add" method="POST">
                                     <input type="hidden" name="productId" value="<%= product.id %>">
-                                    <input type="number" name="quantity" value="1" min="1">
-                                    <button type="submit">Agregar al Carrito</button>
+                                    
+                                    <button type="submit" name="quantity" value="1">Agregar al Carrito</button>
                                 </form>
                             </div>
                         </a>

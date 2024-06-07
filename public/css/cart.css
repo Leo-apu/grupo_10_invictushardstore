@@ -1,0 +1,189 @@
+.container-cart {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 70px; /* Añade un margen inferior para separarla del footer */
+    min-height: 200px; /* Establece un tamaño mínimo para la caja */
+}
+
+.cart-message {
+    align-items: center;
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 70px; /* Añade un margen inferior para separarla del footer */
+    min-height: 200px; /* Establece un tamaño mínimo para la caja */
+}
+
+.cart-message-text {
+    font-size: 24px; /* Puedes ajustar el tamaño según tus preferencias */
+    
+}
+
+.total-cart {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #333;
+}
+
+h1 {
+    color: #123666;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+    flex-grow: 1;
+}
+.product-cant {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+    flex-grow: 1;
+}
+
+li img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px; /* Ajusta el valor según sea necesario */
+}
+
+li p {
+    margin: 0;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #333;
+    
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-price {
+    margin-left: auto;
+}
+
+
+button {
+    background-color: #9ACB34;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7fb92e;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.empty-cart-message,
+.login-message {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.empty-cart-message {
+    color: #e90e0e;
+}
+
+@media screen and (max-width: 480px) {
+    .container-cart {
+        width: 100%; /* Utilizar todo el ancho disponible */
+        padding: 10px; /* Reducir el espacio alrededor del contenedor */
+    }
+    
+    li {
+        flex-direction: column; /* Cambiar la dirección de los elementos a columnas */
+        align-items: flex-start; /* Alinear los elementos al inicio horizontalmente */
+    }
+    
+    li img {
+        width: 100px; /* Ancho completo para la imagen */
+        height: auto; /* Altura automática */
+        margin-bottom: 5px; /* Añadir espacio entre la imagen y el título */
+    }
+    
+    .product-info {
+        width: 100%; /* Ancho completo para la información del producto */
+        text-align: left; /* Alinear el texto a la izquierda */
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .product-title {
+        margin-top: 5px; /* Añadir espacio encima del título */
+    }
+    
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 768px y un ancho máximo de 991px (típicamente tablets en posición horizontal) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container-cart {
+        width: 90%; /* Reducir el ancho del contenedor */
+    }
+    
+    li img {
+        width: 80px; /* Reducir el tamaño de las imágenes */
+        height: 80px;
+        margin-right: 10px; /* Reducir el margen entre la imagen y el texto */
+    }
+    
+    .product-info {
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 1024px y un ancho máximo de 1930px (típicamente laptops y monitores) */
+@media screen and (min-width: 1024px) and (max-width: 1930px) {
+    /* Puedes agregar estilos específicos para este rango de tamaños de pantalla si es necesario */
+}

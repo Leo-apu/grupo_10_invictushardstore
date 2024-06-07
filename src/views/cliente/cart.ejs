@@ -12,28 +12,43 @@
         <%- include('../partials/header.ejs') %>
     </header>
     <main>
-        <div class="container">
+        <div class="container-cart">
             <h1>Carrito de Compras</h1>
+            
             <% if (cart.length > 0) { %>
                 <ul>
                     <% cart.forEach(item => { %>
                         <li>
                             <img src="/images/productsBD/<%= item.product.img %>" alt="<%= item.product.titulo %>">
-                            <p><%= item.product.titulo %></p>
-                            <p>Cantidad: </p><input type="number" value="<%= item.quantity %>" min="1">
-                            <p>Titulo: <%= item.product.name %></p> <!-- Cambié "titulo" por "name" -->
-                            <p>Precio: $<%= item.product.price %></p>
+                            <div class="product-info">
+                                <p class="product-title"><%= item.product.titulo %></p>
+                                <form action="/cart/update" method="POST" class="update-cart-form">
+                                    <input type="hidden" name="productId" value="<%= item.product.id %>">
+                                    <input type="hidden" class="product-price" value="<%= item.product.price %>">
+                                    <p>Titulo: <%= item.product.name %></p>
+                                    <p class="product-cant">Cantidad: <input type="number" class="product-quantity" value="<%= item.quantity %>" min="1"></p>
+                                </form>
+                            </div>
+                            <div class="product-price-container">
+                                <p class="total-price">Precio total: $<span><%= (item.product.price * item.quantity).toFixed(2) %></span></p>
+                            </div>
                         </li>
                     <% }) %>
                 </ul>
+                <div class="total-cart">
+                    <p>Total del carrito: $<span id="cart-total"><%= total.toFixed(2) %></span></p>
+                </div>
+                <div class="vovler-carrito">
+                    <a href="/products/prodList">Continuar Comprando</a>
+                </div>
                 <form action="/cart/purchase" method="POST">
                     <button type="submit">Comprar</button>
                 </form>
             <% } else { %>
                 <% if (locals.isLoged) { %>
-                    <p>El carrito está vacío.</p>
+                    <p class="cart-message">El carrito está vacío.</p>
                 <% } else { %>
-                    <p>Primero debes Iniciar Sesión</p>
+                    <p class="cart-message">Primero debes Iniciar Sesión</p>
                 <% } %>
             <% } %>
         </div>
@@ -41,5 +56,25 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+    <!-- JavaScript para escuchar eventos de cambio en la cantidad del producto y actualizar el precio -->
+    <script>
+    document.querySelectorAll('.product-quantity').forEach(input => {
+        input.addEventListener('change', function() {
+            const quantity = parseInt(this.value);
+            const price = parseFloat(this.closest('.product-info').querySelector('.product-price').value);
+            const totalPriceElement = this.closest('li').querySelector('.total-price span');
+            const totalPrice = quantity * price;
+            // Actualizar el texto del precio total del producto
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+
+            // Actualizar el total del carrito
+            let newTotal = 0;
+            document.querySelectorAll('.total-price span').forEach(span => {
+                newTotal += parseFloat(span.textContent);
+            });
+            document.getElementById('cart-total').textContent = newTotal.toFixed(2);
+        });
+    });
+    </script>
 </body>
 </html>

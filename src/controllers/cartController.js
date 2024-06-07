@@ -1,4 +1,7 @@
 const db = require('../database/models');
+const notifier = require('node-notifier');
+const path = require('path');
+const iconPath = path.join(__dirname, '../../public/images/invictusNotification.png');
 
 module.exports = {
     addToCart: async (req, res) => {
@@ -16,6 +19,16 @@ module.exports = {
         } else {
             req.session.cart.push({ product, quantity: parseInt(quantity) });
         }
+
+        // Mostrar notificación de éxito
+        notifier.notify({
+            title: 'InvictusHardStore',
+            message: `Producto agregado al carrito`,
+            icon: iconPath, // Usar el icono personalizado
+            sound: true, // Opcional, reproduce un sonido con la notificación
+            appID: 'Notificacion',
+            timeout: 5000,
+        });
 
         res.redirect('/cart');
     },

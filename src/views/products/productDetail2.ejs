@@ -36,7 +36,15 @@
                 <p>$ <%= product.price %></p>
                 </div>
                 <div class="botonesContainerDetail">
-                <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a>
+
+                    <form action="/cart/add" method="POST">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <% if (locals.isLoged) { %>
+                        <button type="submit" name="quantity" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;" value="1">Agregar al Carrito</button>
+                        <% } %>
+                    </form>
+
+                <!-- <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a> -->
                 <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
 
                 <% if (locals.isLoged) { %>

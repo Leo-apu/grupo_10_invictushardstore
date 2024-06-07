@@ -236,6 +236,9 @@ main section article{
 }
 
 article div.main-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     /* padding: 20px; */
     background-color: #ffffff28;
@@ -304,7 +307,6 @@ main section article img{
     font-family: 'Hind Madurai', sans-serif;
     font-size: 24px;
     font-weight: 600;
-    position:relative;
     top:10px;
     align-content: center;
     height:50px;
@@ -731,7 +733,6 @@ footer {
     }
 }
 
-}
 
 
 

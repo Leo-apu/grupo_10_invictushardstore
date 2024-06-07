@@ -56,6 +56,8 @@ const controller = {
 				message: `Usuario creado exitosamente`,
 				icon: iconPath, // Usar el icono personalizado
 				sound: true, // Opcional, reproduce un sonido con la notificación
+                appID: 'Notificacion',
+                timeout: 5000,
             });
 
             return res.redirect('/users/login');

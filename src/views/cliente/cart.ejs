@@ -41,17 +41,22 @@
                 <div class="total-cart">
                     <p>Total del carrito: $<span id="cart-total"><%= total.toFixed(2) %></span></p>
                 </div>
-                <div class="vovler-carrito">
+                <div class="volver-carrito">
                     <a href="/products/prodList">Continuar Comprando</a>
                 </div>
+                <div class="botones-carrito">
+                <form action="/cart/clean" method="POST">
+                    <button type="submit">Limpiar Carrito</button>
+                </form>
                 <form action="/cart/purchase" method="POST">
                     <button type="submit">Comprar</button>
                 </form>
+            </div>
             <% } else { %>
                 <% if (locals.isLoged) { %>
-                    <p class="cart-message">El carrito está vacío.</p>
+                    <p class="cart-message-text">El carrito está vacío.</p>
                 <% } else { %>
-                    <p class="cart-message">Primero debes Iniciar Sesión</p>
+                    <p class="cart-message-text">Primero debes Iniciar Sesión</p>
                 <% } %>
             <% } %>
         </div>

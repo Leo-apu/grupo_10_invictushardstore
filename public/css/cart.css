@@ -6,13 +6,15 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-bottom: 70px; /* Añade un margen inferior para separarla del footer */
-    min-height: 200px; /* Establece un tamaño mínimo para la caja */
+    margin-bottom: 70px; 
+    min-height: 200px; 
 }
 
 .cart-message {
-    align-items: center;
-    text-align: center; /* Centra el texto horizontalmente */
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -20,13 +22,12 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-bottom: 70px; /* Añade un margen inferior para separarla del footer */
-    min-height: 200px; /* Establece un tamaño mínimo para la caja */
+    margin-bottom: 70px; 
 }
 
 .cart-message-text {
-    font-size: 24px; /* Puedes ajustar el tamaño según tus preferencias */
-    
+    font-size: 3rem;
+    text-align: center;
 }
 
 .total-cart {
@@ -38,7 +39,6 @@
 }
 
 h1 {
-    color: #123666;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
@@ -56,6 +56,29 @@ li {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
+
+.volver-carrito {
+    font-size: 18px;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #333;
+}
+
+.volver-carrito:hover {
+    color: #9ACB34;
+}
+
+.volver-carrito a{
+    text-decoration: none;
+}
+
+.botones-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
 
 .product-info {
     display: flex;
@@ -105,17 +128,17 @@ input[type="number"] {
 
 button {
     background-color: #9ACB34;
-    color: #fff;
+    color: #000000;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #7fb92e;
+    background-color: aqua;
 }
 
 form {

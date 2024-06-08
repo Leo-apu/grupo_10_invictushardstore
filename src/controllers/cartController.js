@@ -20,14 +20,13 @@ module.exports = {
             req.session.cart.push({ product, quantity: parseInt(quantity) });
         }
 
-        // Mostrar notificación de éxito
         notifier.notify({
             title: 'InvictusHardStore',
             message: `Producto agregado al carrito`,
-            icon: iconPath, // Usar el icono personalizado
-            sound: true, // Opcional, reproduce un sonido con la notificación
+            icon: iconPath, 
+            sound: true,
             appID: 'Notificacion',
-            timeout: 5000,
+            timeout: 1000,
         });
 
         res.redirect('/cart');
@@ -47,6 +46,14 @@ module.exports = {
         res.render('cliente/purchased', {
             cart: [],
             message: '¡Muchas gracias por su compra!'
+        });
+    },
+
+    cleanCart: (req, res) => {
+        req.session.cart = [];
+        res.render('cliente/cart', {
+            cart: [],
+            message: 'Carrito vacío'
         });
     }
 };

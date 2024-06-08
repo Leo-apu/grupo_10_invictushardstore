@@ -2,14 +2,14 @@ main{
     display: flex; 
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    margin: 20px 0;
     height: 637px;
 }
 
 .form-container {
     width: 40%;
     border-radius: 0.75rem;
-    background-color: #FBF8EF;
+    background-color: #9acb34;
     padding: 1rem;
     /* color: #353E4A; */
   }

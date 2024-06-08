@@ -9,7 +9,15 @@ main{
 .form-container {
     width: 40%;
     border-radius: 0.75rem;
-    background-color: #9acb34;
+    background-color: #9ACB34;
+    padding: 1rem;
+    /* color: #353E4A; */
+  }
+
+  .form-container-login {
+    width: 40%;
+    border-radius: 0.75rem;
+    background-color: #f7f7f7;
     padding: 1rem;
     /* color: #353E4A; */
   }

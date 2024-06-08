@@ -55,56 +55,6 @@
                 <% } %>
             <% } %>
         </div>
-        <div class="container">
-
-
-            <% if (cart.length> 0) { %>
-                <div class="containerAll">
-                    <ul class="containerProd">
-                        <% cart.forEach(item=> { %>
-                            <li class="liProdsCart">
-                                <div class="containerImgProd">
-                                    <img class="imgProdCart" src="/images/productsBD/<%= item.product.img %>"
-                                        alt="<%= item.product.titulo %>">
-                                </div>
-                                <div class="containerInfoProd">
-
-                                    <p class="textoProdInfo">
-                                        <%= item.product.name %>
-                                    </p> <!-- Cambié "titulo" por "name" -->
-                                    <p class="textoProdInfo">Cantidad: <input type="number" value="<%= item.quantity %>"
-                                            min="1"></p>
-
-                                    <p class="textoProdInfo">Precio: $<%= item.product.price %>
-                                    </p>
-                                </div>
-                            </li>
-                            <% }) %>
-                    </ul>
-                    <div class="formCompra">
-                        <form action="/cart/purchase" method="POST">
-                            <button class="comprarButton" type="submit">COMPRAR</button>
-                        </form>
-                    </div>
-                </div>
-
-                <% } else { %>
-                    <% if (locals.isLoged) { %>
-                        <div class="containerCarritoVacio">
-                            <!-- <h1>Carrito de Compras</h1> -->
-                           <p>El carrito está vacío.</p>
-
-                            </div>
-
-                            <% } else { %>
-                                <div class="containerCarritoVacio">
-                                <p>Primero debes Iniciar Sesión</p>
-                            </div>
-                                <% } %>
-                                    <% } %>
-
-
-                        </div>
     </main>
     <footer>
         <%- include('../partials/footer.ejs') %>
@@ -130,9 +80,5 @@
     });
     </script>
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
->>>>>>> miranda-ismael

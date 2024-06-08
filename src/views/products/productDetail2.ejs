@@ -36,41 +36,46 @@
                 <p>$ <%= product.price %></p>
                 </div>
                 <div class="botonesContainerDetail">
-<<<<<<< HEAD
-
+                
                     <form action="/cart/add" method="POST">
                         <input type="hidden" name="productId" value="<%= product.id %>">
                         <% if (locals.isLoged) { %>
-                        <button type="submit" name="quantity" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;" value="1">Agregar al Carrito</button>
-                        <% } %>
-                    </form>
-
-                <!-- <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a> -->
-                <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
-
-                <% if (locals.isLoged) { %>
-                    <% if (locals.userLogged.roles_id===1) { %>
-                        <a href="/products/edit/<%= product.id %>" class="boton-pequeno"
-                            style="background-color: #97c72e;font-size:16px; color:black ; text-decoration: none;">EDITAR PRODUCTO</a>
-                        <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
-                            <button type="submit" class="boton-eliminar" style=" color:black; font-size:16px;">ELIMINAR</button>
-                        </form>                
-                        <% } %>
+                            <button type="submit" name="quantity" class="boton-pequeno"
+                                style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;"
+                                value="1">Agregar al Carrito</button>
                             <% } %>
-                        </div>
-                            <div class="iconosProducto">
-                               
-                                <div class="iconoProductoSeparado">
-                            <i class="fas fa-shield-alt"></i><p>Garantía - 12 meses</p>
-                            </div>
-                            <div class="iconoProductoSeparado">
-                            <i class="fas fa-check"></i>
-                            <p>Stock disponible</p>
-                        </div>
-                        <div class="iconoProductoSeparado">
-                            <i class="fas fa-truck"></i><p>Envíos a todo el país.</p>
-                        </div>
-                        </div>
+                    </form>
+                
+                    <!-- <a href="#" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;">COMPRAR</a> -->
+                
+                    <!-- <a href="#" class="boton-pequeno">Agregar al Carrito</a> -->
+                
+                    <% if (locals.isLoged) { %>
+                        <% if (locals.userLogged.roles_id===1) { %>
+                            <a href="/products/edit/<%= product.id %>" class="boton-pequeno"
+                                style="background-color: #97c72e;font-size:16px; color:black ; text-decoration: none;">EDITAR
+                                PRODUCTO</a>
+                            <form action="/products/delete/<%= product.id %>" method="POST" style="display: block; margin-bottom: 8px;">
+                                <button type="submit" class="boton-eliminar" style=" color:black; font-size:16px;">ELIMINAR</button>
+                            </form>
+                            <% } %>
+                                <% } %>
+                </div>
+                <div class="iconosProducto">
+                
+                    <div class="iconoProductoSeparado">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Garantía - 12 meses</p>
+                    </div>
+                    <div class="iconoProductoSeparado">
+                        <i class="fas fa-check"></i>
+                        <p>Stock disponible</p>
+                    </div>
+                    <div class="iconoProductoSeparado">
+                        <i class="fas fa-truck"></i>
+                        <p>Envíos a todo el país.</p>
+                    </div>
+                </div>
             </div>
         </div>
 

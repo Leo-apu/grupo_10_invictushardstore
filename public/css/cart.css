@@ -49,9 +49,9 @@ ul {
     padding: 0;
 }
 
-li {
+.carritoLi {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
     padding: 10px 0;
     border-bottom: 1px solid #ddd;

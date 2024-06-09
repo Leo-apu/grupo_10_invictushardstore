@@ -23,7 +23,7 @@
             <p><strong>Registrar Usuario</strong></p>
             <p>Ingresa tus datos para crear tu cuenta</p>
         </div>
-            <div>
+            <div class="registroContainer">
                 
                 
                     <div>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div>
-                    <select name="roles_id" id="role" class="form-input" required>
+                    <select name="roles_id" id="role" class="form-Select" required>
                         <option value="">Elige un rol</option>
                         <%  let roles = [{ id: 1, name: 'Administrador' }, { id: 2, name: 'Usuario' }] %>
                         <% for(const oneRole of roles) { %>
@@ -83,7 +83,7 @@
                             </div> -->
                 </ul>
                 
-                <div class="form-register">
+                <div>
                     <button class="registerButton" type="submit" >REGISTRAR</button>
                 </div>
                 

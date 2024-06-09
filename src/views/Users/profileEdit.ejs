@@ -5,8 +5,9 @@
     <%- include('../partials/head.ejs') %>
     <link rel="icon" href="/images/logo-InvictusHardStore-1.png">
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/profileEdit.css">
+    
     <title>Editar perfil - Invictus Hard Store</title>
 </head>
 
@@ -15,7 +16,7 @@
         <%- include('../partials/header.ejs') %>
     </header>
 <main>
-    <div class="form-container">
+    <div class="form-container-profileEdit">
         <h1 class="profile-title">Editar información personal</h1>
         <form class="user-form-edit" action="/users/profile/update/<%= user.id %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
@@ -31,7 +32,7 @@
                 </label>
             </div>
             <label for="email">
-                <span for="email">Correo electrónico:</span>
+                <span for="email">Correo:</span>
                 <input type="email" id="email" name="email" value="<%= user.email %>" required>
             </label>
             

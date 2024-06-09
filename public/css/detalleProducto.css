@@ -56,6 +56,7 @@ div.imgLogo{
 img {
     max-width: 100%;
     height: auto;
+    border: 1px solid lightgrey;
 }
 
 #miniaturas {
@@ -104,6 +105,8 @@ a:link, a:visited, a:active {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom:10px;
+
 }
 
 .boton-eliminar:hover {
@@ -115,6 +118,7 @@ a:link, a:visited, a:active {
  /* Estilos para la información adicional */
  .precio-info-botones p {
      margin: 0 0 10px;
+
  }
 
  .precio-info-botones ul {
@@ -152,22 +156,33 @@ a:link, a:visited, a:active {
 .titulo-especificaciones {
     width: 100%;
     /* Ocupa todo el ancho disponible */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    padding-bottom:15px;
     /* Espacio entre el título y las columnas */
+    border-bottom: 1px solid lightgrey;
 }
 
 .grupo-especificaciones {
     width: calc(33.33% - 10px);
     margin-bottom: 20px;
     box-sizing: border-box;
+    
+    padding-bottom: 15px;
+    font-size:20px;
     /* Asegura que el margen no aumente el ancho real */
 }
 
 .categoria {
     font-weight: bold;
     margin-bottom: 5px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    
 }
 
+.grupoUl{
+    margin-top: 20px;
+}
 .detalle {
     margin-left: 15px;
 }
@@ -272,6 +287,48 @@ footer{
         order: 3; /* Cambiar el orden para que aparezca debajo del contenido */
         width: 100%; /* Ancho completo */
     }
+    .iconosProducto{
+        color: green;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        font-weight: 600;
+        margin-top: 50px;
+        height:60px;
+        
+    }
+
+    .prodTitleRight{
+        font-size: 15px;
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position: relative;
+        left:25px;
+        height:40px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+    .botonesContainerDetail{
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position:relative;
+        left:25px;
+        height:175px;
+     
+    }
+    .especificaciones{
+        font-size: 14px;
+    }
+    .categoria{
+        font-size: 18px;
+    }
+    p{
+        font-size: 17px;
+    }
+    li{
+        font-size: 17px;
+    }
 }
 
 /* Estilos para pantallas de 768px a 991px de ancho */
@@ -313,16 +370,45 @@ footer{
         margin-top:10px;
         font-weight: 600;
     }
+
+    .prodTitleRight{
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position: relative;
+        left:25px;
+        height:40px;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    .botonesContainerDetail{
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position:relative;
+        left:25px;
+        height:150px;
+     
+    }
+    .iconosProducto{
+        color: green;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        font-weight: 600;
+        margin-top: 50px;
+        height:60px;
+        
+    }
 }
 
 /* Estilos para pantallas de 1024px a 1930px de ancho */
 @media(min-width: 1024px) and (max-width: 1930px) {
     .detalle-producto {
-    
+        border-radius:7px;
         background-color: #FBF8EF;
         
         margin-top:15px;
-        border-radius: 10px;
+        
         
     }
     img{
@@ -348,13 +434,45 @@ footer{
         width:100%;
         position:relative;
         /* top:130px; */
-        border:2px solid #b4b4b4c0;
-        border-radius: 10px;
+        border: 1px solid lightgrey;
+        
         height:469px;
-        padding-top: 110px;
+        padding-top: 60px;
     }
+   
     .productPrice{
         margin-top:10px;
         font-weight: 600;
+    }
+    .iconosProducto{
+        color: green;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font-weight: 600;
+        margin-top: 50px;
+        height:60px;
+        
+    }
+    .iconoProductoSeparado{
+        width:100%;
+        margin-bottom:5px;
+    }
+    .botonesContainerDetail{
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position:relative;
+        left:25px;
+        height:150px;
+     
+    }
+    .prodTitleRight{
+        width:90%;
+        border-bottom: 1px solid lightgrey;
+        position: relative;
+        left:25px;
+        height:40px;
+        
+        padding-bottom: 60px;
     }
 }

@@ -15,11 +15,11 @@
 
     <main>
         <section class="destacados">
-            <h1>Lista de Productos </h1>
+            <!-- <h1>Lista de Productos </h1> -->
             <form action="/products/search" method="get">
                 <div class="search-container">
-                    <input type="text" id="name" name="name" required>
-                    <button class="boton crear" type="submit" style="margin-top: 1.5rem;">Buscar</button>
+                    <input class="prodSearch" type="text" id="name" name="name" required>
+                    <button class="buttonSearch" type="submit" style="margin-top: 1.5rem;">Buscar</button>
                 </div>
             </form>
             <div class="producto">
@@ -27,7 +27,7 @@
                 <% products.forEach((product) =>{ %>
                     <article class="product-item">
                         <a href="/products/detail/<%= product.id %>" style="text-decoration: none">
-                            <img src="../images/productsBD/<%= product.img %>" alt="<%= product.name %>">
+                            <img class="prodImg2" src="../images/productsBD/<%= product.img %>" alt="<%= product.name %>">
                             
                             <div class="main-article">
                                 <div class="">
@@ -35,6 +35,12 @@
                                     
                                 </div>
                                 <p class="precio2">$ <%= product.price %></p>
+                                <form action="/cart/add" method="POST">
+                                    <input type="hidden" name="productId" value="<%= product.id %>">
+                                    <% if (locals.isLoged) { %>
+                                    <button type="submit" name="quantity" class="boton-pequeno" style="background-color: #04D0D9 ; color:black ;font-size:16px; text-decoration: none;" value="1">Agregar al Carrito</button>
+                                    <% } %>
+                                </form>
                             </div>
                         </a>
                     </article>

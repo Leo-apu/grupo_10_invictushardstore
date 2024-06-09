@@ -5,10 +5,13 @@
 }
 
 header{
-    background-color: #fbf8efc0;
+    background-color: #beeeea;
+    /* border-bottom: 10px solid #04D0D9; */
+    
 }
 
 body{
+    /* background-color: #04D0D9; */
     background-color: #04D0D9;
 }
 
@@ -45,11 +48,9 @@ nav ul li{
   font-size:23px;
   margin-bottom:15px;
 }
-li{
-    
-}
+
 .nav-lista:hover {
-  background-color: #35e9628a;
+  background-color: #9ACB34;
   padding: 10px;
   color: #ffffff;
 } 
@@ -109,14 +110,28 @@ label[for="email"] {
     margin-top: 15px;
 }
 
-input[type="text"],
-input[type="email"] {
-    width: 100%;
+input[type="text"]
+{
+    /* width: 100%; */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+input[type="email"]{
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+} 
+input[type="password"]{
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+} 
+
+
 
 /* Estilos para la imagen de perfil */
 .user-image-edit input[type="file"] {
@@ -149,6 +164,7 @@ input[type="email"] {
     border-radius: 50%;
     margin-right: 5px;
     margin-top: 5px;
+    object-fit: cover;
 }
 
 /**
@@ -207,8 +223,8 @@ h1 {
 
 main section article{
     margin: 10px;
-    border-top: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
+    /* border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb; */
     padding: 15px;
 
     display: flex;
@@ -218,6 +234,9 @@ main section article{
 }
 
 article div.main-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     /* padding: 20px; */
     background-color: #ffffff28;
@@ -235,9 +254,9 @@ main section article img{
 }
 
 .producto{
-    background-color: #9ACB34;
+    /* background-color: #9ACB34;
     border-radius: 10px;
-    border: 1px solid #353E4A;
+    border: 1px solid #353E4A; */
 
     display: flex;
     flex-wrap: wrap;
@@ -286,7 +305,6 @@ main section article img{
     font-family: 'Hind Madurai', sans-serif;
     font-size: 24px;
     font-weight: 600;
-    position:relative;
     top:10px;
     align-content: center;
     height:50px;
@@ -298,7 +316,8 @@ main section article img{
 */
 
 footer {
-    background-color: #fbf8efc0;
+    background-color: #beeeea;
+    /* border-top: 10px solid #04D0D9; */
     padding: 10px;
     text-align: center;
   
@@ -505,7 +524,7 @@ footer {
     }
     
     .nav-caja ul li a:hover {
-        background-color: #35e9628a;
+        /* background-color: #35e9628a; */
         color: #ffffff;
     }
     .precio{
@@ -516,16 +535,36 @@ footer {
         margin-top: 15px;
         margin-bottom: 15px;
     } */
+    .producto article{
+        background-color:#9ACB34;
+        border-radius: 7px;
+    }
+    .nav-lista:hover {
+        background-color: #9ACB34;
+        padding: 10px;
+        color: #ffffff;
+      } 
 }
 
 /**
    Navegacion en tablets
 */
 @media(min-width: 768px) and (max-width:991px){
-    
+
+    .producto{
+        width:93%;
+        position:relative;
+        left:34px;
+    }
     .producto article{
-       flex-basis: 48%; /* Ajuste para dejar espacio entre los elementos */
-       margin: 5px; /* Espacio entre los elementos */
+        flex-basis: 48%;
+     
+        margin: 5px;
+        background-color:#9ACB34;
+        border-radius: 7px;
+        /* box-shadow: 1px 1px 10px #9E9E9E; */
+        /* background-color: #EEEEEE; */
+
     }
 
     .seccion{
@@ -572,6 +611,13 @@ footer {
         font-size: 40px; 
         margin-top:60px;
         margin-bottom:30px;
+    }
+
+    .form-Select{
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
     }
 }
 .dropdown {
@@ -631,9 +677,17 @@ footer {
    Navegación en desktop (1200-min)
 */
 @media(min-width: 1024px) and (max-width:1930px){
+    .producto{
+        width:96%;
+        position:relative;
+        left:45px;
+    }
     .producto article{
         flex-basis: 23%; 
         margin: 5px; 
+        background-color:#9ACB34;
+        border-radius: 7px;
+        /* box-shadow: 1px 1px 10px lightgray; */
     }
 
     .container{
@@ -669,7 +723,12 @@ footer {
         margin: 20px;
     }
 
+    .form-Select{
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
 }
-
 
 

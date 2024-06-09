@@ -19,29 +19,36 @@
         <div class="form-container">
             <h1 class="profile-title">Información personal</h1>
             <!-- <h3 class="profile-userName">Hola!, <%= user.username %></h2> -->
-                <div    class="container-profile">
-                    <div class="profile-info">
-                        <p class="profile-userText"><strong>NOMBRE :</strong> <%= user.first_name %>
-                        </p>
-                        <p class="profile-userText"><strong>APELLIDO:</strong> <%= user.last_name %>
-                        </p>
-                        <p class="profile-userText"><strong>CORREO ELECTRONICO :</strong> <%= user.email %>
-                        </p>
-                        <% if (user.roles_id === 1) {%>
-                        <p class="profile-userText"><strong>ROL :</strong>  Administrador</p>
-                        <% }else if (user.roles_id === 2) {%>
-                        <p class="profile-userText"><strong>ROL :</strong>  Usuario</p>
-                        <% } %>
-                    </div>
+            <div class="container-profile">
+                <div class="profile-info">
                     <div class="image-profile">
                         <img class="profile-userImage-perfil" src="/images/users/<%= user.img %>">
                     </div>
-                    <div >
-                        <a href="/users/profile/edit/<%= user.id %>">
-                            <button class="edit-button">Editar</button>
-                        </a>
+                    <div>
+                        <p class="profile-userText"><strong>NOMBRE :</strong>
+                            <%= user.first_name %>
+                        </p>
+                        <p class="profile-userText"><strong>APELLIDO:</strong>
+                            <%= user.last_name %>
+                        </p>
+                        <p class="profile-userText"><strong>CORREO ELECTRONICO :</strong>
+                            <%= user.email %>
+                        </p>
+                        <% if (user.roles_id===1) {%>
+                            <p class="profile-userText"><strong>ROL :</strong> Administrador</p>
+                            <% }else if (user.roles_id===2) {%>
+                                <p class="profile-userText"><strong>ROL :</strong> Usuario</p>
+                                <% } %>
                     </div>
+                
                 </div>
+        
+                <div>
+                    <a href="/users/profile/edit/<%= user.id %>">
+                        <button class="edit-button">Editar</button>
+                    </a>
+                </div>
+            </div>
             <!-- <a href="/users/profile/edit/<%= user.id %>" class="userEdit-button"></a> -->
             </br>
         </div>

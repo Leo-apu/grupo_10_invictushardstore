@@ -84,10 +84,21 @@ p{
     
 }
 
+.registroContainer{
+    width:96%;
+    position:relative;
+    left:12px;
+}
 .form-register input[type="file"] {
     width: 100%;
-    border: solid 1px #ffffff;
+
     background-color: rgb(255, 255, 255);
+      
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    
     
     
 }
@@ -97,20 +108,33 @@ outline: 3px solid #9ACB34;
 
 select{
     outline: none;
+    width: 100%;
+    border: solid 1px #ffffff;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 1px;
+    /* margin-bottom: 10px; */
+    padding: 10px;
+    
 }
 
 select:focus{
     outline: 3px solid #9ACB34;
 }
 
-.form-register select {
-    width: 100%;
+.form-register{
+    /* width: 100%; */
     border: solid 1px #ffffff;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    background-color: #FBF8EF;
+    border-radius: 0.75rem;
     margin-top: 1px;
     margin-bottom: 10px;
-    padding: 10px;
+    /* padding: 10px; */
+}
+.registroContainer{
+    left:0;
+    width:100%;
 }
 
 .class-checkbox{
@@ -133,6 +157,8 @@ select:focus{
 .registerButton{
     background-color: #9ACB34;
     font-weight: 600;
+    margin-top:25px;
+    margin-bottom:25px;
 }
 .div-container {
     display: flex; /* Flexbox --> alinear los elementos horizontalmente */
@@ -201,7 +227,10 @@ select:focus{
 
     .form-register {
         width:90%;
-        margin-bottom:25px;
+        margin-bottom:50px;
+        
+        /* position: relative;
+        top: 50px; */
     }
 
     .form-register input {
@@ -220,4 +249,13 @@ select:focus{
     .class-input + .class-input {
        margin-left: 0px; 
     }
+}
+
+@media screen and (max-width: 1930px) {
+
+    /* .form-register {
+        position:relative;
+        top: 50px;
+    } */
+
 }

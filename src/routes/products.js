@@ -77,7 +77,7 @@ router.get('/create/', productsController.create);
 router.post('/create/',upload.single('img'), validationsProduct , productsController.store); 
 
 router.get('/edit/:id', productsController.edit);
-router.post('/update/:id', productsController.update);
+router.put('/update/:id',upload.single('img'), productsController.update);
 
 //router.get('/delete/:id', productsController.delete);
 router.post('/delete/:id', productsController.destroy);

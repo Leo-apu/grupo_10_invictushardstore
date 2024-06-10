@@ -18,10 +18,10 @@ productForm.addEventListener('submit', function(event) {
     }
 
     
-    let productImage = document.getElementById('imagen').files[0];
+    /* let productImage = document.getElementById('imagen').files[0];
     if (!productImage || !isValidExtension(productImage.name)) {
         errors.push('Seleccione un archivo de imagen válido (jpg, jpeg, png, gif)');
-    }
+    } */
 
     if (errors.length > 0) {
         
